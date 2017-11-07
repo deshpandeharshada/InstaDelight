@@ -1,0 +1,494 @@
+﻿@{
+    ViewBag.Title = "ManageLicenses";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<style>
+    .htabGrid {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 60% !important;
+    }
+
+    .htabStaffGrid {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 80% !important;
+    }
+
+
+    .htabGridshare {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        border-left: 0px;
+        border-right: 0px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 20% !important;
+    }
+
+    .ui-grid-header-cell-row {
+        background-color: white !important;
+        border: none;
+        border-left: 0px;
+        border-right: 0px;
+        font-size: 1em;
+        background: none;
+    }
+
+    .ui-grid-header-cell {
+        border: none !important;
+        background-color: white !important;
+        border-left: 0px !important;
+        border-right: 0px !important;
+        font-size: 1em !important;
+        background: none !important;
+        text-align: center;
+    }
+
+    .htabGridDelete {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 1px !important;
+        border-bottom-left-radius: 1px !important;
+        border-left: 0px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 20% !important;
+    }
+</style>
+
+<style type="text/css">
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ui-grid, .ui-grid-viewport {
+        height: auto !important;
+        border: none !important;
+        margin-left: 2px;
+        margin-right: 2px;
+        /*width: 100%!important;*/
+    }
+
+    .ui-grid-row .ng-scope {
+        /*height: 65px !important;*/
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .ui-grid-pager-panel {
+        position: relative;
+        display: inline-block;
+    }
+
+    .ui-grid-pager-max-pages-number {
+        vertical-align: middle !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+
+    .scrollFiller {
+        float: right;
+        border: none;
+    }
+
+    .ui-grid-icon-plus-squared {
+        vertical-align: middle !important;
+    }
+</style>
+
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="openManageLicenses()" class="row rowb">
+    <input type="hidden" disabled="disabled" name="hdnCountry" ng-model="country" value="@ViewBag.countryid" />
+
+    <div ng-show="divBrands">
+        @if (User.IsInRole("Merchant") || User.IsInRole("BrandManager"))
+        {
+            <h3>@Global.Merchant.ManageLocationsUsers</h3>
+
+            <label>
+                @Global.Merchant.NoofLicenses:
+                {{NoOfLicenses}}
+            </label>
+
+            <label>
+                @Global.Merchant.AvailableLicenses
+                {{AvailableLicenses}}
+            </label>
+
+
+            <p>@Global.Merchant.BrandList @Global.Merchant.Selecttoedit</p>
+
+            <div class="row" ng-show="divBrands">
+                <div ui-grid="gridBrands" ui-grid-pinning ui-grid-expandable class="myGrid" ng-style="{visibility: gridBrands.data && gridBrands.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+                <div ng-style="{visibility: gridBrands.data && gridBrands.data.length > 0 ? 'hidden' : 'visible'}"><h3>@Global.Merchant.NoBrandsPrompt</h3></div>
+            </div>
+        }
+
+
+        <div class="text-center">
+            @if (User.IsInRole("Merchant"))
+            {
+                <a class="button" ng-click="AddBrand()">@Global.Merchant.AddBrand</a>
+            }
+            &nbsp;
+            @if (User.IsInRole("Merchant") || User.IsInRole("BrandManager"))
+            {
+                <a class="button" ng-click="AddLocation()">@Global.Merchant.AddLocation</a>
+            }
+            &nbsp;
+            @if (ViewBag.isUserCreationAllowed == "true")
+            {
+                if (User.IsInRole("LocationManager") && User.IsInRole("BrandManager") == false)
+                {
+                    <h3>Manage Staff</h3>
+                    <div ui-grid="gridUsers" ui-grid-pinning ui-grid-expandable class="myGrid" ng-style="{visibility: gridUsers.data && gridUsers.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+                    <div ng-style="{visibility: gridUsers.data && gridUsers.data.length > 0 ? 'hidden' : 'visible'}"><h3>@Global.Merchant.NoStaffPrompt</h3></div>
+                }
+                <a class="button" ng-click="AddStaff()">@Global.Merchant.AddStaff</a>
+            }
+        </div>
+    </div>
+
+    <div ng-show="divAddBrand">
+        <form name="brandForm">
+            <h3>{{AddUpdateHeading}}</h3>
+            <input type="hidden" disabled="disabled" ng-model="BrandId" />
+            <input type="hidden" disabled="disabled" ng-model="BrandManagerId" />
+
+            <label>
+                @Global.Merchant.BrandName <font style="color:red">*</font>
+                <input name="name" type="text" class="textbox" ng-model="BrandName" maxlength="50" ng-required="true"
+                       placeholder="@Global.Merchant.BrandNamePrompt" required>
+            </label>
+
+            <label>
+                @Global.Merchant.BusinessCategory <font style="color:red">*</font>
+                <select style="border-radius:4px;" id="gender" name="gender" ng-model="selectedcatobject" ng-required="true" ng-change="CategoryChanged(selectedcatobject)"
+                        ng-options="busi.CategoryName for busi in CategoryList track by busi.categoryid">
+                    <option value="" label="@Global.Merchant.BusinessCategory"></option>
+                </select>
+            </label>
+            <label>
+                @Global.Merchant.NoofLicenses: <font style="color:red">*</font>
+                <input name="NoOfLicenses" type="number" class="textbox" placeholder="@Global.Merchant.NoofLicenses" ng-model="NoOfLocations"
+                       ng-required="true">
+            </label>
+
+            <div class="row grey text-center">@Global.Merchant.CreateBrandManager</div>
+
+            <label>
+                @Global.Merchant.EnterName: <font style="color:red">*</font>
+                <input name="BrandManager" type="text" class="textbox" placeholder="@Global.Merchant.EnterName" ng-model="BrandManager"
+                       maxlength="50">
+            </label>
+
+
+            <div class="row" style="padding:0px;">
+                <div class="medium-6 columns">
+                    <b> @Global.Merchant.Logo</b>
+                    <input type="file" name="mechantlogofile" ng-disabled="BrandManagerId != 0" style="margin-top:10px;" value="Upload File" id="mechantlogofile" ng-required="false" accept="image/*" required
+                           onchange="angular.element(this).scope().merchantlogofile_changed(this)" />
+                </div>
+            </div>
+            <label>
+                <img class="img-responsive" ng-src="{{b64encoded}}" width="75" height="75">
+            </label>
+            <label>
+                @Global.Merchant.MobileNo:
+            </label>
+
+            <div class="small-4 column">
+                <select style="border-radius:4px;" ng-disabled="BrandManagerId != 0" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                        ng-selected="country.countryid == countryid"
+                        ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                    <option value="" label="@Global.Merchant.CountryCode"></option>
+                </select>
+            </div>
+            <div class="small-8 column">
+                <input id="inputPhone" ng-disabled="BrandManagerId != 0" type="text" maxlength="10" name="PhoneNumber" ng-model="PhoneNumber"
+                       class="textbox" ng-required="true" ng-pattern="/^[0-9]/"
+                       placeholder="@Global.Merchant.MobileNo" />
+
+            </div>
+
+            <div class="alert-warning" ng-show="brandForm.PhoneNumber.$error.pattern">
+                <p> @Global.Merchant.PhoneValidationMessage</p>
+            </div>
+
+            <label>
+                @Global.Merchant.Email:
+                <input type="email" ng-disabled="BrandManagerId != 0" class="textbox" ng-model="Email" id="inputEmail" name="Email"
+                       maxlength="256" ng-required="true" placeholder="@Global.Merchant.Email" />
+            </label>
+            <div class="alert-warning" ng-show="brandForm.Email.$error.email" style="width:70%">
+                <p> @Global.Merchant.EmailValidationMessage</p>
+            </div>
+
+            <label>
+                @Global.Merchant.PrimeryIDLogin  <br />
+                <input type="radio" ng-disabled="BrandManagerId != 0" name="type" value="cell" ng-checked="true" ng-model="PrimaryIDSelection" ng-init="PrimaryIDSelection = 'cell'" /><label>@Global.Merchant.MobileNo</label>
+
+                <input type="radio" ng-disabled="BrandManagerId != 0" name="type" value="email" ng-model="PrimaryIDSelection" /><label>@Global.Merchant.Email</label>
+            </label>
+
+            <div class="text-center">
+                <a class="button" ng-click="AddNewBrand()">@Global.Merchant.Save</a>
+            </div>
+        </form>
+    </div>
+
+    <div ng-show="divAddLocation">
+        <form name="locationForm">
+            <h3>{{AddUpdateLocationHeading}}</h3>
+            <input type="hidden" disabled="disabled" ng-model="BranchId" />
+            <input type="hidden" disabled="disabled" ng-model="BranchManagerId" />
+
+            <label>
+                @Global.Merchant.SelectBrand <font style="color:red">*</font>
+                <select style="border-radius:4px;" id="brand" name="brand" ng-model="selectedbrandobject" ng-required="true"
+                        ng-change="BrandChanged(selectedbrandobject)"
+                        ng-options="bnd.BrandName for bnd in BrandList track by bnd.BrandId">
+                    <option value="" label="@Global.Merchant.SelectBrand"></option>
+                </select>
+            </label>
+
+            <label>
+                @Global.Merchant.ManageLocations <font style="color:red">*</font>
+                <input name="name" type="text" class="textbox" ng-model="BranchLocation" maxlength="255" ng-required="true"
+                       placeholder="@Global.Merchant.EnterLocationPrompt" required>
+            </label>
+
+
+            <div class="row grey text-center">@Global.Merchant.LocationManagerPrompt</div>
+
+            <label>
+                @Global.Merchant.EnterName: <font style="color:red">*</font>
+                <input name="LocationManager" type="text" class="textbox" placeholder="@Global.Merchant.EnterName" ng-model="LocationManager"
+                       maxlength="50">
+            </label>
+
+
+            <div class="row" style="padding:0px;">
+                <div class="medium-6 columns">
+                    <b> @Global.Merchant.Logo</b>
+                    <input type="file" name="mechantlogofile" ng-disabled="BranchManagerId != 0" style="margin-top:10px;" value="Upload File" id="mechantlogofile" ng-required="false" accept="image/*" required
+                           onchange="angular.element(this).scope().merchantlogofile_changed(this)" />
+                </div>
+            </div>
+            <label>
+                <img class="img-responsive" ng-src="{{b64encoded}}" width="75" height="75">
+            </label>
+
+            <label>
+                @Global.Merchant.MobileNo:
+            </label>
+
+            <div class="small-4 column">
+                <select style="border-radius:4px;" ng-disabled="BranchManagerId != 0" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                        ng-selected="country.countryid == countryid"
+                        ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                    <option value="" label="@Global.Merchant.CountryCode"></option>
+                </select>
+            </div>
+            <div class="small-8 column">
+                <input id="inputPhone" type="text" ng-disabled="BranchManagerId != 0" name="PhoneNumber" ng-model="PhoneNumber"
+                       class="textbox" ng-required="true" ng-pattern="/^[0-9]/" maxlength="10"
+                       placeholder="@Global.Merchant.MobileNo" />
+            </div>
+
+            <div class="alert-warning" ng-show="locationForm.PhoneNumber.$error.pattern">
+                <p> @Global.Merchant.PhoneValidationMessage</p>
+            </div>
+
+
+            <label>
+                @Global.Merchant.Email:
+                <input type="email" class="textbox" ng-disabled="BranchManagerId != 0" ng-model="Email" id="inputEmail" name="Email"
+                       maxlength="256" ng-required="true" placeholder="@Global.Merchant.Email" />
+            </label>
+            <div class="alert-warning" ng-show="locationForm.Email.$error.email" style="width:70%">
+                <p> @Global.Merchant.EmailValidationMessage</p>
+            </div>
+
+            <label>
+                @Global.Merchant.PrimeryIDLogin  <br />
+                <input type="radio" name="location" ng-disabled="BranchManagerId != 0" value="cell" ng-checked="true" ng-model="PrimaryLocIDSelection" ng-init="PrimaryLocIDSelection = 'cell'" /><label>@Global.Merchant.MobileNo</label>
+
+                <input type="radio" name="location" ng-disabled="BranchManagerId != 0" value="email" ng-model="PrimaryLocIDSelection" /><label>@Global.Merchant.Email</label>
+            </label>
+
+            <label>
+                @Global.Merchant.AllowUserCreation:<br />
+                <input type="radio" name="user" value="yes" ng-checked="true" ng-model="AllowUserCreation" ng-init="AllowUserCreation = 'yes'" /><label>@Global.Merchant.Yes</label>
+
+                <input type="radio" name="user" value="no" ng-model="AllowUserCreation" /><label>@Global.Merchant.No</label>
+            </label>
+
+            <label>
+                @Global.Merchant.AllowMenuCreation:<br />
+                <input type="radio" name="menu" value="yes" ng-checked="true" ng-model="AllowMenuCreation" ng-init="AllowMenuCreation = 'yes'" /><label>@Global.Merchant.Yes</label>
+
+                <input type="radio" name="menu" value="no" ng-model="AllowMenuCreation" /><label>@Global.Merchant.No</label>
+            </label>
+
+            <label>
+                @Global.Merchant.AllowCouponCreation:<br />
+                <input type="radio" name="coupon" value="yes" ng-checked="true" ng-model="AllowCouponCreation" ng-init="AllowCouponCreation = 'yes'" /><label>@Global.Merchant.Yes</label>
+
+                <input type="radio" name="coupon" value="no" ng-model="AllowCouponCreation" /><label>@Global.Merchant.No</label>
+            </label>
+
+            <label>
+                @Global.Merchant.AllowCouponEventCreation:<br />
+                <input type="radio" name="eventcoupon" value="yes" ng-checked="true" ng-model="AllowEventCouponCreation" ng-init="AllowEventCouponCreation = 'yes'" /><label>@Global.Merchant.Yes</label>
+
+                <input type="radio" name="eventcoupon" value="no" ng-model="AllowEventCouponCreation" /><label>@Global.Merchant.No</label>
+            </label>
+
+            <div class="row" ng-show="BranchManagerId != 0">
+                <div ui-grid="gridUsers" ui-grid-pinning ui-grid-expandable class="myGrid" ng-style="{visibility: gridUsers.data && gridUsers.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+                <div ng-style="{visibility: gridUsers.data && gridUsers.data.length > 0 ? 'hidden' : 'visible'}"><h3>@Global.Merchant.NoStaffPrompt</h3></div>
+            </div>
+
+
+            <div class="text-center">
+                <a class="button" ng-click="AddNewLocation()">@Global.Merchant.Save</a>
+            </div>
+        </form>
+    </div>
+
+    <div ng-show="divAddStaff">
+        <form name="staffForm">
+            <h3>{{AddUpdateStaffHeading}}</h3>
+            <input type="hidden" disabled="disabled" ng-model="BranchId" />
+            <input type="hidden" disabled="disabled" ng-model="BrandId" />
+            <input type="hidden" disabled="disabled" ng-model="StaffMasterId" />
+
+            <label>
+                @Global.Merchant.SelectBrand <font style="color:red">*</font>
+                <select style="border-radius:4px;" id="brand" name="brand" ng-model="selectedbrandobject" ng-required="true"
+                        ng-change="BrandChanged(selectedbrandobject)"
+                        ng-options="bnd.BrandName for bnd in BrandList track by bnd.BrandId">
+                    <option value="" label="@Global.Merchant.SelectBrand"></option>
+                </select>
+            </label>
+
+            <label>
+                @Global.Merchant.SelectLocation <font style="color:red">*</font>
+                <select style="border-radius:4px;" id="brand" name="brand" ng-model="selectedbranchobject" ng-required="true"
+                        ng-change="BranchChanged(selectedbranchobject)"
+                        ng-options="bch.BranchLocation for bch in BranchList track by bch.BranchId">
+                    <option value="" label="@Global.Merchant.SelectLocation"></option>
+                </select>
+            </label>
+
+            <label>
+                @Global.Merchant.EnterName: <font style="color:red">*</font>
+                <input name="StaffName" type="text" class="textbox" placeholder="@Global.Merchant.EnterName" ng-model="StaffName"
+                       maxlength="50">
+            </label>
+
+
+            <div class="row" style="padding:0px;">
+                <div class="medium-6 columns">
+                    <b> @Global.Merchant.Logo</b>
+                    <input type="file" name="mechantlogofile" style="margin-top:10px;" value="Upload File" id="mechantlogofile" ng-required="false" accept="image/*" required
+                           onchange="angular.element(this).scope().merchantlogofile_changed(this)" />
+                </div>
+            </div>
+            <label>
+                <img class="img-responsive" ng-src="{{b64encoded}}" width="75" height="75">
+            </label>
+            <label>
+                @Global.Merchant.MobileNo:
+            </label>
+
+            <div class="small-4 column">
+                <select style="border-radius:4px;" ng-disabled="StaffMasterId != 0" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                        ng-selected="country.countryid == countryid"
+                        ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                    <option value="" label="@Global.Merchant.CountryCode"></option>
+                </select>
+            </div>
+            <div class="small-8 column">
+                <input id="inputPhone" ng-disabled="StaffMasterId != 0" type="text" name="PhoneNumber" ng-model="PhoneNumber"
+                       class="textbox" ng-required="true" ng-pattern="/^[0-9]/" maxlength="10"
+                       placeholder="@Global.Merchant.MobileNo" />
+            </div>
+
+            <div class="alert-warning" ng-show="staffForm.PhoneNumber.$error.pattern">
+                <p> @Global.Merchant.PhoneValidationMessage</p>
+            </div>
+
+
+            <label>
+                @Global.Merchant.Email:
+                <input type="email" ng-disabled="StaffMasterId != 0" class="textbox" ng-model="Email" id="inputEmail" name="Email"
+                       maxlength="256" ng-required="true" placeholder="@Global.Merchant.Email" />
+            </label>
+            <div class="alert-warning" ng-show="staffForm.Email.$error.email" style="width:70%">
+                <p> @Global.Merchant.EmailValidationMessage</p>
+            </div>
+
+            <label>
+                @Global.Merchant.PrimeryIDLogin  <br />
+                <input type="radio" ng-disabled="StaffMasterId != 0" name="staff" value="cell" ng-checked="true" ng-model="PrimaryStaffIDSelection" ng-init="PrimaryStaffIDSelection = 'cell'" /><label>@Global.Merchant.MobileNo</label>
+
+                <input type="radio" ng-disabled="StaffMasterId != 0" name="staff" value="email" ng-model="PrimaryStaffIDSelection" /><label>@Global.Merchant.Email</label>
+            </label>
+
+            <label>
+                @Global.Merchant.AllowSendCoupon:<br />
+                <input type="radio" name="sendcoupon" value="yes" ng-checked="true" ng-model="AllowSendCoupon" ng-init="AllowSendCoupon = 'yes'" /><label>@Global.Merchant.Yes</label>
+
+                <input type="radio" name="sendcoupon" value="no" ng-model="AllowSendCoupon" /><label>@Global.Merchant.No</label>
+            </label>
+
+
+            <div class="text-center">
+                <a class="button" ng-click="AddNewStaff()">@Global.Merchant.Save</a>
+            </div>
+        </form>
+    </div>
+</div>

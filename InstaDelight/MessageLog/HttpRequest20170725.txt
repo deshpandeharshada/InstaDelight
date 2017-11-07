@@ -1,0 +1,6 @@
+SMS sent successfully to 9011085421. Status: 400 : Invalid Host
+SMS sent successfully to 1234567890. Status: 400 : Invalid Host
+SMS sent successfully to 9876543210. Status: 400 : Invalid Host
+SMS sent successfully to 9011085421. Status: 400 : Invalid Host
+SMS sent successfully to 1234567890. Status: 400 : Invalid Host
+SMS sent successfully to 9876543210. Status: 400 : Invalid Host

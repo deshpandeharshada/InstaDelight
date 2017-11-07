@@ -1,0 +1,51 @@
+﻿@model List<MerchantApp.Models.CustomerSummaryViewModel>
+
+@{
+    ViewBag.Title = "CustomerSummaryReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="rowb" ng-controller="myCntrl" data-ng-init="OpenReportScreen()">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>@Global.Merchant.CustomerSummary</h3>
+        </div>
+        @if (Model.Count > 0)
+        {
+            <div class="col-xs-12">
+                <h3>Customer : @Model[0].UserName</h3>
+            </div>
+
+            foreach (var item in @Model)
+            {
+                <div class="col-xs-12 bs-callout-info">
+                    <div class="row grey text-center">Serial No: @item.serialno</div>
+                    <label> Date: @item.Date.ToString("dd/MM/yyyy hh:mm tt")</label>
+                    <label>Visit Number: @item.VisitNumber</label>
+                    <label ng-show="currency == 'Rs'">Amount spent: <span class="fa fa-inr"></span> @item.AmountSpent</label>
+                    <label ng-show="currency != 'Rs'">Amount spent:{{currency}} @item.AmountSpent</label>
+
+                    <label>Total Points (Cashback): @item.TotalPoints</label>
+                    <label>Points/cashback redeemed: @item.PointsRedeemed</label>
+                    <label>Cashback/Points earned on this visit: @item.PointsEarned</label>
+                    <label>sms/email status: @item.smsemailstatus</label>
+                    <label ng-show="currency == 'Rs'">Total Amount spent till date: <span class="fa fa-inr"></span> @item.TotalAmountSpent</label>
+                    <label ng-show="currency != 'Rs'">Total Amount spent till date: {{currency}} @item.TotalAmountSpent</label>
+                    <label>&nbsp;</label>
+                    <hr />
+                </div>
+            }
+        }
+        else
+        {
+            <div class="col-xs-12">
+                <h3>@Global.Merchant.NoDataAvailable</h3>
+            </div>
+        }
+    </div>
+</div>

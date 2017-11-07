@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = @Global.Merchant.CreateCoupons;
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+@*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>*@
+
+
+@*<script type="text/javascript" src="~/Scripts/underscore.js"></script>*@
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenForm()">
+    <!-- Form Start-->
+    <h4 class="Heading">@Global.Merchant.CreateCoupons</h4>
+    <form name="myForm">
+        <input type="hidden" disabled="disabled" ng-model="couponid" value="@ViewBag.couponid" />
+        
+        <label>
+            @Global.Merchant.CouponTitle <font style="color:red">*</font>
+            <input name="Coupon Title" type="text" class="textbox" placeholder="Enter Coupon Title" ng-model="CouponTitle" ng-required="true" maxlength="255">
+        </label>
+
+        <label>
+            @Global.Merchant.CouponDescription <font style="color:red">*</font>
+            <textarea name="Coupon Description" class="textbox" placeholder="Enter Coupon Description" ng-model="CouponDetails" ng-required="true" maxlength="255"></textarea>
+        </label>
+
+        <label>
+            @Global.Merchant.CopuponBackground: @Global.Merchant.Imagesize (325 x 200) px
+            <input type='file' name="file" style="margin-top:10px;" value="Upload File" title="Upload File" id="file" accept="image/*"
+                   onchange="angular.element(this).scope().coupon_file_changed(this)">
+        </label>
+
+        <div class="small-6 columns">
+            <input type="radio" name="type" value="percentage" ng-model="checkboxSelection" ng-init="checkboxSelection = 'percentage'" /><label for="%off">@Global.Merchant.PercentageOff</label>
+        </div>
+        <div class="small-6 columns">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.PercentageOff"
+                   ng-model="PercentageOff" ng-disabled="isCheckboxSelected('discount')" ng-pattern="/^[0-9]{1,2}$/" id="inputPercentageOff" name="PercentageOff">
+            <div class="alert-warning" ng-show="myForm.PercentageOff.$error.pattern" style="width:70%">
+                <p>@Global.Merchant.PercentOffValidationMessage</p>
+            </div>
+        </div>
+        <div class="small-6 columns">
+            <input type="radio" name="type" value="discount" ng-model="checkboxSelection" /><label for="discount"> @Global.Merchant.Discount ({{currency}})</label>
+        </div>
+        <div class="small-6 columns">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.Discount" ng-model="Discount" ng-disabled="isCheckboxSelected('percentage')" ng-pattern="/^[0-9]{1,6}$/" id="inputDiscount" name="Discount">
+            <div class="alert-warning" ng-show="myForm.Discount.$error.pattern" style="width:70%">
+                <p>@Global.Merchant.DiscountValidationMessage</p>
+            </div>
+        </div>
+
+        <hr />
+        <div class="row grey text-center">@Global.Merchant.Conditions</div>
+        <label>
+            @Global.Merchant.ValidAbove ({{currency}})
+            <input name="Valid Above Bill Amount" type="text" class="textbox" placeholder="@Global.Merchant.ValidAbove ({{currency}})" ng-model="AboveAmount">
+        </label>
+
+        <label>
+            @Global.Merchant.MaxDiscount ({{currency}})
+            <input name="Max Discount" type="text" class="textbox" placeholder="@Global.Merchant.MaxDiscount ({{currency}})" ng-model="MaxDiscount" ng-disabled="isCheckboxSelected('discount')">
+        </label>
+
+        <label>
+            @Global.Merchant.ValidFrom
+            <input name="ValidFrom" class="textbox" placeholder="@Global.Merchant.ValidFrom" type="date" ng-model="ValidFrom" id="ValidFrom">
+        </label>
+
+        <label>
+            @Global.Merchant.ValidTill
+            <input name="ValidTill" type="date" class="textbox" placeholder="@Global.Merchant.ValidTill" ng-model="ValidTill">
+        </label>
+        <div class="row grey text-center">@Global.Merchant.ValidAt (Branches)</div>
+        @*<div ng-dropdown-multiselect="" style="width:100%;border-radius:4px;" options="locationdata" selected-model="locationmodel" checkboxes="true"
+            extra-settings="locationsettings"></div>*@
+        <label>
+            @Global.Merchant.ValidAt
+            <input name="ValidAt" type="text" class="textbox" placeholder="ValidAt" ng-model="ValidAt" maxlength="500">
+        </label>
+        <div class="row grey text-center">@Global.Merchant.TermsAndConditions </div>
+        @*<div class="row grey text-center">@Global.Merchant.OtherSpecifications </div>
+            <div class="small-12 columns">
+                <input type="checkbox" name="type" value="shareondec" ng-model="shareondec" ng-init="shareondec = true" /><label>@Global.Merchant.ShareWithAll</label>
+                <label>@Global.Merchant.ShareWithAllMessage</label>
+            </div>
+            <label>&nbsp;</label>*@
+        <label>
+            @Global.Merchant.MaxCoupons
+            <input name="MaxCoupons" type="text" class="textbox" placeholder="@Global.Merchant.MaxCoupons" ng-model="MaxCoupons" ng-pattern="/^[0-9]{0,7}$/" maxlength="7">
+        </label>
+
+        <div class="alert-warning" ng-show="myForm.MaxCoupons.$error.pattern" style="width:70%">
+            <p> Please enter numbers only</p>
+        </div>
+        <label>&nbsp;</label>
+        <label>
+            @Global.Merchant.Other
+        </label>
+
+        <div class="small-12 columns row">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.TermsAndConditions" ng-model="couponcondition1" id="inputcouponCondition1" name="couponCondition1">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.TermsAndConditions" ng-model="couponcondition2" id="inputcouponCondition2" name="couponCondition2">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.TermsAndConditions" ng-model="couponcondition3" id="inputcouponCondition3" name="couponCondition3">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.TermsAndConditions" ng-model="couponcondition4" id="inputcouponCondition4" name="couponCondition4">
+            <input type="text" class="textbox" placeholder="@Global.Merchant.TermsAndConditions" ng-model="couponcondition5" id="inputcouponCondition5" name="couponCondition5">
+        </div>
+        <hr />
+        <button class="button" ng-click="AddUpdateCoupon('myForm')" style="width:100%; border-radius:4px;">@Global.Merchant.CreateCoupons</button>
+    </form>
+    <!-- Form End-->
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+SMS sent successfully to 424. Status: Request sheduled
+SMS sent successfully to 9011085421. Status: Request sheduled
+SMS sent successfully.

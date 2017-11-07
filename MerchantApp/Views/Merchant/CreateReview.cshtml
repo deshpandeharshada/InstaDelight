@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "CreateReview";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenReviewForm()">
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/underscore.js"></script>
+
+    <div class="row rowb">
+        <h4 class="Heading">@Global.Merchant.CreateReview</h4>
+
+        <form name="myForm">
+            <input type="hidden" disabled="disabled" ng-model="reviewid" />
+            <label>
+                @Global.Merchant.Questions 1 <font style="color:red">*</font>
+                <textarea name="1" class="textbox" placeholder="Enter Review" ng-required="true" ng-model="Question1" maxlength="255"></textarea>
+            </label>
+            <label>
+                @Global.Merchant.Questions 2 <font style="color:red">*</font>
+                <textarea name="2" class="textbox" placeholder="Enter Review" ng-required="true" ng-model="Question2" maxlength="255"></textarea>
+            </label>
+            <label>
+                @Global.Merchant.Questions 3 <font style="color:red">*</font>
+                <textarea name="3" class="textbox" placeholder="Enter Review" ng-required="true" ng-model="Question3" maxlength="255"></textarea>
+            </label>
+            <label>
+                @Global.Merchant.Questions 4 <font style="color:red">*</font>
+                <textarea name="4" class="textbox" placeholder="Enter Review" ng-required="true" ng-model="Question4" maxlength="255"></textarea>
+            </label>
+            <button class="button" ng-click="AddUpdateReview('myForm')" style="width:100%; border-radius:5px;">@Global.Merchant.CreateReview</button>
+        </form>
+    </div>
+
+
+
+
+</div>
+

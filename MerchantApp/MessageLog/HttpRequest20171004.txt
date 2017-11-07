@@ -1,0 +1,33 @@
+Email sent successfully to harshada@vaspsolutions.com
+New password 268729
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker Business App is 908602&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3419024294950475084-372714179353502060
+
+New password 908602
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker Business App is 609367&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3419031619206923569-426107748811955994
+
+New password 609367
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Shakambhari Dry Fruits %26 Foods Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3419061436947834188-498979728803921683
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Shakambhari Dry Fruits %26 Foods Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3419061955952244044-264810151092639877
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3419063470932411724-66105856090690922
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to BBQ and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3419129790686922033-131489428880445108
+
+Email sent successfully to harshada@vaspsolutions.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to BBQ and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3419129802961683761-45851990039824246
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231233&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to BBQ and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231233. Status: success | 911231231233 | 3419129809111467313-270173995666121147
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Vaishnavi Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3419219109137225009-37124065982934011
+
+Email sent successfully to harshada@vaspsolutions.com

@@ -1,0 +1,49 @@
+﻿@{
+    ViewBag.Title = "GetCouponFromCouponCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<h2>Redeem Coupon</h2>
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="setLanguageCode()">
+
+    <div class="row rowb" ng-show="divBilledAmount" ng-init="divBilledAmount = true">
+        <input type="hidden" name="couponcode" id="hdnCouponCode" value="@ViewBag.couponcode" disabled="disabled" />
+        <label>
+            @Global.Merchant.Email / @Global.Merchant.MobileNo: <font style="color:red">*</font>
+            <input name="CustPhoneNumber" id="inputCustPhone" type="text" class="textbox" placeholder="@Global.Merchant.Email / @Global.Merchant.MobileNo:"
+                   ng-required="true" ng-model="CustPhoneNumber" />
+        </label>
+        <div class="alert-warning" ng-show="myForm.PhoneNumber.$error.pattern" style="width:70%">
+            <p> @Global.Merchant.PhoneValidationMessage</p>
+        </div>
+
+        <label>
+            @Global.Merchant.EnterBillAmount
+            <input type="text" class="textbox" placeholder="@Global.Merchant.EnterBillAmount" ng-model="BillAmount"
+                   ng-pattern="/^[0-9]{1,6}$/" id="inputBillAmount" name="BillAmount">
+        </label>
+        <div class="alert-warning" ng-show="myForm.Discount.$error.pattern" style="width:70%">
+            <p> @Global.Merchant.BillValidationMessage</p>
+        </div>
+        <button class="button" style="width:100%; border-radius:5px;" ng-click="GetCouponFromScanner()">Redeem Coupon</button>
+    </div>
+
+    <div class="row rowb text-center" ng-show="divShowMessage">
+        <input type="hidden" name="couponcode" id="hdnCouponCode" value="{{couponcode}}" disabled="disabled" />
+        <label>{{validitymsg}}</label><br>
+
+        <div class="small-6 columns">
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="RedeemNow()">@Global.Merchant.Redeem</button>
+        </div>
+        <div class="small-6 columns">
+            <button class="button small-6 columns" style="width:100%; border-radius:5px;" onclick="location.href='@Url.Action("Index", "Home")'">
+                @Global.Merchant.Cancel
+            </button>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,85 @@
+﻿<!-- ko with: home -->
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" data-ng-init="OpenHomeScreen()">
+    <div class="rowb">
+        <div class="col-md-4">
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="row rowb">
+                    <div class="small-10 small-offset-1 text-center columns">
+                        <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-bank fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("BankConfiguration", "Bank")>@Global.InstaDelight.Bank @Global.InstaDelight.Configuration</a></div>
+                        <label>&nbsp;</label>
+                        <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-building fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("MerchantConfiguration", "Merchant")>@Global.InstaDelight.Merchant @Global.InstaDelight.Configuration</a></div>
+                        <label>&nbsp;</label>
+                    </div>
+                </div>
+            }
+            @if (User.IsInRole("SupportAdmin") || User.IsInRole("InstadelightAdmin") || User.IsInRole("SupportUsers"))
+            {
+                <div class="small-10 small-offset-1 text-center" ng-show="divAdminIndex">
+                    <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-support fa-2x red-icon" aria-hidden="true"></i><br><a ng-click="ShowSupportDiv()">Support</a></div>
+                </div>
+            }
+            @if (User.IsInRole("SupportAdmin") || User.IsInRole("InstadelightAdmin"))
+            {
+                <div class="small-10 small-offset-1 text-center" ng-show="divAdminIndex">
+                    <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user-plus fa-2x red-icon" aria-hidden="true"></i><br><a ng-click="ShowVARDiv()">VAR</a></div>
+                </div>
+            }
+            @if (User.IsInRole("InstadelightAdmin"))
+            {
+                <div class="small-10 small-offset-1 text-center" ng-show="divAdminIndex">
+                    <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-database fa-2x red-icon" aria-hidden="true"></i><br><a ng-click="ShowBusinessSettingsDiv()">Business Settings</a></div>
+                </div>
+            }
+            
+
+            <div ng-show="divSupport">
+                <div class="small-10 small-offset-1 text-center">
+                    <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-support fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("CustomerSupport", "Sarvatra")>@Global.InstaDelight.CustomerSupport </a></div>
+                </div>
+                @if (User.IsInRole("SupportAdmin") || User.IsInRole("InstadelightAdmin"))
+                {
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("CreateUser", "Sarvatra")>Create User</a></div>
+                    </div>
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("IndexUsers", "Sarvatra")>Edit User</a></div>
+                    </div>
+                }
+            </div>
+
+            <div ng-show="divVAR">
+                @if (User.IsInRole("SupportAdmin") || User.IsInRole("InstadelightAdmin"))
+                {
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("CreateVAR", "Sarvatra")>@Global.InstaDelight.CreateVAR</a></div>
+                    </div>
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("Index", "Sarvatra")>@Global.InstaDelight.EditVAR</a></div>
+                    </div>
+                }
+               
+            </div>
+
+            <div ng-show="divSettings">
+                @if (User.IsInRole("InstadelightAdmin"))
+                {
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-bank fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("BankSettings", "Sarvatra")>Bank Settings</a></div>
+                    </div>
+                    <div class="small-10 small-offset-1 text-center">
+                        <div class="small-12 htab" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-gift fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("GiftCardSettings", "Sarvatra")>Gift Card Settings</a></div>
+                    </div>
+                }
+
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- /ko -->

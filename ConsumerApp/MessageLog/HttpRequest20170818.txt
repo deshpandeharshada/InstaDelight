@@ -1,0 +1,6 @@
+Email sent successfully to mutalikharshada@gmail.com
+Email sent successfully to mutalikharshada@gmail.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9998887776&userid=2000170305&password=O1czbaj9f&msg=Harshada has sent a great offer from Fasoos to you. Download the app for Android at goo.gl/r5rxjj, use your mobile no. as login and 123456 as password and enjoy the benefits!&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9998887776. Status: error | 253 | Message specified does not match with any template.
+
+Email sent successfully to harshada@vaspsolutions.com

@@ -1,0 +1,8 @@
+26-09-2017 2:37:33 PM
+Error occurred Merchant/GetLicenses.Non-static method requires a target.
+26-09-2017 2:41:53 PM
+User harshada@shakambhari.com does not exist.
+26-09-2017 4:00:10 PM
+Error occurred Merchant/UpdateMerchant.Object reference not set to an instance of an object.
+26-09-2017 4:00:30 PM
+Error occurred Merchant/UpdateMerchant.Object reference not set to an instance of an object.

@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "UploadConsumers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <input type="hidden" ng-model="CouponId" id="hdnCouponId" name="hdnCouponId" value="@ViewBag.CouponId" />
+        <b> @Global.Merchant.SelectConsumerList  </b>
+        <div class="small-12 small-offset-1 text-center columns">
+            <div class="small-12 htab columns" style="border-radius:5px 5px 0px 0px;height:100px"><i class="fa fa-download fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("DownloadConsumerSample", "Merchant")>@Global.Merchant.DownloadSampleFile </a></div>
+            <div class="small-12 htab columns" style="border-radius:0px 0px 0px 0px;height:100px"><i class="fa fa-upload fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("UploadConsumerFile", "Merchant",new { CouponId = ViewBag.CouponId })>@Global.Merchant.UploadConsumerFile</a></div>
+            <div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;height:100px"><i class="fa fa-search fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("SelectGroups", "Merchant",new { CouponId = ViewBag.CouponId })>@Global.Merchant.SelectSavedGroups</a></div>
+        </div>
+    </div>
+</div>
+

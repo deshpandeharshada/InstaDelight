@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "PendingReviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" data-ng-init="OpenReviewForm()">
+        <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+
+        @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">*@
+        <link href="~/Content/star-rating.css" media="all" rel="stylesheet" type="text/css" />
+        <!--suppress JSUnresolvedLibraryURL -->
+        <script src="~/Scripts/star-rating.js" type="text/javascript"></script>
+
+        <div class="row rowb">
+            <div class="h-heading text-center">
+                @Global.Consumer.Review
+            </div>
+            <div class="row ">
+                <form name="myForm">
+                    <label class="h5">
+                        <b>
+                            @Global.Consumer.SubmitReviewPrompt
+                        </b>
+                    </label>
+                    <input type="hidden" id="hdnMerchantId" name="hdnMerchantId" ng-model="MerchantId" value="@ViewBag.merchantid" />
+                    <input type="hidden" id="hdnConsumerId" name="hdnConsumerId" ng-model="ConsumerId" value="@ViewBag.consumerid" />
+                    <input type="hidden" id="hdnReviewId" name="hdnReviewId" ng-model="reviewid" />
+                    <div>
+                        {{Question1}}
+                        <input id="input-Q1" name="input-Q1" type="text" class="rating" data-min=0 data-max=5 data-step=1 data-size="sm"
+                               required title="" showclear="false" showcaption=false />
+                    </div>
+
+                    <div>
+                        {{Question2}}
+                        <input id="input-Q2" name="input-Q2" type="text" class="rating" data-min=0 data-max=5 data-step=1 data-size="sm"
+                               required title="" showclear="false" showcaption=false />
+                    </div>
+
+                    <div>
+                        {{Question3}}
+                        <input id="input-Q3" name="input-Q3" type="text" class="rating" data-min=0 data-max=5 data-step=1 data-size="sm"
+                               required title="" showclear="false" showcaption=false />
+                    </div>
+
+                    <div>
+                        {{Question4}}
+                        <input id="input-Q4" name="input-Q4" type="text" class="rating" data-min=0 data-max=5 data-step=1 data-size="sm"
+                               required title="" showclear="false" showcaption=false />
+                    </div>
+                    <div>
+                        <input type="checkbox" name="type" ng-model="checkboxsenddec" ng-init="checkboxsenddec = 0" />
+                        {{DefaultQuestion}}
+                    </div>
+                    <label>&nbsp;</label>
+                    <div>
+                        <h5>
+                            Please Enter Your Comment
+                        </h5>
+
+                        <textarea rows="4" cols="50" name="comment" type="text" class="textbox" placeholder="Enter Comment" ng-model="Comment"></textarea>
+                    </div>
+                    <div>
+                        <button class="button" style="width:100%; border-radius:5px;font-size:15px" ng-click="SubmitReview('myForm')">@Global.Consumer.SubmitReview</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+}
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+27-09-2017 9:30:27 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 10:22:15 AM
+User prasad@kfactory.com does not exist.
+27-09-2017 10:24:05 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 10:28:02 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 10:45:37 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 10:46:05 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 10:58:01 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:07:31 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:10:57 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:17:24 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:53:16 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:53:35 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 11:59:16 AM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 12:18:34 PM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 12:19:22 PM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 12:22:24 PM
+Error occurred Merchant/GetCategories.Object reference not set to an instance of an object.
+27-09-2017 12:31:14 PM
+Error occurred while creating staff member.User name bhushan@k-factory.com is invalid, can only contain letters or digits.
+27-09-2017 12:31:28 PM
+Error occurred Merchant/GetMerchantById.Input string was not in a correct format.

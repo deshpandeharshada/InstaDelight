@@ -1,0 +1,140 @@
+﻿@{
+    ViewBag.Title = "MerchantGiftCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var MerchantId = ViewData["MerchantId"];
+}
+
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@if (User.IsInRole("Consumer"))
+{
+
+    <div ng-controller="myCntrl" data-ng-init="OpenMerchantGiftCardForm()" ng-show="divBuyGiftCards == true">
+        <div class="row rowb">
+            <h4>Buy Gift Cards</h4>
+            <input type="hidden" id="hdnMerchantId" name="hdnMerchantId" ng-model="merchantid" value="@MerchantId" />
+            <input type="hidden" disabled="disabled" name="hdngiftcardid" ng-model="giftcardid" ng-required="true" />
+            <input type="hidden" disabled="disabled" id="hdngiftcarddiscount" name="hdngiftcarddiscount" ng-model="giftcarddiscount" ng-required="true" value="@ViewBag.GiftCardDiscount" />
+            <input type="hidden" disabled="disabled" id="hdngiftcardtax" name="hdngiftcardtax" ng-model="giftcardtax" ng-required="true" value="@ViewBag.Taxes" />
+
+            <div class="row" style="padding:0px;">
+                <div class="small-12 columns">
+                    <div class="small-4 columns">
+                        Select Gift Card Value
+                    </div>
+                    <div class="small-1 columns"><span class="fa fa-inr"></span></div>
+                    <div class="small-7 columns">
+                        <select style="border-radius:4px;" ng-model="selecteddenominationobject" id="ddlDenomination"
+                                ng-change="CalculateTaxes(selecteddenominationobject)"
+                                ng-init="selecteddenominationobject = ''" name="ddlDenomination" ng-required="true">
+                            <option value="" label="Denominations" selected="selected"></option>
+                            <option value="{{Denomination1}}" label="{{Denomination1}}"></option>
+                            <option value="{{Denomination2}}" label="{{Denomination2}}"></option>
+                            <option value="{{Denomination3}}" label="{{Denomination3}}"></option>
+                            <option value="{{Denomination4}}" label="{{Denomination4}}"></option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="small-12 columns" ng-show="ShowCurrency == true && currency != 'Rs'">
+                    Special Price for Privilege customers: &nbsp;
+                    {{currency}} {{DiscountedValue| number : 2}}
+
+                </div>
+
+                <div class="small-12 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                    Special Price for Privilege customers: &nbsp; <i class="fa fa-inr"></i> {{DiscountedValue| number : 2}}
+                </div>
+
+
+                <div class="small-12 columns">
+
+                </div>
+                <div class="small-12 columns">
+                    <div class="small-4 columns">
+                        Quantity: &nbsp;
+                    </div>
+                    <div class="small-1 columns">&nbsp;</div>
+                    <div class="small-7 columns">
+                        <input id="inputQty" ng-change="CalculateTaxes(selecteddenominationobject)" type="number" name="Quantity" ng-model="Quantity"
+                               class="textbox" ng-required="true" maxlength="3" placeholder="Quantity" />
+                    </div>
+                </div>
+
+                <div class="small-12 columns">
+                    <div class="small-4 columns">
+                        Amount: &nbsp;
+                    </div>
+                    <div class="small-8 columns" ng-show="ShowCurrency == true && currency != 'Rs'">
+                        {{currency}} {{Amount| number : 2}}
+                    </div>
+
+                    <div class="small-1 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        <span class="fa fa-inr"></span>
+                    </div>
+                    <div class="small-7 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        {{Amount| number : 2}}
+                    </div>
+                </div>
+
+                <div class="small-12 columns">
+                    <div class="small-4 columns">
+                        Taxes: &nbsp;
+                    </div>
+                    <div class="small-8 columns" ng-show="ShowCurrency == true && currency != 'Rs'">
+                        {{currency}} {{Taxes| number : 2}}
+                    </div>
+
+                    <div class="small-1 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        <span class="fa fa-inr"></span>
+                    </div>
+                    <div class="small-7 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        {{Taxes| number : 2}}
+                    </div>
+                </div>
+
+                <div class="small-12 columns">
+                    <div class="small-4 columns">
+                        Total Amount: &nbsp;
+                    </div>
+                    <div class="small-8 columns" ng-show="ShowCurrency == true && currency != 'Rs'">
+                        {{currency}} {{GrandTotal| number : 2}}
+                    </div>
+
+                    <div class="small-1 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        <span class="fa fa-inr"></span>
+                    </div>
+                    <div class="small-7 columns" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        {{GrandTotal| number : 2}}
+                    </div>
+                </div>
+            </div>
+
+           <label>&nbsp;</label>
+
+
+               @* <button class="button" style="width:100%; border-radius:5px;" ng-click="PayGiftCard('myForm')">Buy</button>*@
+
+            @using (Html.BeginForm("PayForGiftCards", "Consumer", FormMethod.Post, new { enctype = "multipart/form-data", id = "PayForGiftCard" }))
+            {
+                @Html.AntiForgeryToken();
+                @Html.ValidationSummary(true);
+                <input type="Submit" class="button" style="width:100%; border-radius:5px;" value="Buy" />
+                <input type="hidden" id="merchantid" name="merchantid" ng-model="merchantid" value="@MerchantId" />
+                <input type="hidden" id="giftCardId" name="giftCardId" ng-model="giftcardid" value="{{giftcardid}}" />
+                <input type="hidden" id="Denomination" name="Denomination" ng-model="selecteddenominationobject" value="{{selecteddenominationobject}}" />
+                <input type="hidden" id="qty" name="qty" ng-model="Quantity" value="{{Quantity}}" />
+                <input type="hidden" id="grandtotal" name="grandtotal" ng-model="grandtotal" value="{{GrandTotal}}" />
+
+            }
+
+        </div>
+    </div>
+
+    <div class="row rowb" ng-show="divBuyGiftCards == false">
+        <h3>@Global.Consumer.NoGiftCardsPrompt</h3>
+    </div>
+}

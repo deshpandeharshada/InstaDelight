@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Upload";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <h3>@Global.Merchant.UploadMenu</h3>
+        <div class="medium-6 columns">
+            <b> @Global.Merchant.SelectCSVFile </b>
+
+            @using (Html.BeginForm("Upload", "Merchant", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <label>
+                    <input type="file" name="file" />
+                </label>
+                <input type="submit" value=@Global.Merchant.UploadMenu />
+            }
+        </div>
+        <div>
+            <label>
+                <b> @ViewBag.result</b>
+            </label>
+        </div>
+    </div>
+</div>

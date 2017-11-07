@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddBranch" xml:space="preserve">
+    <value>Add Branch</value>
+  </data>
+  <data name="AddBrand" xml:space="preserve">
+    <value>Add Brand</value>
+  </data>
+  <data name="AddBrandException" xml:space="preserve">
+    <value>Error occurred while adding new brand with brand manager</value>
+  </data>
+  <data name="AddCondition" xml:space="preserve">
+    <value>Add Condition</value>
+  </data>
+  <data name="AddCoupon" xml:space="preserve">
+    <value>Add Coupon</value>
+  </data>
+  <data name="AddEventCouponMessage" xml:space="preserve">
+    <value>Event Coupons Set Successfully</value>
+  </data>
+  <data name="AddLocation" xml:space="preserve">
+    <value>Add Location</value>
+  </data>
+  <data name="AddLocationException" xml:space="preserve">
+    <value>Error occurred while adding new location with location manager</value>
+  </data>
+  <data name="AddNewCouponException" xml:space="preserve">
+    <value>Error occurred while adding new coupon</value>
+  </data>
+  <data name="AddNewReviewException" xml:space="preserve">
+    <value>Error occurred while adding new review</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="AddStaff" xml:space="preserve">
+    <value>Add Staff</value>
+  </data>
+  <data name="AllowCouponCreation" xml:space="preserve">
+    <value>Allow Coupon Creation</value>
+  </data>
+  <data name="AllowCouponEventCreation" xml:space="preserve">
+    <value>Allow to Set Event Coupon</value>
+  </data>
+  <data name="AllowMenuCreation" xml:space="preserve">
+    <value>Allow Menu Creation</value>
+  </data>
+  <data name="AllowSendCoupon" xml:space="preserve">
+    <value>Allow Send Coupon</value>
+  </data>
+  <data name="AllowUserCreation" xml:space="preserve">
+    <value>Allow User Creation</value>
+  </data>
+  <data name="AlreadyRedeemedErrorMessage" xml:space="preserve">
+    <value>Coupon xyz is already redeemed by pqr on dt</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="AnniversaryCopupon" xml:space="preserve">
+    <value>Anniversary coupon</value>
+  </data>
+  <data name="ApplicableIn" xml:space="preserve">
+    <value>Applicable In</value>
+  </data>
+  <data name="AsOnDEC" xml:space="preserve">
+    <value>Name as on Digital Card</value>
+  </data>
+  <data name="AvailableLicenses" xml:space="preserve">
+    <value>Available Licenses</value>
+  </data>
+  <data name="AvailablePoints" xml:space="preserve">
+    <value>Available Points</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Benefits" xml:space="preserve">
+    <value>Benefits</value>
+  </data>
+  <data name="BenefitsPrompt" xml:space="preserve">
+    <value>Please mention the benefits of the Privilege/Reward/Membership program</value>
+  </data>
+  <data name="BillValidationMessage" xml:space="preserve">
+    <value>Enter Number for Bill Amount</value>
+  </data>
+  <data name="BirthdayCoupon" xml:space="preserve">
+    <value>Birthday coupon</value>
+  </data>
+  <data name="Black" xml:space="preserve">
+    <value>Black</value>
+  </data>
+  <data name="BranchManager" xml:space="preserve">
+    <value>Branch Manager Name</value>
+  </data>
+  <data name="BranchName" xml:space="preserve">
+    <value>Branch Name</value>
+  </data>
+  <data name="branchUpdated" xml:space="preserve">
+    <value>Location Updated Successfully</value>
+  </data>
+  <data name="BrandList" xml:space="preserve">
+    <value>Brand List</value>
+  </data>
+  <data name="BrandManagerException" xml:space="preserve">
+    <value>Error occurred while creating brand manager.</value>
+  </data>
+  <data name="BrandName" xml:space="preserve">
+    <value>Brand Name</value>
+  </data>
+  <data name="BrandNamePrompt" xml:space="preserve">
+    <value>Enter New Brand Name</value>
+  </data>
+  <data name="brandUpdated" xml:space="preserve">
+    <value>Brand Updated Successfully</value>
+  </data>
+  <data name="BuildingName" xml:space="preserve">
+    <value>Unit No./Building Name</value>
+  </data>
+  <data name="BulkShareDEC" xml:space="preserve">
+    <value>Share DEC using a list</value>
+  </data>
+  <data name="BulkUpload" xml:space="preserve">
+    <value>Send coupon to a list of consumers</value>
+  </data>
+  <data name="BusinessCategory" xml:space="preserve">
+    <value>Select Business Category</value>
+  </data>
+  <data name="Button" xml:space="preserve">
+    <value>Button</value>
+  </data>
+  <data name="BuyAndShareGiftCards" xml:space="preserve">
+    <value>Buy and Share gift cards</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Cashback" xml:space="preserve">
+    <value>Cashback</value>
+  </data>
+  <data name="CashbackPoints" xml:space="preserve">
+    <value>Cashback Points</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CategoryListErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving category list</value>
+  </data>
+  <data name="ChangeCountry" xml:space="preserve">
+    <value>Change Country</value>
+  </data>
+  <data name="CheckCustomerCoupons" xml:space="preserve">
+    <value>Check Customer's visits, Points and Coupons</value>
+  </data>
+  <data name="CheckPointsCoupons" xml:space="preserve">
+    <value>Check Points And Coupons</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="ClearLogo" xml:space="preserve">
+    <value>Clear Logo</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="Confirmpassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="Consumer" xml:space="preserve">
+    <value>Consumer</value>
+  </data>
+  <data name="ConsumerAddedSuccessfully" xml:space="preserve">
+    <value>Consumer Added Successfully.</value>
+  </data>
+  <data name="ConsumerCell" xml:space="preserve">
+    <value>Consumer Cell</value>
+  </data>
+  <data name="ConsumerDoesNotExistErrorMessage" xml:space="preserve">
+    <value>Consumer does not exist.</value>
+  </data>
+  <data name="ConsumerMobileNo" xml:space="preserve">
+    <value>Consumer Mobile No.</value>
+  </data>
+  <data name="ConsumerName" xml:space="preserve">
+    <value>Consumer Name</value>
+  </data>
+  <data name="ConsumerNotRegistered" xml:space="preserve">
+    <value>Not able to register Consumer</value>
+  </data>
+  <data name="ConsumetCount" xml:space="preserve">
+    <value>Number of Consumers</value>
+  </data>
+  <data name="CopuponBackground" xml:space="preserve">
+    <value>Coupon background image</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>Country Code</value>
+  </data>
+  <data name="CountryCodeErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving country code</value>
+  </data>
+  <data name="CountryUpdated" xml:space="preserve">
+    <value>Language Preferences Updated</value>
+  </data>
+  <data name="CouponDescription" xml:space="preserve">
+    <value>Coupon Description</value>
+  </data>
+  <data name="CouponDetails" xml:space="preserve">
+    <value>Coupon Details</value>
+  </data>
+  <data name="CouponExpiredErrorMessage" xml:space="preserve">
+    <value>Coupon is expired. You cannot redeem coupon now.</value>
+  </data>
+  <data name="CouponIsValid" xml:space="preserve">
+    <value>Coupon is Valid.</value>
+  </data>
+  <data name="CouponList" xml:space="preserve">
+    <value>Coupon list</value>
+  </data>
+  <data name="CouponRedeemedSuccessfully" xml:space="preserve">
+    <value>Coupon Redeemed Successfully.</value>
+  </data>
+  <data name="Coupons" xml:space="preserve">
+    <value>Coupons</value>
+  </data>
+  <data name="CouponSharedSuccessfully" xml:space="preserve">
+    <value>Coupon shared with consumer Successfully.</value>
+  </data>
+  <data name="CouponSharedToCSVMessage" xml:space="preserve">
+    <value>Coupon shared successfully to list of consumers.</value>
+  </data>
+  <data name="CouponSharedToGroupMessage" xml:space="preserve">
+    <value>Coupon shared successfully to group of consumers.</value>
+  </data>
+  <data name="CouponTitle" xml:space="preserve">
+    <value>Coupon Title</value>
+  </data>
+  <data name="couponUpdated" xml:space="preserve">
+    <value>coupon Updated</value>
+  </data>
+  <data name="CreateBrand" xml:space="preserve">
+    <value>Create a New Brand</value>
+  </data>
+  <data name="CreateBrandManager" xml:space="preserve">
+    <value>Create Brand Manager</value>
+  </data>
+  <data name="CreateCoupons" xml:space="preserve">
+    <value>Create Coupon</value>
+  </data>
+  <data name="CreateReview" xml:space="preserve">
+    <value>Create Review</value>
+  </data>
+  <data name="CSVErrorMessage" xml:space="preserve">
+    <value>CSV file is not in correct format. Please download sample file and try again.</value>
+  </data>
+  <data name="CurrencyErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving currency</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="CustomerList" xml:space="preserve">
+    <value>Customer List</value>
+  </data>
+  <data name="CustomerProfile" xml:space="preserve">
+    <value>Customer Profile</value>
+  </data>
+  <data name="CustomerSummary" xml:space="preserve">
+    <value>Customer Summary</value>
+  </data>
+  <data name="CustomerSupport" xml:space="preserve">
+    <value>Customer Support numbers:</value>
+  </data>
+  <data name="DateOfAnniversary" xml:space="preserve">
+    <value>Date of Anniversary</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="DEC" xml:space="preserve">
+    <value>DEC</value>
+  </data>
+  <data name="DECBackground" xml:space="preserve">
+    <value>Digital Card background image</value>
+  </data>
+  <data name="DECShare" xml:space="preserve">
+    <value>Digital Card share</value>
+  </data>
+  <data name="DECSharedToCSVMessage" xml:space="preserve">
+    <value>DEC shared successfully to list of consumers.</value>
+  </data>
+  <data name="DECSharedToGroupMessage" xml:space="preserve">
+    <value>DEC shared successfully to group of consumers.</value>
+  </data>
+  <data name="Denomination" xml:space="preserve">
+    <value>Denomination</value>
+  </data>
+  <data name="DigitalMarketingPlatform" xml:space="preserve">
+    <value>Digital Marketing Platform</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="DiscountValidationMessage" xml:space="preserve">
+    <value>Enter Number for Discount</value>
+  </data>
+  <data name="DownloadCSVMessage" xml:space="preserve">
+    <value>Consumer csv template downloaded successfully.</value>
+  </data>
+  <data name="DownloadSampleFile" xml:space="preserve">
+    <value>Download Sample File</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="EmailSent" xml:space="preserve">
+    <value>Email Sent</value>
+  </data>
+  <data name="EmailValidationMessage" xml:space="preserve">
+    <value>Write a Email Id</value>
+  </data>
+  <data name="EnterBillAmount" xml:space="preserve">
+    <value>Enter Bill Amount</value>
+  </data>
+  <data name="EnterBrandDetails" xml:space="preserve">
+    <value>Please enter brand and brand manager details</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>Enter Code</value>
+  </data>
+  <data name="EnterLocationDetails" xml:space="preserve">
+    <value>Please enter location and location manager details</value>
+  </data>
+  <data name="EnterLocationPrompt" xml:space="preserve">
+    <value>Enter New Location, City Name</value>
+  </data>
+  <data name="EnterName" xml:space="preserve">
+    <value>Enter Name</value>
+  </data>
+  <data name="EnterStaffDetails" xml:space="preserve">
+    <value>Please enter staff details</value>
+  </data>
+  <data name="FinalRedeemException" xml:space="preserve">
+    <value>Error occurred while final redeem of coupon</value>
+  </data>
+  <data name="FinalRedeemGiftcardException" xml:space="preserve">
+    <value>Error occurred while final redeem of gift card</value>
+  </data>
+  <data name="FinalRedeemPointsException" xml:space="preserve">
+    <value>Error occurred while final redeem of points</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="FixedCashback" xml:space="preserve">
+    <value>Fixed cashback per transaction</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>Forgot Password?</value>
+  </data>
+  <data name="ForgotPasswordCaption" xml:space="preserve">
+    <value>Enter your registered phone number / Email.</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value>Forgot Password Confirmation</value>
+  </data>
+  <data name="ForgotPasswordMessage" xml:space="preserve">
+    <value>Please check your phone SMS to reset your password</value>
+  </data>
+  <data name="ForgotPasswordMessage1" xml:space="preserve">
+    <value>Please check your mail box to reset your password</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="GetAllCouponsException" xml:space="preserve">
+    <value>Error occurred while retrieving coupon list</value>
+  </data>
+  <data name="GetAllGroupsException" xml:space="preserve">
+    <value>Error occurred while retrieving group details</value>
+  </data>
+  <data name="GetBranchByIdException" xml:space="preserve">
+    <value>Error occurred while getting branch details</value>
+  </data>
+  <data name="GetBrandByIdException" xml:space="preserve">
+    <value>Error occurred while retrieving brand details by brand id.</value>
+  </data>
+  <data name="GetCityException" xml:space="preserve">
+    <value>Error occurred while retrieving city list from state</value>
+  </data>
+  <data name="GetCountryListException" xml:space="preserve">
+    <value>Error occurred while retrieving country list</value>
+  </data>
+  <data name="GetCouponByIdException" xml:space="preserve">
+    <value>Error occurred while retrieving coupon by id</value>
+  </data>
+  <data name="GetEventConditionsExcepton" xml:space="preserve">
+    <value>Error occurred while retrieving event conditions for coupon</value>
+  </data>
+  <data name="GetEventCouponListException" xml:space="preserve">
+    <value>Error occurred while retrieving event coupon list</value>
+  </data>
+  <data name="GetGiftCardsException" xml:space="preserve">
+    <value>Error occurred while retrieving gift card</value>
+  </data>
+  <data name="GetGiftConditionsException" xml:space="preserve">
+    <value>Error occurred while retrieving gift conditions</value>
+  </data>
+  <data name="GetLanguageException" xml:space="preserve">
+    <value>Error occurred while retrieving language</value>
+  </data>
+  <data name="GetLocationForCouponException" xml:space="preserve">
+    <value>Error occurred while retrieving coupons for locations</value>
+  </data>
+  <data name="GetLocationsException" xml:space="preserve">
+    <value>Error occurred while retrieving location list</value>
+  </data>
+  <data name="GetReviewException" xml:space="preserve">
+    <value>Error occurred while retrieving review</value>
+  </data>
+  <data name="GetStateException" xml:space="preserve">
+    <value>Error occurred while retrieving states list from country</value>
+  </data>
+  <data name="GiftcardBackground" xml:space="preserve">
+    <value>Giftcard background image</value>
+  </data>
+  <data name="GiftCardConditionException" xml:space="preserve">
+    <value>Error occurred while saving gift cards conditions</value>
+  </data>
+  <data name="GiftCardEmailPrompt" xml:space="preserve">
+    <value>Please note, the gift card purchase will be activated ONLY after you submit your license to issue gift cards to below mentioned email</value>
+  </data>
+  <data name="GiftCardPrompt1" xml:space="preserve">
+    <value>Your customers can buy and share gift cards in upto 4 denomination.</value>
+  </data>
+  <data name="GiftCardPrompt2" xml:space="preserve">
+    <value>Please enter the denomination</value>
+  </data>
+  <data name="GiftcardRedeemedSuccessfully" xml:space="preserve">
+    <value>Giftcard Redeemed Successfully</value>
+  </data>
+  <data name="GiftcardRedeemError" xml:space="preserve">
+    <value>Giftcard does not exists</value>
+  </data>
+  <data name="GiftcardRedeemError1" xml:space="preserve">
+    <value>Invalid giftcard details</value>
+  </data>
+  <data name="GiftCards" xml:space="preserve">
+    <value>Gift Cards</value>
+  </data>
+  <data name="GroupName" xml:space="preserve">
+    <value>Group Name</value>
+  </data>
+  <data name="GroupNamePrompt" xml:space="preserve">
+    <value>Save this group as</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="ImageGalleryHeading" xml:space="preserve">
+    <value>Select image from gallery</value>
+  </data>
+  <data name="Imagesize" xml:space="preserve">
+    <value>Image size</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="InvalidBranchDetails" xml:space="preserve">
+    <value>Location does not exist</value>
+  </data>
+  <data name="InvalidBrandDetails" xml:space="preserve">
+    <value>Brand does not exist</value>
+  </data>
+  <data name="InvalidConsumerCouponErrorMessage" xml:space="preserve">
+    <value>This coupon is not shared with consumer xyz by merchant pqr</value>
+  </data>
+  <data name="InvalidConsumerDetails" xml:space="preserve">
+    <value>Invalid Consumer Details</value>
+  </data>
+  <data name="InvalidCouponDetails" xml:space="preserve">
+    <value>Invalid Coupon Details</value>
+  </data>
+  <data name="InvalidLoginDetails" xml:space="preserve">
+    <value>Invalid Login Details</value>
+  </data>
+  <data name="InvalidMerchantCouponErrorMessage" xml:space="preserve">
+    <value>Coupon is not valid for merchant xyz</value>
+  </data>
+  <data name="InvalidMerchantDetails" xml:space="preserve">
+    <value>Invalid Merchant Details</value>
+  </data>
+  <data name="InvalidOTP" xml:space="preserve">
+    <value>OTP is invalid.</value>
+  </data>
+  <data name="InvalidpointsDetails" xml:space="preserve">
+    <value>Invalid points Details</value>
+  </data>
+  <data name="IsAdmin" xml:space="preserve">
+    <value>Is Admin?</value>
+  </data>
+  <data name="JoiningBonus" xml:space="preserve">
+    <value>Joining Bonus Points</value>
+  </data>
+  <data name="JoiningBonus1" xml:space="preserve">
+    <value>Joining Bonus Cashback Points</value>
+  </data>
+  <data name="KeyBusinessMetrics" xml:space="preserve">
+    <value>Key Business Metrics</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="LocalFavourites" xml:space="preserve">
+    <value>Local Favourites</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Locality</value>
+  </data>
+  <data name="LocationManagerException" xml:space="preserve">
+    <value>Error occurred while creating location manager.</value>
+  </data>
+  <data name="LocationManagerPrompt" xml:space="preserve">
+    <value>Create Location Manager</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LoginLink" xml:space="preserve">
+    <value>click here to log in</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="ManageDECs" xml:space="preserve">
+    <value>Manage DECs</value>
+  </data>
+  <data name="ManageGroups" xml:space="preserve">
+    <value>Manage Groups</value>
+  </data>
+  <data name="ManageLicenses" xml:space="preserve">
+    <value>Manage Licenses</value>
+  </data>
+  <data name="ManageLocations" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="ManageLocationsUsers" xml:space="preserve">
+    <value>Manage Brands, Locations and Users</value>
+  </data>
+  <data name="MaxAmountErrorMessage" xml:space="preserve">
+    <value>Billed amount must be greater than nnn to redeem the coupon. You cannot redeem coupon now.</value>
+  </data>
+  <data name="MaxCouponMessage" xml:space="preserve">
+    <value>Max number of coupons already shared.</value>
+  </data>
+  <data name="MaxCoupons" xml:space="preserve">
+    <value>Limit no. of coupons</value>
+  </data>
+  <data name="MaxDiscount" xml:space="preserve">
+    <value>Max Discount</value>
+  </data>
+  <data name="MerchantBillInfo" xml:space="preserve">
+    <value>Please enter consumer bill information</value>
+  </data>
+  <data name="MerchantErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving merchant</value>
+  </data>
+  <data name="MerchantLicenseException" xml:space="preserve">
+    <value>Error occurred while retrieving merchant license information</value>
+  </data>
+  <data name="MerchantLogin" xml:space="preserve">
+    <value>Business Login</value>
+  </data>
+  <data name="MerchantRedeemErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving merchant's redeems</value>
+  </data>
+  <data name="MerchantRewardErrorMessage" xml:space="preserve">
+    <value>Error occurred while retrieving merchant's reward details</value>
+  </data>
+  <data name="MerchantShareCouponErrorMessage" xml:space="preserve">
+    <value>This coupon is not shared by merchant xyz</value>
+  </data>
+  <data name="Message" xml:space="preserve">
+    <value>Message as on Digital Card</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>Mobile No</value>
+  </data>
+  <data name="MobileNoPrompt" xml:space="preserve">
+    <value>Enter Mobile Number</value>
+  </data>
+  <data name="MyCards" xml:space="preserve">
+    <value>My cards</value>
+  </data>
+  <data name="MyDigitalCards" xml:space="preserve">
+    <value>My Digital Cards</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>My Business Profile</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="NewBrandSuccess" xml:space="preserve">
+    <value>New Brand Added Successfully.</value>
+  </data>
+  <data name="NewLocationSuccess" xml:space="preserve">
+    <value>New Location Added Successfully.</value>
+  </data>
+  <data name="NewStaffSuccess" xml:space="preserve">
+    <value>Staff member added successfully</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NoBrandsPrompt" xml:space="preserve">
+    <value>No brands are added for this merchant</value>
+  </data>
+  <data name="NoCustomers" xml:space="preserve">
+    <value>No Customers Added</value>
+  </data>
+  <data name="NoDataAvailable" xml:space="preserve">
+    <value>No Data Available</value>
+  </data>
+  <data name="NoGroupErrorMessage" xml:space="preserve">
+    <value>No groups with selected names</value>
+  </data>
+  <data name="NoofLicenses" xml:space="preserve">
+    <value>Number Of Licenses</value>
+  </data>
+  <data name="NoOfVisitsException" xml:space="preserve">
+    <value>Error occurred while retrieving no of visits</value>
+  </data>
+  <data name="NoPointsAvailableErrorMessage" xml:space="preserve">
+    <value>Consumer xyz have only nnn points available for redeem</value>
+  </data>
+  <data name="NoPointsAvailableErrorMessage1" xml:space="preserve">
+    <value>Please enter less number of points and try again.</value>
+  </data>
+  <data name="NoPointsDefinedErrorMessage" xml:space="preserve">
+    <value>No redeem options are defined by merchant xyz.</value>
+  </data>
+  <data name="NoRedeemFormulaErrorMessage" xml:space="preserve">
+    <value>No redeem formula is defined by merchant</value>
+  </data>
+  <data name="NoStaffPrompt" xml:space="preserve">
+    <value>No staff added for this location</value>
+  </data>
+  <data name="NotRegisteredErrorMessage" xml:space="preserve">
+    <value>is not registered with merchant</value>
+  </data>
+  <data name="NumberOfVisits" xml:space="preserve">
+    <value>Number Of Visits</value>
+  </data>
+  <data name="OffersNearMe" xml:space="preserve">
+    <value>Offers near me</value>
+  </data>
+  <data name="OptionalMobileNumber" xml:space="preserve">
+    <value>Mobile Number (optional)</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other Terms &amp; Conditions</value>
+  </data>
+  <data name="OtherSpecifications" xml:space="preserve">
+    <value>Other Specifications</value>
+  </data>
+  <data name="OTPVerified" xml:space="preserve">
+    <value>OTP Verified</value>
+  </data>
+  <data name="OwnerEmail" xml:space="preserve">
+    <value>Owner's Email</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="PendingReviews" xml:space="preserve">
+    <value>Pending Reviews</value>
+  </data>
+  <data name="PercentageOff" xml:space="preserve">
+    <value>% Off</value>
+  </data>
+  <data name="PercentOffValidationMessage" xml:space="preserve">
+    <value>Enter Number for % Off</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="PhoneValidationMessage" xml:space="preserve">
+    <value>write a phone number</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>Picture</value>
+  </data>
+  <data name="PinCode" xml:space="preserve">
+    <value>Pin Code</value>
+  </data>
+  <data name="PinCodeValidationMessage" xml:space="preserve">
+    <value>write a pin code</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>Please</value>
+  </data>
+  <data name="PleaseselectgroupErrorMessage" xml:space="preserve">
+    <value>Please select group</value>
+  </data>
+  <data name="Points" xml:space="preserve">
+    <value>Points</value>
+  </data>
+  <data name="PointsCashbackExpiry" xml:space="preserve">
+    <value>Points/Cashback Expiry</value>
+  </data>
+  <data name="PointsExpiryPrompt" xml:space="preserve">
+    <value>Please select Expiry period for Points/Cashback</value>
+  </data>
+  <data name="PointsRedeem" xml:space="preserve">
+    <value>Points to be redeemed today</value>
+  </data>
+  <data name="PointsRedeemedSuccessfully" xml:space="preserve">
+    <value>Points redeemed successfully.</value>
+  </data>
+  <data name="PrimeryIDLogin" xml:space="preserve">
+    <value>Select Primary ID for Login</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profile</value>
+  </data>
+  <data name="ProfileUpdated" xml:space="preserve">
+    <value>Profile Updated</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>QR Code</value>
+  </data>
+  <data name="Questions" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Redeem" xml:space="preserve">
+    <value>Redeem</value>
+  </data>
+  <data name="RedeemCode" xml:space="preserve">
+    <value>redeem code</value>
+  </data>
+  <data name="RedeemCouponException" xml:space="preserve">
+    <value>Error occurred while redeem coupon</value>
+  </data>
+  <data name="RedeemFormula" xml:space="preserve">
+    <value>Redeem Formula</value>
+  </data>
+  <data name="RedeemOptions" xml:space="preserve">
+    <value>Redeem options for points</value>
+  </data>
+  <data name="RedeemOptions1" xml:space="preserve">
+    <value>Redeem Options</value>
+  </data>
+  <data name="RedeemOptionsMessage" xml:space="preserve">
+    <value>Redeem nnn points. Please select one of the option for redeem: </value>
+  </data>
+  <data name="RedeemPointsConfirmationMessage" xml:space="preserve">
+    <value>Redeem nnn points. Give a discount of Currency ppp.</value>
+  </data>
+  <data name="RegionalSetting" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="RegionalSettingsException" xml:space="preserve">
+    <value>Error occurred while saving regional settings</value>
+  </data>
+  <data name="RegisteredMobileNumber" xml:space="preserve">
+    <value>Registered Mobile Number</value>
+  </data>
+  <data name="Registernewmerchant" xml:space="preserve">
+    <value>Register a new merchant</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember Me?</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="ResetConfirmation" xml:space="preserve">
+    <value>Reset password confirmation</value>
+  </data>
+  <data name="ResetMessage" xml:space="preserve">
+    <value>Your password has been reset.</value>
+  </data>
+  <data name="Resetpassword" xml:space="preserve">
+    <value>Reset password</value>
+  </data>
+  <data name="Resetyourpassword" xml:space="preserve">
+    <value>Reset your password.</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="ReviewCreatedMessage" xml:space="preserve">
+    <value>Review Created Successfully</value>
+  </data>
+  <data name="ReviewReport" xml:space="preserve">
+    <value>Review Report</value>
+  </data>
+  <data name="ReviewReport1" xml:space="preserve">
+    <value>Review Report</value>
+  </data>
+  <data name="ReviewSubmission" xml:space="preserve">
+    <value>Review Submission</value>
+  </data>
+  <data name="RewardFormula" xml:space="preserve">
+    <value>Reward Formula</value>
+  </data>
+  <data name="RewardFormulaErrorMessage" xml:space="preserve">
+    <value>does not have any reward points earned for merchant</value>
+  </data>
+  <data name="RewardName" xml:space="preserve">
+    <value>Reward Name</value>
+  </data>
+  <data name="RewardProgram" xml:space="preserve">
+    <value>Reward Program</value>
+  </data>
+  <data name="RewardProgramPrompt" xml:space="preserve">
+    <value>Do you want to run a reward program</value>
+  </data>
+  <data name="RewardRedeemFormula" xml:space="preserve">
+    <value>Reward/Redeem Formula</value>
+  </data>
+  <data name="Rupees" xml:space="preserve">
+    <value>Rupees</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="SaveGiftCardException" xml:space="preserve">
+    <value>Error occurred while saving gift cards</value>
+  </data>
+  <data name="SaveGiftCardMessage" xml:space="preserve">
+    <value>Gift Card Saved Successfully</value>
+  </data>
+  <data name="ScanCoupon" xml:space="preserve">
+    <value>Scan Coupon</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="SelectBrand" xml:space="preserve">
+    <value>Select Brand</value>
+  </data>
+  <data name="SelectConsumerList" xml:space="preserve">
+    <value>Select Consumer List</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Select Country</value>
+  </data>
+  <data name="SelectCSVFile" xml:space="preserve">
+    <value>Select CSV File</value>
+  </data>
+  <data name="SelectForSummary" xml:space="preserve">
+    <value>Select to view summary</value>
+  </data>
+  <data name="SelectFromLibrary" xml:space="preserve">
+    <value>Select From Library</value>
+  </data>
+  <data name="SelectGroups" xml:space="preserve">
+    <value>Select Groups</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>Select Language</value>
+  </data>
+  <data name="SelectLocation" xml:space="preserve">
+    <value>Select Location</value>
+  </data>
+  <data name="SelectSavedGroups" xml:space="preserve">
+    <value>Select Saved Groups</value>
+  </data>
+  <data name="Selecttoedit" xml:space="preserve">
+    <value>(Select to edit)</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="SendCouponException" xml:space="preserve">
+    <value>Error occurred while sending coupon to consumer</value>
+  </data>
+  <data name="SendCouponTitle" xml:space="preserve">
+    <value>Please use any of the 4 options to send your coupons:</value>
+  </data>
+  <data name="SendCouponToAll" xml:space="preserve">
+    <value>Coupon Sent Successfully to selected contacts.</value>
+  </data>
+  <data name="SendDEC" xml:space="preserve">
+    <value>Send Digital Card</value>
+  </data>
+  <data name="SendDECException" xml:space="preserve">
+    <value>Error occurred while sending DEC to consumer</value>
+  </data>
+  <data name="SendDECToAll" xml:space="preserve">
+    <value>DEC Sent Successfully to selected contacts.</value>
+  </data>
+  <data name="SendDECToAllException" xml:space="preserve">
+    <value>Error occurred while sending coupon to all DEC consumer</value>
+  </data>
+  <data name="SendOTP" xml:space="preserve">
+    <value>Send OTP</value>
+  </data>
+  <data name="SendSMS" xml:space="preserve">
+    <value>Send SMS</value>
+  </data>
+  <data name="SendSMSEmail" xml:space="preserve">
+    <value>Send SMS / Email</value>
+  </data>
+  <data name="SendToAFriend" xml:space="preserve">
+    <value>Send to a friend</value>
+  </data>
+  <data name="SendToAllDECs" xml:space="preserve">
+    <value>Send to All DECs</value>
+  </data>
+  <data name="SendToConsumerList" xml:space="preserve">
+    <value>Send DEC/Coupons to list of consumers</value>
+  </data>
+  <data name="SendToGroupException" xml:space="preserve">
+    <value>Error occured while sending DEC/Coupon to group</value>
+  </data>
+  <data name="SetButtonURL" xml:space="preserve">
+    <value>Set Button URLs</value>
+  </data>
+  <data name="SetCouponForEvents" xml:space="preserve">
+    <value>Set coupons for events</value>
+  </data>
+  <data name="SetCoupons" xml:space="preserve">
+    <value>Set coupons</value>
+  </data>
+  <data name="SetEventCouponsException" xml:space="preserve">
+    <value>Error occurred while setting event coupons</value>
+  </data>
+  <data name="SetGiftCards" xml:space="preserve">
+    <value>Set Gift cards</value>
+  </data>
+  <data name="SetImage" xml:space="preserve">
+    <value>Set Image</value>
+  </data>
+  <data name="SetImageHeading" xml:space="preserve">
+    <value>Set this image as Digital Card background</value>
+  </data>
+  <data name="SetReviewQuestions" xml:space="preserve">
+    <value>Set Review questions</value>
+  </data>
+  <data name="ShareCouponWithFriends" xml:space="preserve">
+    <value>Send to Contacts</value>
+  </data>
+  <data name="ShareWithAll" xml:space="preserve">
+    <value>Make this coupon available to all DECs</value>
+  </data>
+  <data name="ShareWithAllMessage" xml:space="preserve">
+    <value>(When unselected, you will need to send the coupon to selective consumers only)</value>
+  </data>
+  <data name="ShareWithFriends" xml:space="preserve">
+    <value>Send Digital Card to friends</value>
+  </data>
+  <data name="SMSBalance" xml:space="preserve">
+    <value>SMS Balance</value>
+  </data>
+  <data name="SMSSent" xml:space="preserve">
+    <value>SMS Sent</value>
+  </data>
+  <data name="SocietyName" xml:space="preserve">
+    <value>Society Name</value>
+  </data>
+  <data name="SplashScreenText" xml:space="preserve">
+    <value>Create and send Digital Cards, create and redeem coupons, create gift cards, get dynamic customer feedback and more...</value>
+  </data>
+  <data name="StaffManagerException" xml:space="preserve">
+    <value>Error occurred while adding staff member</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>State</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>Street</value>
+  </data>
+  <data name="SubmitReview" xml:space="preserve">
+    <value>Submit Review</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>Terms &amp; Conditions</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Terms of Use</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+  </data>
+  <data name="TextColorPrompt" xml:space="preserve">
+    <value>Text color to be displayed on Digital Card</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Unauthorizedaccess" xml:space="preserve">
+    <value>Unauthorized access.</value>
+  </data>
+  <data name="UpcomingEvents" xml:space="preserve">
+    <value>Upcoming events</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateBranchException" xml:space="preserve">
+    <value>Error occurred while updating location</value>
+  </data>
+  <data name="UpdateBrandException" xml:space="preserve">
+    <value>Error occurred while updating brand</value>
+  </data>
+  <data name="UpdateCouponException" xml:space="preserve">
+    <value>Error occurred while updating coupon</value>
+  </data>
+  <data name="UpdateMerchantException" xml:space="preserve">
+    <value>Error occurred while updating merchant</value>
+  </data>
+  <data name="UploadConsumerFile" xml:space="preserve">
+    <value>Upload Consumer File</value>
+  </data>
+  <data name="UploadMenu" xml:space="preserve">
+    <value>Upload Menu</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>User Name </value>
+  </data>
+  <data name="ValidAbove" xml:space="preserve">
+    <value>Valid above bill amount</value>
+  </data>
+  <data name="ValidAt" xml:space="preserve">
+    <value>Valid At</value>
+  </data>
+  <data name="ValidCouponMessage1" xml:space="preserve">
+    <value>Coupon is Valid. Discounted amount is greater than max discount allowed of nnn. Redeem Coupon for nnn.</value>
+  </data>
+  <data name="ValidCouponMessage2" xml:space="preserve">
+    <value>Please give Currency nnn discount on the bill amount</value>
+  </data>
+  <data name="ValidCouponMessage3" xml:space="preserve">
+    <value>Please give nnn% discount on the bill amount</value>
+  </data>
+  <data name="ValidFrom" xml:space="preserve">
+    <value>Valid From</value>
+  </data>
+  <data name="ValidTill" xml:space="preserve">
+    <value>Valid Till</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Verify</value>
+  </data>
+  <data name="VerifyCouponCode" xml:space="preserve">
+    <value>Verify Coupon</value>
+  </data>
+  <data name="VerifyGC" xml:space="preserve">
+    <value>An OTP has been sent to your registered mobile no / Email Id. Please enter and verify the OTP to redeem the gift card.</value>
+  </data>
+  <data name="VerifyOTPException" xml:space="preserve">
+    <value>Error occurred while verifying OTP</value>
+  </data>
+  <data name="ViewEditCoupons" xml:space="preserve">
+    <value>View / Edit / Send</value>
+  </data>
+  <data name="ViewSendCoupons" xml:space="preserve">
+    <value>View / Send Coupons</value>
+  </data>
+  <data name="White" xml:space="preserve">
+    <value>White</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+</root>

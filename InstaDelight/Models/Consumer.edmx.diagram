@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7acd981b8f614a8680bf3153e40957e7" Name="Diagram1">
+        <EntityTypeShape EntityType="instadelight_consumerModel.city_master" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumer_otp_details" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumerbilldetail" Width="1.5" PointX="0.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumercashbackdetail" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumergiftcarddetail" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumermaster" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumerredeemdetail" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumerrewardpoint" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumersmsdetail" Width="1.5" PointX="6.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.consumervisitdetail" Width="1.5" PointX="6.75" PointY="6.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.country_master" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.language_master" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.location_master" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.role" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.state_master" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.userclaim" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.userlogin" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.userrole" Width="1.5" PointX="2.75" PointY="10.75" />
+        <EntityTypeShape EntityType="instadelight_consumerModel.ConsumerUser" Width="1.5" PointX="11.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" data-ng-init="OpenHomeScreen()">
+        <div class="row rowb">
+            <div class="small-10 small-offset-1 text-center columns">
+                <a href=@Url.Action("Index", "Consumer")><div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-id-card fa-2x red-icon" aria-hidden="true"></i><br>@Global.Consumer.MyCards </div></a>
+                <label>&nbsp;</label>
+                <a href=@Url.Action("MerchantPendingReviews", "Consumer")><div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-star fa-2x red-icon" aria-hidden="true"></i><br>@Global.Consumer.PendingReviews ({{noofreviews}})</div></a>
+                <label>&nbsp;</label>
+                <a href=@Url.Action("MyProfile", "Consumer")><div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br>@Global.Consumer.Profile</div></a>
+                @*<div class="small-6 htab columns"><i class="fa fa-tags fa-2x red-icon" aria-hidden="true"></i><br>Search for Coupons</div>*@
+                @*<div class="small-6 htab columns"><i class="fa fa-star-half-o fa-2x red-icon" aria-hidden="true"></i><br>Pending Reviews</div>*@
+                
+            </div>
+        </div>
+    </div>
+    <script src="~/Content/js/vendor/jquery.js"></script>
+    <script src="~/Content/js/vendor/what-input.js"></script>
+    <script src="~/Content/js/vendor/foundation.js"></script>
+    <script src="~/Content/js/app.js"></script>
+
+  
+}
+
+  

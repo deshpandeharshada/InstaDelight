@@ -1,0 +1,318 @@
+﻿@{
+    ViewBag.Title = "Bank Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<style>
+    .graystyle {
+        background-color: gray;
+    }
+
+    .panel-heading .accordion-toggle:after {
+        /* symbol for "opening" panels */
+        font-family: 'Glyphicons Halflings'; /* essential for enabling glyphicon */
+        content: "↓"; /* adjust as needed, taken from bootstrap.css */
+        float: left; /* adjust as needed */
+        color: grey; /* adjust as needed */
+        text-decoration: none;
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    .panel-heading .accordion-toggle.collapsed:after {
+        /* symbol for "collapsed" panels */
+        content: "→"; /* adjust as needed, taken from bootstrap.css */
+    }
+
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ajax-loader {
+        background-image: url('../../Images/loading.gif');
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        background-color: #666;
+        opacity: 0.4;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+</style>
+<div ng-controller="myCntrl" class="rowb" data-ng-init="OpenSeachCriteria()">
+    <div class="row" ng-show="divSearch">
+        <div class="h-heading text-center">
+            @Global.InstaDelight.ViewRegisteredBusiness
+        </div>
+
+        @Global.InstaDelight.SelectSearchParameters
+        <form name="myForm" method="post">
+            <div class="mydiv" ng-show="searchButtonText">
+                <label class="ajax-loader"></label>
+            </div>
+
+            <div class="large-12 columns" style="border-radius:5px; margin-bottom:2px;">
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="Country" maxlength="500" placeholder="@Global.InstaDelight.Country" />
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="State" maxlength="500" placeholder="@Global.InstaDelight.State" />
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="SearchCity" maxlength="500" placeholder="@Global.InstaDelight.City" />
+                    </label>
+                </div>
+            </div>
+            <div class="large-12 columns" style="border-radius:5px; margin-bottom:2px;">
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="PIN" maxlength="6" ng-pattern="/^[0-9]{6,6}$/" placeholder="@Global.InstaDelight.Pin" />
+                    </label>
+                    <div class="alert-warning" ng-show="myForm.PinCode.$error.pattern" style="width:70%">
+                        <p> @Global.InstaDelight.PinCodeValidationMessage</p>
+                    </div>
+
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="BusinessName" maxlength="500" placeholder="@Global.InstaDelight.BusinessCategory" />
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="MobileNumber" maxlength="500" placeholder="@Global.InstaDelight.RegisteredMobileNumber" />
+                    </label>
+                </div>
+            </div>
+            <div class="large-12 columns" style="border-radius:5px;margin-bottom:2px;">
+                <div class="large-4 columns">
+                    <label>
+                        <input type="text" class="textbox" ng-model="rname" maxlength="500" placeholder="@Global.InstaDelight.Sales" />
+                    </label>
+                </div>
+                @if (User.IsInRole("InstadelightAdmin"))
+                {
+                <div class="large-4 columns">
+                    <label>
+                        <select style="border-radius:4px;" id="VARCode" name="VARCode" ng-model="selectedvarobject"
+                                ng-change="VARCodeChanged(selectedvarobject)"
+                                ng-options="var.VARCode1 for var in VARCodeList track by var.Id">
+                            <option value="" label="@Global.InstaDelight.SelectVARCode"></option>
+                        </select>
+
+                    </label>
+                </div>
+                }
+                <div class="large-4 columns">
+                    &nbsp;
+                </div>
+            </div>
+            <div class="large-12 columns" style="border-radius:5px; margin-bottom:2px;">
+                <div class="large-4 columns">
+                    @Global.InstaDelight.FromDate
+                    <label>
+                        <input name="ValidFrom" class="textbox" placeholder="@Global.InstaDelight.FromDate" type="date"
+                               id="ValidFrom" ng-model="ValidFrom">
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <label>
+                        @Global.InstaDelight.ToDate
+                        <input name="ValidTill" type="date" class="textbox" placeholder="@Global.InstaDelight.ToDate"
+                               ng-model="ValidTill">
+                    </label>
+                </div>
+                <div class="large-4 columns">
+                    <button class="button" style="width:50%; border-radius:5px;" ng-click="SearchMerchant('myForm')">@Global.InstaDelight.Search</button>
+                </div>
+            </div>
+
+            <hr />
+
+            <div class="small-12 columns text-center">
+                <button class="button" style="border-radius:5px;" ng-click="showBankSettingsPanel()">Bank Benefits</button>
+            </div>
+            <hr />
+            @*<div class="large-12 columns">*@
+            <table class="table-layout" style="width:1390px;padding:0px;">
+                <tr>
+                    <td style="width:25px">
+                        <input type="checkbox" name="type" value="Select All" ng-model="selectAll" ng-click="selectedAll()" />
+                    </td>
+                    <td style="width:75px">
+                        @Global.InstaDelight.SrNo
+                    </td>
+                    <td style="width:100px;text-align:left">
+                        @Global.InstaDelight.BizName
+                    </td>
+                    <td style="width:100px;text-align:left">
+                        Discount
+                    </td>
+                    <td style="width:100px;text-align:left">
+                        @Global.InstaDelight.City
+                    </td>
+                    <td style="width:100px">
+                        @Global.InstaDelight.State
+                    </td>
+                    <td style="width:100px">
+                        @Global.InstaDelight.Country
+                    </td>
+                    <td style="width:100px">
+                        @Global.InstaDelight.PinCode
+                    </td>
+                    <td style="width:200px">
+                        @Global.InstaDelight.Category
+                    </td>
+                    <td style="width:100px">
+                        @Global.InstaDelight.RegisteredMobileNumber
+                    </td>
+                    <td style="width:100px">
+                        @Global.InstaDelight.CreationDate
+                    </td>
+
+                    <td style="width:50px">
+                        @Global.InstaDelight.ConsumetCount
+                    </td>
+                    <td style="width:50px">
+                        @Global.InstaDelight.SMSSent
+                    </td>
+                    <td style="width:50px">
+                        @Global.InstaDelight.SMSBalance
+                    </td>
+                    <td style="width:40px">
+                        @Global.InstaDelight.EmailSent
+                    </td>
+                </tr>
+            </table>
+
+            <table class="table-layout scroll" style="height:250px;width:1400px;padding:0px;overflow-y:auto;overflow-x:auto">
+                <tr ng-repeat="merchant in merchants">
+                    <td style="width:25px">
+                        <input type="checkbox" ng-checked="merchant.selected" ng-model="merchant.selected" />
+                    </td>
+                    <td style="width:72px">
+                        {{$index + 1}}
+                    </td>
+                    <td style="width:90px;text-align:left">
+                        {{merchant.MerchantName}}
+                    </td>
+                    <td style="width:90px;text-align:left">
+                        {{merchant.GiftCardDiscount}}
+                    </td>
+
+                    <td style="width:96px">
+                        {{merchant.City}}
+                    </td>
+                    <td style="width:97px">
+                        {{merchant.StateName}}
+                    </td>
+                    <td style="width:99px">
+                        {{merchant.CountryName}}
+                    </td>
+                    <td style="width:98px">
+                        {{merchant.PinCode}}
+                    </td>
+                    <td style="width:193px">
+                        {{merchant.CategoryName}}
+                    </td>
+                    <td style="width:100px">
+                        {{merchant.PhoneNumber}}
+                    </td>
+                    <td style="width:110px">
+                        {{showValidTill(merchant.creation_date)}}
+                    </td>
+                    <td style="width:106px">
+                        {{merchant.ConsumerCount}}
+                    </td>
+                    <td style="width:54px">
+                        {{merchant.SMSCount}}
+                    </td>
+                    <td style="width:79px">
+                        {{merchant.NoOfSMS}}
+                    </td>
+                    <td style="width:61px">
+                        {{merchant.EmailCount}}
+                    </td>
+                </tr>
+            </table>
+
+            <div class="small-12 table-scroll columns text-center" ng-hide="merchants.length">No records found!</div>
+        </form>
+    </div>
+
+    <div class="row rowb" ng-show="divSetBankBenefits">
+        <div class="h-heading text-center small-12 columns">
+            Bank Benefits
+        </div>
+        <label>
+            <input type="text" class="textbox" ng-model="BankName" maxlength="500" placeholder="Bank Name" />
+        </label>
+        <label>
+            <input type="text" class="textbox" ng-model="Benefit" maxlength="500" placeholder="Benefit" />
+        </label>
+        <label>
+            <input type="text" class="textbox" ng-model="URL" maxlength="500" placeholder="URL for 'Apply' button" />
+        </label>
+
+        <div class="small-12 columns text-center">
+            <button class="button" style="border-radius:5px;" ng-click="AddBenefit()">Add Benefit</button>
+        </div>
+
+        <hr />
+        <table class="table-layout" style="width:95%;padding:0px;">
+            <tr>
+                <td style="width:10%">
+                    @Global.InstaDelight.SrNo
+                </td>
+                <td style="width:20%;text-align:left">
+                    Bank Name
+                </td>
+                <td style="width:20%;text-align:left">
+                    Benefit
+                </td>
+                <td style="width:45%;text-align:left">
+                    URL
+                </td>                
+            </tr>
+        </table>
+
+        <table class="table-layout scroll" style="height:250px;width:100%;padding:0px;overflow-y:auto;overflow-x:auto">
+            <tr ng-repeat="benefit in benefits">
+                <td style="width:10%">
+                    {{$index + 1}}
+                </td>
+                <td style="width:20%;text-align:left">
+                    {{benefit.BankName}}
+                </td>
+                <td style="width:20%;text-align:left">
+                    {{benefit.Benefit}}
+                </td>
+
+                <td style="width:50%">
+                    {{benefit.URL}}
+                </td>                
+            </tr>
+        </table>
+
+        <div class="small-12 table-scroll columns text-center" ng-hide="benefits.length">No records found!</div>
+
+        <div class="small-12 columns text-center">
+            <button class="button" style="border-radius:5px;" ng-click="SetBenefits()">Add Benefits For Selected Merchants</button>
+        </div>
+
+    </div>
+</div>
+

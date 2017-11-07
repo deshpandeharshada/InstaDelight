@@ -1,0 +1,33 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Bhagyashree travels and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3392930389123396913-404537710119484653
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Bhagyashree travels and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3392930879086228785-274186257405765025
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3392931517398754609-327730180103341715
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3392931518782989617-278079430013643007
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3392931519856833841-496196633972872070
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3393016020836697420-153736536265941043
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3393016022036350284-493220455013589700
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3393016023462499660-575876441017080725
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3393017124908348748-531579330077716705
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3393017126007342412-501000578500642753
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Bhagyashree travels Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3393017126888199500-469520186432453818
+

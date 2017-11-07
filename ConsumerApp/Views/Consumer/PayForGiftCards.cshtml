@@ -1,0 +1,21 @@
+﻿@model ConsumerApp.Models.Citrus
+@{
+    ViewBag.Title = "PayForGiftCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row rowb">
+    <form align="center" method="post" action=@Model.formPostUrl>
+        <input type="hidden" id="merchantTxnId" name="merchantTxnId" value=@Model.merchantTxnId />
+        <input type="hidden" id="orderAmount" name="orderAmount" value=@Model.orderAmount />
+        <input type="hidden" id="currency" name="currency" value=@Model.currency />
+        <input type="text" id="email" name="email" value="@Model.email" />
+        <input type="text" id="phoneNumber" name="phoneNumber" value="@Model.phoneNumber" />
+        <input type="hidden" name="returnUrl" value=@Model.returnUrl />
+        <input type="hidden" id="notifyUrl" name="notifyUrl" value=@Model.notifyUrl />
+        <input type="hidden" id="secSignature" name="secSignature" value=@Model.secSignature />
+        <input type="Submit" value="Pay Now" />
+    </form>
+</div>
+
+

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "UploadMenu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <h1>@Global.Merchant.UploadMenu</h1>
+        <div class="small-10 small-offset-1 text-center columns">
+            <div class="small-12 htab columns" style="border-radius:5px 5px 0px 0px;height:100px"><i class="fa fa-download fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("Download", "Merchant")>@Global.Merchant.DownloadSampleFile </a></div>
+            <div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;height:100px"><i class="fa fa-upload fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("Upload", "Merchant")>@Global.Merchant.UploadMenu</a></div>
+        </div>
+    </div>
+</div>
+

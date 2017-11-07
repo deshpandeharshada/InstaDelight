@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "MerchantGiftCardsIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@if (User.IsInRole("Consumer"))
+{
+
+    <div class="row rowb">
+
+        <h3>Gift Cards</h3>
+        <input type="hidden" ng-model="MerchantId" value="@ViewBag.MerchantId" />
+
+
+        <div class="small-12 small-offset-1 text-center columns">
+            <div class="small-6 htab columns" style="border-radius:5px 0px 0px 5px;"><i class="fa fa-gift red-icon" aria-hidden="true"></i><br><a href=@Url.Action("MerchantGiftCards", "Consumer", new { id = @ViewBag.MerchantId})>@Global.Consumer.BuyGiftCards </a></div>
+            <div class="small-6 htab columns" style="border-radius:0px 5px 5px 0px;"><i class="fa fa-gift red-icon" aria-hidden="true"></i><br><a href=@Url.Action("ViewGiftCards", "Consumer", new { id = @ViewBag.MerchantId })>View Purchased</a></div>
+            @*<div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;"><i class="fa fa-gift fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("ViewGiftCards", "Consumer", new { id = @ViewBag.MerchantId })>@Global.Consumer.ShareGiftCards</a></div>*@
+        </div>
+
+    </div>
+}

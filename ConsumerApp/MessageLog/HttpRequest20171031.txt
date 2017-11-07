@@ -1,0 +1,53 @@
+Sending request to citrus pay for amount Rs 500 for consumer Harshada Deshpande
+d18e86db4fb0d23c81891fff1a7bb129d36604b2
+Sending request to citrus pay for amount Rs 500 for consumer Harshada Deshpande
+8e88471ebac340df38e5388612db80a8b5183322
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, thank you for buying our Gift card. You can view the gift card in the "purchased" section of Gift cards on our DEC. Best wishes, Goodluck&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Your Unique Transaction/Order Id : 201710310907527871
+Transaction Status : SUCCESS
+Sending request to citrus pay for amount Rs 500 for consumer 
+9de48d5b7319ec11aea30b10163fec019d82cb2f
+Sending request to citrus pay for amount Rs 500 for consumer Harshada Deshpande
+69e01c323a62a3fdc515ad4bf0cd44c60e0c9324
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, thank you for buying our Gift card. You can view the gift card in the "purchased" section of Gift cards on our DEC. Best wishes, Goodluck&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Your Unique Transaction/Order Id : 201710310911463668
+Transaction Status : SUCCESS
+Sending request to citrus pay for amount Rs 1000 for consumer Harshada Deshpande
+f1d27d1469b5c921b5b17b454ccee16f383b9598
+Sending request to citrus pay for amount Rs 1000 for consumer Harshada Deshpande
+460246e6c4b4d43005aacb8df0f937ac6ec9a330
+Sending request to citrus pay for amount Rs 1000 for consumer Harshada Deshpande
+aa272bdf51c6c82e685eca1830099d51be3bac01
+Sending request to citrus pay for amount Rs 2000 for consumer 
+f759b6897e39dc243d6cdb0d5cf9b7354b90baeb
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+f26c942fd3524d094ae081c289268adec57887aa
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+90624f318d5544f0559157e42bfa92f59baa4ab5
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+0a43a7dc613ed95eadac6077ae5ef9c990694264
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+03fba524f677608ee62f09931e51919c8abb157a
+Sending request to citrus pay for amount Rs  for consumer Harshada Deshpande
+65b7f41ad5ce6889045f171194a140a7481913c0
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+7bd53c6995129793baf137e1756cefd0ce5855ee
+Sending request to citrus pay for amount Rs 1.0856000000000001 for consumer Harshada Deshpande
+4bc9d63f14b4903b2b240dc5cb6f6a867ef3f9f2
+Sending request to citrus pay for amount Rs 1 for consumer Harshada Deshpande
+25bc0fee439b60876fefd9e517adb69c6cfb4b08
+Sending request to citrus pay for amount Rs 1 for consumer Harshada Deshpande
+245143b4623961be5a088e1a016f37b387892e56
+Sending request to citrus pay for amount Rs 1 for consumer Harshada Deshpande
+bce0db64a4244248b69db5a81b030100a9e4c9b6
+Sending request to citrus pay for amount Rs 1 for consumer Harshada Deshpande
+2ee94d4264824fd54f57cb2005235e81902814cf
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, thank you for buying our Gift card. You can view the gift card in the "purchased" section of Gift cards on our DEC. Best wishes, Goodluck&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Your Unique Transaction/Order Id : 201710311254467453
+Transaction Status : SUCCESS

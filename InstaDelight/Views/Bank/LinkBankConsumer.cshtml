@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "LinkBankConsumer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" ng-app="app" class="row rowb">
+
+    <div class="h-heading text-center">
+        @Global.InstaDelight.LinkBankWithConsumer
+    </div>
+
+    <div class="row">
+        <form name="sendBankForm">
+            <input type="hidden" ng-model="BankId" id="hdnBankId" name="hdnBankId" value="@ViewBag.BankId" />            
+            
+            <label>
+                @Global.InstaDelight.Email / @Global.InstaDelight.MobileNo: <font style="color:red">*</font>
+                <input name="mobile" type="text" class="textbox" placeholder="@Global.InstaDelight.Email / @Global.InstaDelight.MobileNo" ng-model="MobileNo"
+                       required>
+            </label>
+
+
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="LinkBanktoConsumer('sendBankForm')">@Global.InstaDelight.Send</button>
+            <hr />
+            <div class="small-12 text-center">
+                <div class="small-12 htab columns" style="border-radius:5px;">
+                    <a href=@Url.Action("UploadConsumers", "Bank", new { BankId = ViewBag.BankId })>
+                        <i class="fa fa-share-alt fa-2x red-icon" aria-hidden="true"></i>&nbsp;Send bank DEC to a list of consumers
+                    </a>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>

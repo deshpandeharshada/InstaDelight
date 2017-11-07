@@ -1,0 +1,9 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, Thank you for your valuable feedback. As a token of appreciation we have sent you a coupon! K-Factory&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3413962192309110065-188223207006553007
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9998887776&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from K-Factory to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9998887776. Status: success | 919998887776 | 3413962612485403953-303614195071999194
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, Thanks for sharing our DEC. As a token of appreciation we have sent you a coupon! K-Factory&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3413962613299246385-262042958755200536
+

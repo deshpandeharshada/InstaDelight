@@ -1,0 +1,9 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=7897897899&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 7897897899. Status: success | 917897897899 | 3395128830977447217-53312801169623673
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3395129107305297201-497265927585216615
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to harshada.deshpande@hotmail.com

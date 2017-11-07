@@ -1,0 +1,55 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0072093781&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Goodluck to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0072093781. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+Email sent successfully to harshada.deshpande@hotmail.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Vaishnavi to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440170401871631750-485932253912332637
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0072093781&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Vaishnavi to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0072093781. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6898490541&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Vaishnavi to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6898490541. Status: success | 916898490541 | 3440175806607926662-429387037948822408
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0072093781&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Hindustan Bakery to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0072093781. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6898490541&userid=2000170305&password=O1czbaj9f&msg=Harshada Deshpande has sent a great offer from Hindustan Bakery to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6898490541. Status: success | 916898490541 | 3440179595927332146-142499904614958448
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6898490541&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Men's Avenue and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6898490541. Status: success | 916898490541 | 3440189809678792070-223079494960577752
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6898490541&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6898490541. Status: success | 916898490541 | 3440190294064055686-173995979969587728
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0072093781&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Bajaj Auto and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0072093781. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, Thank you for your valuable feedback. As a token of appreciation we have sent you a coupon! Goodluck&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440194563802674508-491090685999917185
+
+Email sent successfully to harshada.deshpande@hotmail.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, Thanks for sharing our DEC. As a token of appreciation we have sent you a coupon! Goodluck&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440195054805185868-410533120832713319
+
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0072093781&userid=2000170305&password=O1czbaj9f&msg=harshada@vaspsolutions.com has sent a great offer from Vaishnavi to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0072093781. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+Sending request to citrus pay for amount Rs 1085 for consumer harshada@vaspsolutions.com
+b037e9468ff45bb250008fc4252c508324587726
+Sending request to citrus pay for amount Rs 1085 for consumer harshada@vaspsolutions.com
+229a28f99f95f94e699d00db924f175bd77df04d
+Sending request to citrus pay for amount Rs 1085 for consumer harshada@vaspsolutions.com
+e18f8230ad9b1a108a363d82b67a1b4a7344a785
+Sending request to citrus pay for amount Rs 1085 for consumer harshada@vaspsolutions.com
+87aba779bfc5de9603d605a2b94851e1ece84e53
+Email sent successfully to harshada@vaspsolutions.com
+Your Unique Transaction/Order Id : 201711021609328116
+Transaction Status : SUCCESS
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear +91 9011085421, harshada@vaspsolutions.com has sent you a Gift Card. To avail the Gift card, please download the Offertraker app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Sending request to citrus pay for amount Rs 1 for consumer harshada@vaspsolutions.com
+6390a861540ed6e761b43d5ee603714c647fd30b

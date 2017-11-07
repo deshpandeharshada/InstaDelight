@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "ChangeCountry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+@*<link rel="stylesheet" href="~/Content/css/app.css">*@
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+@if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager") || User.IsInRole("Staff"))
+{
+    <div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenCountryForm()">
+        <!-- The actual modal template, just a bit o bootstrap -->
+        <input type="hidden" disabled="disabled" name="hdnCountryId" ng-model="countryid" ng-required="true" value="@ViewBag.countryid" />
+        <input type="hidden" disabled="disabled" name="hdnLangId" ng-model="languageid" ng-required="true" value="@ViewBag.languageid" />
+
+        <div class="row rowb">
+            <p>@Global.Merchant.RegionalSetting</p>
+            <form>
+                <label>
+                    <select style="border-radius:4px;" ng-model="selectedcountryobject" id="ddlCountry" name="ddlCountry" ng-required="true"
+                            ng-selected="country.countryid == countryid" ng-disabled="IsCountrySelected==true"
+                            ng-change="getLanguage(selectedcountryobject)"
+                            ng-options="country.countryname for country in CountryList track by country.countryid">
+                        <option value="" label="@Global.Merchant.SelectCountry"></option>
+                    </select>
+
+                </label>
+
+                <label>
+                    <select style="border-radius:4px;" ng-model="selectedangobject" id="ddlLang" name="ddlLang" ng-required="true" 
+                            ng-change="LanguageChanged(selectedangobject)" ng-options="language.Language for language in LanguageList track by language.LanguageiId">
+                        <option value="" label="@Global.Merchant.SelectLanguage"></option>
+                    </select>
+
+                </label>
+
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="SaveChangedCountry()">@Global.Merchant.Save</button>
+            </form>
+        </div>
+
+
+    </div>
+}
+

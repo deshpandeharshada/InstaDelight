@@ -1,0 +1,17 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3423345208364172593-305826211804252110
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Shakambhari Dry Fruits %26 Foods Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3423372362740258097-178659138503154718
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to harshada.deshpande@hotmail.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=0000011111&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 0000011111. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+Email sent successfully to test@xyz.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker Business App is 225253&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3423436122005120306-547827847603346801
+
+New password 225253

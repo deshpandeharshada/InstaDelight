@@ -1,0 +1,10 @@
+04-10-2017 4:26:35 PM
+Error occurred Consumer/LoadStaticCache.An error occurred while executing the command definition. See the inner exception for details.
+04-10-2017 4:27:09 PM
+Error occurred Consumer/GetMerchantDECDetails.An error occurred while executing the command definition. See the inner exception for details.
+04-10-2017 4:27:10 PM
+Error occurred Consumer/getConsumerPoints.An error occurred while executing the command definition. See the inner exception for details.
+04-10-2017 4:27:10 PM
+Error occurred Consumer/GetMerchantDECDetails.An error occurred while executing the command definition. See the inner exception for details.
+04-10-2017 4:27:11 PM
+Error occurred Consumer/getConsumerPoints.An error occurred while executing the command definition. See the inner exception for details.

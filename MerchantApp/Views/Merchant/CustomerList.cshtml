@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "CustomerList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<style>
+    .htabGrid {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 80% !important;
+    }
+
+    .htabGridshare {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: 0px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 20% !important;
+    }
+</style>
+
+<style type="text/css">
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ui-grid, .ui-grid-viewport {
+        height: auto !important;
+        border: none !important;
+        margin-left: 2px;
+        margin-right: 2px;
+        /*width: 100%!important;*/
+    }
+
+    .ui-grid-row .ng-scope {
+        /*height: 65px !important;*/
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .ui-grid-pager-panel {
+        position: relative;
+        display: inline-block;
+    }
+
+    .ui-grid-pager-max-pages-number {
+        vertical-align: middle !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+</style>
+<div ng-controller="myCntrl" data-ng-init="OpenCustomerList()">
+    <div class="row rowb" ng-show="divCoupons">
+        <p>@Global.Merchant.CustomerList <br /> @Global.Merchant.SelectForSummary</p>
+        
+        <div class="row">
+            <div ui-grid="gridCust" class="myGrid" ng-style="{visibility: gridCust.data && gridCust.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+
+            <div ng-style="{visibility: gridCust.data && gridCust.data.length > 0 ? 'hidden' : 'visible'}">@Global.Merchant.NoCustomers</div>
+        </div>
+               
+    </div>
+</div>

@@ -1,0 +1,4 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker App is 493178&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3413408146501940614-502129315272827598
+
+New password 493178

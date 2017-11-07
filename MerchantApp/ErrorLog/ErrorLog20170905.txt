@@ -1,0 +1,22 @@
+05-09-2017 2:44:54 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:44:54 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:46:17 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:46:17 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:46:18 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:46:34 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 2:46:34 PM
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 15:50:50
+Error occured in Merchant/UploadConsumerFile. CSV file is not in correct format. Please download sample file and try again.
+05-09-2017 15:51:13
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 15:51:13
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.
+05-09-2017 15:51:13
+Error occured Merchant/AddNewCouponConsumer.Input string was not in a correct format.

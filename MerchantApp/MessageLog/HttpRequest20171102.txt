@@ -1,0 +1,43 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6327527192&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6327527192. Status: success | 916327527192 | 3440052645073196338-325233721923778490
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Goodluck Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440053166323520818-105599019468449973
+
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+Email sent successfully to harshada@vaspsolutions.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Goodluck Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440076479541761329-502721638728177841
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6327527192&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Goodluck Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6327527192. Status: success | 916327527192 | 3440076496280134961-430716327300105819
+
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Goodluck Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3440080914411701554-170066583316195423
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=5555555555&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 5555555555. Status: success | 915555555555 | 3440088301089797510-131174960106077267
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=2222222222&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 2222222222. Status: success | 912222222222 | 3440088309043217798-481401439113252955
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3440088314731406726-33295207192474518
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3440088319639283078-173248835806815210
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1604276784&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1604276784. Status: success | 911604276784 | 3440112570751763846-31083985892852291
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to= 91 1604276784&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to  91 1604276784. Status: success | 911604276784 | 3440112877691934086-32258240344120347
+

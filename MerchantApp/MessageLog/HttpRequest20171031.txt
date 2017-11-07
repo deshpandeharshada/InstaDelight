@@ -1,0 +1,3 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=253697123&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Indian Airlines and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 253697123. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+

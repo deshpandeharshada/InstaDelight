@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "MerchantPendingReviews";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" data-ng-init="OpenMerchantReviewForm()">
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+
+        <div class="row rowb">
+            <div class="h-heading text-center">
+                @Global.Consumer.PendingReviews
+            </div>
+
+            <div class="row">
+                <div class="small-12 text-center">
+                    <div class="small-12 htab columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="merchant in merchants">
+                        <input type="hidden" value="@ViewBag.merchantid" id="hdnMerchantId" ng-model="MerchantId" />
+                        <div class="small-12" ng-click="showMerchantReviews(merchant.merchantid)">
+                            <div class="small-2 columns" ng-click="showMerchantReviews(merchant.merchantid)">
+                                <img ng-hide="merchant.MerchantLogo == null" ng-src="{{getImageUrl(merchant.MerchantLogo)}}" width="70" height="50" style="width:75px;height:35px" />
+                                <i ng-show="merchant.MerchantLogo == null" class="fa fa-cart-arrow-down fa-2x red-icon" aria-hidden="true" style="width:75px;height:35px"></i>
+                            </div>
+                            <div class="small-10 columns" ng-click="showMerchantReviews(merchant.merchantid)">
+                                {{merchant.DECName}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+
+

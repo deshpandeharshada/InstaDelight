@@ -1,0 +1,163 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: white;
+    background: #603813; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #b29f94, #603813); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #b29f94, #603813); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: url("../Images/Background/DarkGray.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.Dashboard-button {
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: blueviolet;
+    width: 99%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.Homescreen-button {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e9e9ce+0,fcfff4+100 */
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9e9ce', endColorstr='#fcfff4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: blueviolet;
+    width: 99%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.DEC-button {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f1da36+0,fefcea+100 */
+    background: #f1da36; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #f1da36 0%, #fefcea 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #f1da36 0%,#fefcea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #f1da36 0%,#fefcea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f1da36', endColorstr='#fefcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    color: black;
+    font-weight: bold;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+}
+
+.table-dec {
+    background: #ECE9E6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    border: black 1px solid;
+    border-radius: 10px;
+}
+
+.coupon-details {
+    font-size: medium;
+    color: yellow;
+}
+
+.Heading {
+    color: white;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    padding-top: 5px;
+    font-size: large;
+}
+
+.tablecell {
+    color: white;
+}
+
+.tableinputcell {
+    width: 70%;
+    border-radius: 10px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+.login_table {
+    border: white 1px solid;
+}
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+textarea {
+    max-width: 280px;
+}
+
+/* Set padding to display errors that occur during databinding */
+.padding-error {
+    padding-top: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+    .nofloat {
+        float: none;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    table {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 480px) and (max-width : 768px) {
+    .price_block {
+        width: 50%;
+    }
+
+        .price_block:nth-child(odd) {
+            border-right: 1px solid transparent;
+        }
+
+        .price_block:nth-child(3) {
+            clear: both;
+        }
+
+        .price_block:nth-child(odd):hover {
+            border: 0 none;
+        }
+}
+
+@media only screen and (min-width : 768px) {
+    .price_block {
+        width: 25%;
+    }
+
+    .price_block {
+        border-right: 1px solid transparent;
+        border-bottom: 0 none;
+    }
+
+        .price_block:last-child {
+            border-right: 0 none;
+        }
+
+        .price_block:hover {
+            border: 0 none;
+        }
+}
+

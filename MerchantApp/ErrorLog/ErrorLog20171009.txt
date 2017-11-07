@@ -1,0 +1,8 @@
+09-10-2017 9:53:25 AM
+Error occurred while creating brand manager. Brand Manager +971 504980635 already registered with some other merchant.
+09-10-2017 10:03:41 AM
+Error occurred while creating brand manager. Brand Manager +971 504980635 already registered with some other merchant.
+09-10-2017 10:57:02 AM
+Error occurred while creating staff. Staff +971 3030303030 already registered with some other merchant.
+09-10-2017 10:57:44 AM
+Error occured Merchant/AddNewStaff.Non-static method requires a target.

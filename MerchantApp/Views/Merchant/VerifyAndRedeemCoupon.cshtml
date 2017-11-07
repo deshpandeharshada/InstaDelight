@@ -1,0 +1,101 @@
+﻿@{
+    ViewBag.Title = "VerifyAndRedeemCoupon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="DisplayCoupon()">
+    <form name="myForm">
+        <div class="row rowb">
+            <input type="hidden" ng-model="CouponId" id="hdnCouponId" name="hdnCouponId" value="@ViewBag.CouponId" />
+            <input type="hidden" ng-model="SharedCouponId" id="hdnSharedCouponId" name="hdnSharedCouponId" value="@ViewBag.SharedCouponId" />
+
+            <div class="row grey text-center">
+                {{coupontitle}}
+            </div>
+            <label>
+                Code: <b> {{couponcode}}</b>
+            </label>
+
+            <label>
+                @Global.Merchant.ValidTill: {{validtill}}
+            </label>
+            <label>
+                {{coupondetails}}
+            </label>
+            <label>&nbsp;</label>
+
+            <div class="small-12 columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="cond in EventConditions">
+                <label>
+                    {{cond.EventCondition}}
+                </label>
+            </div>
+            <label>&nbsp;</label>
+            <label ng-show="CouponConditions.length > 0">
+                @Global.Merchant.TermsAndConditions
+            </label>
+            <div class="small-12 columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="cond in CouponConditions">
+                <label>
+                    {{cond.Condition}}
+                </label>
+            </div>
+
+            <label>&nbsp;</label>
+            <div class="row grey text-center">@Global.Merchant.ApplicableIn </div>
+            <label>
+                <b> {{merchant.MerchantName}}</b>
+            </label>
+            <label>{{merchant.Address1}}</label>
+            <label>{{merchant.Address2}}</label>
+            <label ng-hide="merchant.LocationName == null">{{merchant.LocationName}}, {{merchant.CityName}}</label>
+
+            <div ng-switch on="coupondecdata">
+                <div ng-switch-when=null class="small-12 htab columns">
+                    <span ng-switch on="categoryid">
+                        <img ng-switch-when="3" src='~/Images/Coupons/Restaurant.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-when="4" src='~/Images/Coupons/Hotel.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-when="5" src='~/Images/Coupons/Spa.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-default src='~/Images/Coupons/Hotel.png' width="325" height="200" style="width:325px;height:200px">
+                    </span>
+                </div>
+                <div ng-switch-default class="small-12 htab columns">
+                    <img ng-src="{{b64decencoded}}" width="325" height="200" style="width:325px;height:200px" />
+                </div>
+            </div>
+            <label>&nbsp;</label>
+
+            <div class="small-6 columns" ng-show="divShowCouponOTP == false && divVerifiedCouponOTP == false">
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="sendCouponOTP()">@Global.Merchant.SendOTP</button>
+                @*<button class="button" style="width:100%; border-radius:5px;" ng-click="RedeemNow()">@Global.Merchant.Redeem</button>*@
+            </div>
+            <div class="small-6 columns" ng-show="divShowCouponOTP == false && divVerifiedCouponOTP == false">
+                <button class="button small-6 columns" style="width:100%; border-radius:5px;" ng-click="NavigateBack()">
+                    @Global.Merchant.Cancel
+                </button>
+            </div>
+            <label>&nbsp;</label>
+
+            <div class="row text-center table-bordered" ng-show="divShowCouponOTP">
+                <label>
+                    Enter OTP
+                    <input type="text" class="textbox" ng-model="couponotp" placeholder="Enter OTP" id="inputcouponotp" name="inputcouponotp" />
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="VerifyCouponOTP()">@Global.Merchant.Verify</button>
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="divShowCouponOTP = false">@Global.Merchant.Cancel</button>
+                </label>
+            </div>
+
+            <div class="small-6 columns" ng-show="divVerifiedCouponOTP">                
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="RedeemNow()">@Global.Merchant.Redeem</button>
+            </div>
+            <div class="small-6 columns" ng-show="divVerifiedCouponOTP">
+                <button class="button small-6 columns" style="width:100%; border-radius:5px;" ng-click="NavigateBack()">
+                    @Global.Merchant.Cancel
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>

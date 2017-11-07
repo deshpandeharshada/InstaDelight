@@ -1,0 +1,887 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="instadelight_consumerModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="city_master">
+          <Key>
+            <PropertyRef Name="cityid" />
+          </Key>
+          <Property Name="cityid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stateid" Type="int" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="City" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="consumer_coupon_otp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SharedCouponId" Type="int" />
+          <Property Name="OTP" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="consumer_giftcard_otp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GiftCardId" Type="int" />
+          <Property Name="OTP" Type="varchar" MaxLength="6" />
+        </EntityType>
+        <EntityType Name="consumer_otp_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="EmailOTP" Type="varchar" MaxLength="45" />
+          <Property Name="Phone2OTP" Type="varchar" MaxLength="45" />
+          <Property Name="Phone3OTP" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="consumerbilldetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="BillAmount" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="BillDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumercashbackdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="Cashback" Type="int" />
+          <Property Name="CashbackDate" Type="datetime" Precision="0" />
+          <Property Name="ExpiryDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumergiftcarddetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="255" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="255" />
+          <Property Name="GiftCardId" Type="int" />
+          <Property Name="DenominationRs" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="Status" Type="tinyint" />
+          <Property Name="DateOfPurchase" Type="datetime" Precision="0" />
+          <Property Name="ValidTill" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumergiftcardtransactiondetails">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RequestString" Type="varchar" MaxLength="2500" />
+          <Property Name="SentRequestDetails" Type="varchar" MaxLength="2500" />
+          <Property Name="ResponseTransactionId" Type="varchar" MaxLength="45" />
+          <Property Name="ResponseStatus" Type="varchar" MaxLength="45" />
+          <Property Name="ResponseDateTime" Type="datetime" Precision="0" />
+          <Property Name="RequestDateTime" Type="datetime" Precision="0" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="GiftCardId" Type="int" />
+          <Property Name="TransactionAmount" Type="int" />
+          <Property Name="securitySignature" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="consumermaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="consumername" Type="varchar" MaxLength="500" />
+          <Property Name="consumerlogo" Type="longblob" />
+          <Property Name="Email" Type="varchar" MaxLength="200" />
+          <Property Name="Phone1" Type="varchar" MaxLength="256" />
+          <Property Name="Phone2" Type="varchar" MaxLength="256" />
+          <Property Name="Phone3" Type="varchar" MaxLength="255" />
+          <Property Name="DOA" Type="date" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Gender" Type="varchar" MaxLength="45" />
+          <Property Name="BuildingName" Type="varchar" MaxLength="300" />
+          <Property Name="SocietyName" Type="varchar" MaxLength="100" />
+          <Property Name="Street" Type="varchar" MaxLength="100" />
+          <Property Name="Location" Type="varchar" MaxLength="500" />
+          <Property Name="City" Type="varchar" MaxLength="500" />
+          <Property Name="State" Type="int" />
+          <Property Name="Country" Type="int" />
+          <Property Name="UserId" Type="varchar" MaxLength="100" />
+          <Property Name="PinCode" Type="int" />
+          <Property Name="LanguageId" Type="int" />
+          <Property Name="EmailVerified" Type="bit" />
+          <Property Name="Phone2Verified" Type="bit" />
+          <Property Name="Phone3Verified" Type="bit" />
+        </EntityType>
+        <EntityType Name="consumerredeemdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="PointsRedeemed" Type="int" />
+          <Property Name="RedeemDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumerrewardpoints">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="Points" Type="int" />
+          <Property Name="VisitDate" Type="datetime" Precision="0" />
+          <Property Name="ExpiryDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumersmsdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="UserName" Type="varchar" MaxLength="128" />
+          <Property Name="SMSEmailStatus" Type="varchar" MaxLength="1500" />
+          <Property Name="SentDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="consumervisitdetails">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ConsumerId" Type="varchar" MaxLength="128" />
+          <Property Name="MerchantId" Type="varchar" MaxLength="128" />
+          <Property Name="VisitDate" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityType Name="country_master">
+          <Key>
+            <PropertyRef Name="countryid" />
+          </Key>
+          <Property Name="countryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryname" Type="varchar" MaxLength="255" />
+          <Property Name="currency" Type="varchar" MaxLength="100" />
+          <Property Name="CountryCode" Type="varchar" MaxLength="7" />
+        </EntityType>
+        <EntityType Name="language_master">
+          <Key>
+            <PropertyRef Name="LanguageiId" />
+          </Key>
+          <Property Name="LanguageiId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CountryId" Type="int" />
+          <Property Name="Language" Type="varchar" MaxLength="85" />
+          <Property Name="LanguageCode" Type="varchar" MaxLength="3" />
+        </EntityType>
+        <EntityType Name="location_master">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CityId" Type="int" />
+          <Property Name="stateid" Type="int" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="Location" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="roles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="state_master">
+          <Key>
+            <PropertyRef Name="stateid" />
+          </Key>
+          <Property Name="stateid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryid" Type="int" />
+          <Property Name="state" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="userclaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="longtext" />
+          <Property Name="ClaimValue" Type="longtext" />
+        </EntityType>
+        <EntityType Name="userlogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="varchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="userroles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="varchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="varchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bool" Nullable="false" />
+          <Property Name="PasswordHash" Type="longtext" />
+          <Property Name="SecurityStamp" Type="longtext" />
+          <Property Name="PhoneNumber" Type="longtext" />
+          <Property Name="PhoneNumberConfirmed" Type="bool" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bool" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" Precision="0" />
+          <Property Name="LockoutEnabled" Type="bool" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="256" />
+          <Property Name="LastName" Type="varchar" MaxLength="256" />
+          <Property Name="ChangePassword" Type="int" />
+        </EntityType>
+        <Function Name="GetConsumerCountryDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="instadelight_consumer">
+          <Parameter Name="CId" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="GetConsumerForBirthDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="instadelight_consumer" />
+        <Function Name="InsertConsumer" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="instadelight_consumer">
+          <Parameter Name="UserId" Type="varchar" Mode="In" />
+          <Parameter Name="Phone1" Type="varchar" Mode="In" />
+          <Parameter Name="Email" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="InsertConsumerBillDetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="instadelight_consumer">
+          <Parameter Name="ConsumerId" Type="varchar" Mode="In" />
+          <Parameter Name="MerchantId" Type="varchar" Mode="In" />
+          <Parameter Name="BillAmount" Type="decimal" Mode="In" />
+          <Parameter Name="VisitDate" Type="datetime" Mode="In" />
+        </Function>
+        <EntityContainer Name="instadelight_consumerModelStoreContainer">
+          <EntitySet Name="city_master" EntityType="Self.city_master" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumer_coupon_otp" EntityType="Self.consumer_coupon_otp" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumer_giftcard_otp" EntityType="Self.consumer_giftcard_otp" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumer_otp_details" EntityType="Self.consumer_otp_details" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumerbilldetails" EntityType="Self.consumerbilldetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumercashbackdetails" EntityType="Self.consumercashbackdetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumergiftcarddetails" EntityType="Self.consumergiftcarddetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumergiftcardtransactiondetails" EntityType="Self.consumergiftcardtransactiondetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumermaster" EntityType="Self.consumermaster" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumerredeemdetails" EntityType="Self.consumerredeemdetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumerrewardpoints" EntityType="Self.consumerrewardpoints" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumersmsdetails" EntityType="Self.consumersmsdetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="consumervisitdetails" EntityType="Self.consumervisitdetails" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="country_master" EntityType="Self.country_master" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="language_master" EntityType="Self.language_master" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="location_master" EntityType="Self.location_master" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="roles" EntityType="Self.roles" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="state_master" EntityType="Self.state_master" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="userclaims" EntityType="Self.userclaims" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="userlogins" EntityType="Self.userlogins" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="userroles" EntityType="Self.userroles" Schema="instadelight_consumer" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="instadelight_consumer" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="instadelight_consumerModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="instadelight_consumerEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="InsertConsumer">
+            <Parameter Name="UserId" Mode="In" Type="String" />
+            <Parameter Name="Phone1" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="InsertConsumerBillDetails">
+            <Parameter Name="ConsumerId" Mode="In" Type="String" />
+            <Parameter Name="MerchantId" Mode="In" Type="String" />
+            <Parameter Name="BillAmount" Mode="In" Type="Decimal" />
+            <Parameter Name="VisitDate" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetConsumerCountryDetails" ReturnType="Collection(instadelight_consumerModel.GetConsumerCountryDetails_Result)">
+          <Parameter Name="CId" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetConsumerForBirthDay" ReturnType="Collection(instadelight_consumerModel.GetConsumerForBirthDay_Result)" />
+          <EntitySet Name="city_master" EntityType="instadelight_consumerModel.city_master" />
+          <EntitySet Name="consumergiftcarddetails" EntityType="instadelight_consumerModel.consumergiftcarddetail" />
+          <EntitySet Name="consumermasters" EntityType="instadelight_consumerModel.consumermaster" />
+          <EntitySet Name="country_master" EntityType="instadelight_consumerModel.country_master" />
+          <EntitySet Name="language_master" EntityType="instadelight_consumerModel.language_master" />
+          <EntitySet Name="location_master" EntityType="instadelight_consumerModel.location_master" />
+          <EntitySet Name="roles" EntityType="instadelight_consumerModel.role" />
+          <EntitySet Name="state_master" EntityType="instadelight_consumerModel.state_master" />
+          <EntitySet Name="userclaims" EntityType="instadelight_consumerModel.userclaim" />
+          <EntitySet Name="userlogins" EntityType="instadelight_consumerModel.userlogin" />
+          <EntitySet Name="userroles" EntityType="instadelight_consumerModel.userrole" />
+          <EntitySet Name="consumerusers" EntityType="instadelight_consumerModel.consumeruser" />
+          <EntitySet Name="consumerbilldetails" EntityType="instadelight_consumerModel.consumerbilldetail" />
+          <EntitySet Name="consumercashbackdetails" EntityType="instadelight_consumerModel.consumercashbackdetail" />
+          <EntitySet Name="consumerredeemdetails" EntityType="instadelight_consumerModel.consumerredeemdetail" />
+          <EntitySet Name="consumerrewardpoints" EntityType="instadelight_consumerModel.consumerrewardpoint" />
+          <EntitySet Name="consumersmsdetails" EntityType="instadelight_consumerModel.consumersmsdetail" />
+          <EntitySet Name="consumervisitdetails" EntityType="instadelight_consumerModel.consumervisitdetail" />
+          <EntitySet Name="consumer_giftcard_otp" EntityType="instadelight_consumerModel.consumer_giftcard_otp" />
+          <EntitySet Name="consumer_otp_details" EntityType="instadelight_consumerModel.consumer_otp_details" />
+          <EntitySet Name="consumer_coupon_otp" EntityType="instadelight_consumerModel.consumer_coupon_otp" />
+          <EntitySet Name="consumergiftcardtransactiondetails" EntityType="instadelight_consumerModel.consumergiftcardtransactiondetail" />
+          </EntityContainer>
+        <ComplexType Name="GetConsumerCountryDetails_Result" />
+        <ComplexType Name="GetConsumerForBirthDay_Result" />
+        <EntityType Name="city_master">
+          <Key>
+            <PropertyRef Name="cityid" />
+          </Key>
+          <Property Name="cityid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stateid" Type="Int32" />
+          <Property Name="countryid" Type="Int32" />
+          <Property Name="City" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="consumergiftcarddetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="GiftCardId" Type="Int32" />
+          <Property Name="DenominationRs" Type="Decimal" />
+          <Property Name="Status" Type="SByte" />
+          <Property Name="DateOfPurchase" Type="DateTime" />
+          <Property Name="ValidTill" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumermaster">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="consumername" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="consumerlogo" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Phone1" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="Phone3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DOA" Type="DateTime" />
+          <Property Name="DOB" Type="DateTime" />
+          <Property Name="Gender" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="BuildingName" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="SocietyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Street" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Location" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="Int32" />
+          <Property Name="Country" Type="Int32" />
+          <Property Name="UserId" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PinCode" Type="Int32" />
+          <Property Name="LanguageId" Type="Int32" />
+          <Property Name="EmailVerified" Type="Boolean" />
+          <Property Name="Phone2Verified" Type="Boolean" />
+          <Property Name="Phone3Verified" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="country_master">
+          <Key>
+            <PropertyRef Name="countryid" />
+          </Key>
+          <Property Name="countryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="currency" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="language_master">
+          <Key>
+            <PropertyRef Name="LanguageiId" />
+          </Key>
+          <Property Name="LanguageiId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryId" Type="Int32" />
+          <Property Name="Language" Type="String" MaxLength="85" FixedLength="false" Unicode="false" />
+          <Property Name="LanguageCode" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="location_master">
+          <Key>
+            <PropertyRef Name="LocationId" />
+          </Key>
+          <Property Name="LocationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CityId" Type="Int32" />
+          <Property Name="stateid" Type="Int32" />
+          <Property Name="countryid" Type="Int32" />
+          <Property Name="Location" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="role">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="state_master">
+          <Key>
+            <PropertyRef Name="stateid" />
+          </Key>
+          <Property Name="stateid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryid" Type="Int32" />
+          <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="userclaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimType" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="ClaimValue" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="userlogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="userrole">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="RoleId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="consumeruser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="FirstName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" />
+          <Property Name="ChangePassword" Type="Int32" />
+        </EntityType>
+        <EntityType Name="consumerbilldetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="BillAmount" Type="Decimal" />
+          <Property Name="BillDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumercashbackdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Cashback" Type="Int32" />
+          <Property Name="CashbackDate" Type="DateTime" />
+          <Property Name="ExpiryDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumerredeemdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="PointsRedeemed" Type="Int32" />
+          <Property Name="RedeemDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumerrewardpoint">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="Points" Type="Int32" />
+          <Property Name="VisitDate" Type="DateTime" />
+          <Property Name="ExpiryDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumersmsdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="SMSEmailStatus" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+          <Property Name="SentDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumervisitdetail">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="VisitDate" Type="DateTime" />
+        </EntityType>
+        <EntityType Name="consumer_giftcard_otp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GiftCardId" Type="Int32" />
+          <Property Name="OTP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="consumer_otp_details">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="EmailOTP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Phone2OTP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Phone3OTP" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="consumer_coupon_otp">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SharedCouponId" Type="Int32" />
+          <Property Name="OTP" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="consumergiftcardtransactiondetail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RequestString" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="SentRequestDetails" Type="String" MaxLength="2500" FixedLength="false" Unicode="false" />
+          <Property Name="ResponseTransactionId" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="ResponseStatus" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="ResponseDateTime" Type="DateTime" />
+          <Property Name="RequestDateTime" Type="DateTime" />
+          <Property Name="ConsumerId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="MerchantId" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+          <Property Name="GiftCardId" Type="Int32" />
+          <Property Name="TransactionAmount" Type="Int32" />
+          <Property Name="securitySignature" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="instadelight_consumerModelStoreContainer" CdmEntityContainer="instadelight_consumerEntities">
+          <FunctionImportMapping FunctionImportName="InsertConsumer" FunctionName="instadelight_consumerModel.Store.InsertConsumer" />
+          <FunctionImportMapping FunctionImportName="InsertConsumerBillDetails" FunctionName="instadelight_consumerModel.Store.InsertConsumerBillDetails" />
+          <FunctionImportMapping FunctionImportName="GetConsumerCountryDetails" FunctionName="instadelight_consumerModel.Store.GetConsumerCountryDetails">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="instadelight_consumerModel.GetConsumerCountryDetails_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetConsumerForBirthDay" FunctionName="instadelight_consumerModel.Store.GetConsumerForBirthDay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="instadelight_consumerModel.GetConsumerForBirthDay_Result" />
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="city_master">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.city_master">
+              <MappingFragment StoreEntitySet="city_master">
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+                <ScalarProperty Name="cityid" ColumnName="cityid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumergiftcarddetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumergiftcarddetail">
+              <MappingFragment StoreEntitySet="consumergiftcarddetails">
+                <ScalarProperty Name="ValidTill" ColumnName="ValidTill" />
+                <ScalarProperty Name="DateOfPurchase" ColumnName="DateOfPurchase" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DenominationRs" ColumnName="DenominationRs" />
+                <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumermasters">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumermaster">
+              <MappingFragment StoreEntitySet="consumermaster">
+                <ScalarProperty Name="Phone3Verified" ColumnName="Phone3Verified" />
+                <ScalarProperty Name="Phone2Verified" ColumnName="Phone2Verified" />
+                <ScalarProperty Name="EmailVerified" ColumnName="EmailVerified" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="PinCode" ColumnName="PinCode" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="Street" ColumnName="Street" />
+                <ScalarProperty Name="SocietyName" ColumnName="SocietyName" />
+                <ScalarProperty Name="BuildingName" ColumnName="BuildingName" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="DOA" ColumnName="DOA" />
+                <ScalarProperty Name="Phone3" ColumnName="Phone3" />
+                <ScalarProperty Name="Phone2" ColumnName="Phone2" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="consumerlogo" ColumnName="consumerlogo" />
+                <ScalarProperty Name="consumername" ColumnName="consumername" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="country_master">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.country_master">
+              <MappingFragment StoreEntitySet="country_master">
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="currency" ColumnName="currency" />
+                <ScalarProperty Name="countryname" ColumnName="countryname" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="language_master">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.language_master">
+              <MappingFragment StoreEntitySet="language_master">
+                <ScalarProperty Name="LanguageCode" ColumnName="LanguageCode" />
+                <ScalarProperty Name="Language" ColumnName="Language" />
+                <ScalarProperty Name="CountryId" ColumnName="CountryId" />
+                <ScalarProperty Name="LanguageiId" ColumnName="LanguageiId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="location_master">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.location_master">
+              <MappingFragment StoreEntitySet="location_master">
+                <ScalarProperty Name="Location" ColumnName="Location" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="LocationId" ColumnName="LocationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="roles">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.role">
+              <MappingFragment StoreEntitySet="roles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="state_master">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.state_master">
+              <MappingFragment StoreEntitySet="state_master">
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="countryid" ColumnName="countryid" />
+                <ScalarProperty Name="stateid" ColumnName="stateid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userclaims">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.userclaim">
+              <MappingFragment StoreEntitySet="userclaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userlogins">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.userlogin">
+              <MappingFragment StoreEntitySet="userlogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="userroles">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.userrole">
+              <MappingFragment StoreEntitySet="userroles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumerusers">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumeruser">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="ChangePassword" ColumnName="ChangePassword" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumerbilldetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumerbilldetail">
+              <MappingFragment StoreEntitySet="consumerbilldetails">
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="BillAmount" ColumnName="BillAmount" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumercashbackdetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumercashbackdetail">
+              <MappingFragment StoreEntitySet="consumercashbackdetails">
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="CashbackDate" ColumnName="CashbackDate" />
+                <ScalarProperty Name="Cashback" ColumnName="Cashback" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumerredeemdetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumerredeemdetail">
+              <MappingFragment StoreEntitySet="consumerredeemdetails">
+                <ScalarProperty Name="RedeemDate" ColumnName="RedeemDate" />
+                <ScalarProperty Name="PointsRedeemed" ColumnName="PointsRedeemed" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumerrewardpoints">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumerrewardpoint">
+              <MappingFragment StoreEntitySet="consumerrewardpoints">
+                <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+                <ScalarProperty Name="Points" ColumnName="Points" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumersmsdetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumersmsdetail">
+              <MappingFragment StoreEntitySet="consumersmsdetails">
+                <ScalarProperty Name="SentDate" ColumnName="SentDate" />
+                <ScalarProperty Name="SMSEmailStatus" ColumnName="SMSEmailStatus" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumervisitdetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumervisitdetail">
+              <MappingFragment StoreEntitySet="consumervisitdetails">
+                <ScalarProperty Name="VisitDate" ColumnName="VisitDate" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumer_giftcard_otp">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumer_giftcard_otp">
+              <MappingFragment StoreEntitySet="consumer_giftcard_otp">
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumer_otp_details">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumer_otp_details">
+              <MappingFragment StoreEntitySet="consumer_otp_details">
+                <ScalarProperty Name="Phone3OTP" ColumnName="Phone3OTP" />
+                <ScalarProperty Name="Phone2OTP" ColumnName="Phone2OTP" />
+                <ScalarProperty Name="EmailOTP" ColumnName="EmailOTP" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumer_coupon_otp">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumer_coupon_otp">
+              <MappingFragment StoreEntitySet="consumer_coupon_otp">
+                <ScalarProperty Name="OTP" ColumnName="OTP" />
+                <ScalarProperty Name="SharedCouponId" ColumnName="SharedCouponId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="consumergiftcardtransactiondetails">
+            <EntityTypeMapping TypeName="instadelight_consumerModel.consumergiftcardtransactiondetail">
+              <MappingFragment StoreEntitySet="consumergiftcardtransactiondetails">
+                <ScalarProperty Name="securitySignature" ColumnName="securitySignature" />
+                <ScalarProperty Name="TransactionAmount" ColumnName="TransactionAmount" />
+                <ScalarProperty Name="GiftCardId" ColumnName="GiftCardId" />
+                <ScalarProperty Name="MerchantId" ColumnName="MerchantId" />
+                <ScalarProperty Name="ConsumerId" ColumnName="ConsumerId" />
+                <ScalarProperty Name="RequestDateTime" ColumnName="RequestDateTime" />
+                <ScalarProperty Name="ResponseDateTime" ColumnName="ResponseDateTime" />
+                <ScalarProperty Name="ResponseStatus" ColumnName="ResponseStatus" />
+                <ScalarProperty Name="ResponseTransactionId" ColumnName="ResponseTransactionId" />
+                <ScalarProperty Name="SentRequestDetails" ColumnName="SentRequestDetails" />
+                <ScalarProperty Name="RequestString" ColumnName="RequestString" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

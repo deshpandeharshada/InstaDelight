@@ -1,0 +1,131 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3411138254475711878-541696225085184846
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9999999999&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9999999999. Status: success | 919999999999 | 3411139248045929862-289725746812971614
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3411139264933717382-36203434978692763
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=7777777777&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 7777777777. Status: success | 917777777777 | 3411139273205515654-49535896014851009
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3411147485280802124-272976775873724549
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3411147488619656524-214438823535216615
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to mutalikharshada@gmail.com
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9999999999&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9999999999. Status: success | 919999999999 | 3411147503392765260-258763176041631800
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3411147504416220492-527354322757449511
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=7777777777&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 7777777777. Status: success | 917777777777 | 3411147505825613132-515652842683319796
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=989865653&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 989865653. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=5555555555&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 5555555555. Status: success | 915555555555 | 3411147508786996556-462917431301464826
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=2222222222&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 2222222222. Status: success | 912222222222 | 3411147510213190988-301627524820619183
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3411147511245108556-526618495949875219
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3411147512402896204-76838481367201581
+
+Email sent successfully to harshada@vaspsolutions.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=5555555555&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 5555555555. Status: success | 915555555555 | 3411198610468410700-113506397382194805
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=2222222222&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 2222222222. Status: success | 912222222222 | 3411198633219548492-194052806330463349
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3411198643521774924-407253125058683713
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3411198650853946700-431237530509552117
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3411204953910064433-66138463918675534
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3411204975613560113-547510572205023484
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to mutalikharshada@gmail.com
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9999999999&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9999999999. Status: success | 919999999999 | 3411204990144156977-570549551036589410
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3411204991771608369-69390636862817764
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=7777777777&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 7777777777. Status: success | 917777777777 | 3411204993541956913-187798130535345138
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=989865653&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 989865653. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=5555555555&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 5555555555. Status: success | 915555555555 | 3411204997484852529-158510292574201026
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=2222222222&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 2222222222. Status: success | 912222222222 | 3411204999280084273-12219154907301854
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3411205001310283057-201843239311418750
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3411205003013649713-443192801763165248
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3411220260756043058-327120910272217356
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231232&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231232. Status: success | 911231231232 | 3411220262593312050-76301851258887857
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to mutalikharshada@gmail.com
+Email sent successfully to abc@xyz.com
+Email sent successfully to xyz@abc.com
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9999999999&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9999999999. Status: success | 919999999999 | 3411220282527663410-237909999357598225
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3411220284306474290-56574003423466031
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=7777777777&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 7777777777. Status: success | 917777777777 | 3411220286219183410-489964163706693898
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=989865653&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 989865653. Status: error | 175 | The "INTERNATIONAL_PHONE" service is disabled for you. Kindly get the service enabled before using this action
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=5555555555&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 5555555555. Status: success | 915555555555 | 3411220290229245234-254000526914516417
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=2222222222&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 2222222222. Status: success | 912222222222 | 3411220292184032562-407397866700155405
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3411220293920920882-134562302908083732
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Sai Car Services Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3411220295632327986-165320048133183047
+
+Email sent successfully to harshada@vaspsolutions.com

@@ -1,0 +1,21 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=BBQ has sent a great offer from BBQ to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3395095713135183180-263015911465854010
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231233&userid=2000170305&password=O1czbaj9f&msg=BBQ has sent a great offer from BBQ to you.Download the app for Android at goo.gl/r5rxjj, Use your Cell no. as login and 123456 as password and enjoy the benefits!&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231233. Status: success | 911231231233 | 3395095720542954828-570094309834259751
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker App is 675524&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3395174003513627954-36211424628817866
+
+New password 675524
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=BBQ has sent a great offer from BBQ to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3395256322334750001-424402022066792916
+
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8888888888&userid=2000170305&password=O1czbaj9f&msg=BBQ has sent a great offer from BBQ to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8888888888. Status: success | 918888888888 | 3395304053573637426-118115081603706938
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1231231233&userid=2000170305&password=O1czbaj9f&msg=BBQ has sent a great offer from BBQ to you. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1231231233. Status: success | 911231231233 | 3395304054672676146-404918455143433369
+

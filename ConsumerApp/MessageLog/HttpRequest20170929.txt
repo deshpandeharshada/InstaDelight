@@ -1,0 +1,21 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 452106 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3415444923515446604-11007792526430592
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 700554 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3415445633287640396-151151457156308936
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=+91 1954763215&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Shakambhari Dry Fruits %26 Foods and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to +91 1954763215. Status: success | 911954763215 | 3415549330053698892-195668783366953113
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Indian Airlines and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3415552533007377713-400386344592668171
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Baghchi Electronics and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3415559703607682438-57042172165770352
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1954763215&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Vaishnavi and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1954763215. Status: success | 911954763215 | 3415581209121404209-190384601307205775
+

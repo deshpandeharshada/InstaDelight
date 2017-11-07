@@ -1,0 +1,1 @@
+SMS sent successfully to 23424. Status: Request sheduled

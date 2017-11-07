@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "UploadConsumerFile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <h3>@Global.Merchant.SendToConsumerList</h3>
+        <div class="medium-6 columns">
+            @using (Html.BeginForm("UploadConsumerFile", "Merchant", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <input type="hidden" ng-model="CouponId" id="hdnCouponId" name="hdnCouponId" value="@ViewBag.CouponId" />
+                <label class="text">
+                    @Global.Merchant.SelectCSVFile
+                    <input type="file" name="file" />
+                </label>
+
+                <label>
+                    @Global.Merchant.GroupNamePrompt
+                    <input name="group" type="text" class="textbox" placeholder="@Global.Merchant.GroupName" ng-model="GroupName" id="group">
+                </label>
+                <input type="submit" value=@Global.Merchant.Send />
+            }
+        </div>
+        <div>
+            <label>
+                <b> @ViewBag.result</b>
+            </label>
+        </div>
+    </div>
+</div>
+

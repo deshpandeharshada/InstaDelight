@@ -1,0 +1,28 @@
+﻿@{
+    ViewBag.Title = "MerchantConfiguration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" data-ng-init="EnableHomeBackButton()">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row rowb">
+                <h2>@Global.InstaDelight.MerchantDetails</h2>
+                <div class="small-10 small-offset-1 text-center columns">
+                    <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-plus fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("AddMerchant", "Merchant", new { Flag = "Add", merchantid = 0 })>@Global.InstaDelight.AddMerchant</a></div>
+                    <label>&nbsp;</label>
+                    <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-edit fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("Index", "Merchant", new { Flag = "Edit" })>@Global.InstaDelight.EditMerchant</a></div>
+                    <label>&nbsp;</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+

@@ -1,0 +1,12 @@
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Shakambhari Dry Fruits, Welcome to Offertraker! Please download the Offertraker Business app for Android at goo.gl/FzvjZi and for Apple at goo.gl/KtkRHd. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3371894026817922354-348707567426005487
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=3333333333&userid=2000170305&password=O1czbaj9f&msg=Dear Vaishnavi, Welcome to Offertraker! Please download the Offertraker Business app for Android at goo.gl/FzvjZi and for Apple at goo.gl/KtkRHd. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 3333333333. Status: success | 913333333333 | 3372130861833143628-54952190410745798
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=4444444444&userid=2000170305&password=O1czbaj9f&msg=Dear Green Palace, Welcome to Offertraker! Please download the Offertraker Business app for Android at goo.gl/FzvjZi and for Apple at goo.gl/KtkRHd. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 4444444444. Status: success | 914444444444 | 3372133360832632113-468146749073151156
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1010101010&userid=2000170305&password=O1czbaj9f&msg=Dear Sai Car Services, Welcome to Offertraker! Please download the Offertraker Business app for Android at goo.gl/FzvjZi and for Apple at goo.gl/KtkRHd. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1010101010. Status: success | 911010101010 | 3372135457494005041-449630071836059624
+

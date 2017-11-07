@@ -1,0 +1,399 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+
+<style>
+    .mydiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-color: grey;
+        opacity: .8;
+    }
+
+    .ajax-loader {
+        background-image: url('../../Images/loading.gif');
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        background-color: #666;
+        opacity: 0.4;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .htabGrid {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 80% !important;
+    }
+
+    .htabGridshare {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: 0px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 20% !important;
+    }
+</style>
+
+<style type="text/css">
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ui-grid, .ui-grid-viewport {
+        height: auto !important;
+        border: none !important;
+        margin-left: 2px;
+        margin-right: 2px;
+        /*width: 100%!important;*/
+    }
+
+    .ui-grid-row .ng-scope {
+        /*height: 65px !important;*/
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .ui-grid-pager-panel {
+        position: relative;
+        display: inline-block;
+    }
+
+    .ui-grid-pager-max-pages-number {
+        vertical-align: middle !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+</style>
+
+
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" data-ng-init="OpenForm()">
+        <div class="mydiv" ng-show="searchButtonText">
+            <label class="ajax-loader"></label>
+        </div>
+
+
+        <div class="row rowb" ng-show="divBanks">
+
+            <div class="h-heading text-center">
+                @Global.Consumer.MyDigitalCards
+            </div>
+            <input type="hidden" value="@ViewBag.ConsumerId" name="hdnConsumerId" id="hdnConsumerId" ng-model="ConsumerId" />
+            <div class="row">
+                <div class="small-12 text-center">
+                    <div class="small-12 htab columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="bank in banks">
+                        <input type="hidden" value="{{bank.bankid}}" />
+                        <div class="small-12" ng-click="showDEC(bank)">
+                            <div class="small-2 columns" ng-click="showDEC(bank)">
+
+                                <img ng-hide="bank.bank_logo == null" ng-src="{{getImageUrl(bank.bank_logo)}}" width="75" height="75" style="width:75px;height:35px" class="fa fa-2x red-icon" />
+                                <i ng-show="bank.bank_logo == null" class="fa fa-cart-arrow-down fa-2x red-icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="small-8 columns" ng-click="showDEC(bank)">
+                                {{bank.bankname}}
+                            </div>
+                            <div class="small-2 columns">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <div class="small-12 htab columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="merchant in merchants">
+                        <input type="hidden" value="{{merchant.merchantid}}" />
+                        <div class="small-12" ng-click="showMerchantDEC(merchant)">
+                            <div class="small-2 columns" ng-click="showMerchantDEC(merchant)">
+                                <img ng-hide="merchant.MerchantLogo == null" ng-src="{{getImageUrl(merchant.MerchantLogo)}}" width="75" height="75" style="width:75px;height:35px" class="fa fa-2x red-icon" />
+                                <i ng-show="merchant.MerchantLogo == null" class="fa fa-cart-arrow-down fa-2x red-icon" aria-hidden="true"></i>
+                            </div>
+                            <div class="small-8 columns" ng-click="showMerchantDEC(merchant)">
+                                {{merchant.DECName}}
+                            </div>
+                            @*<div class="small-4 columns" ng-click="showMerchantDEC(merchant)">
+                                    <div ng-switch on="merchant.PercentOff">
+                                        <div ng-switch-when=null>
+                                            {{currency}} {{merchant.Discount}} @Global.Consumer.Off
+                                        </div>
+                                        <div ng-switch-default>
+                                            {{merchant.PercentOff}} % @Global.Consumer.Off
+                                        </div>
+                                    </div>
+                                    &nbsp;
+                                </div>*@
+                            <div class="small-2 columns">
+                                <a ng-href="/Consumer/SendDec/{{merchant.UserId}}">
+                                    <i class="fa fa-share-alt fa-2x red-icon" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row rowb" ng-show="divDEC">
+            <input type="hidden" ng-model="bankid" value="@ViewBag.bankid" />
+            <input type="hidden" ng-model="decid" value="@ViewBag.decid" />
+            <div class="h-heading text-center">
+                Welcome to {{bankname}}
+            </div>
+
+            <div class="row">
+                <div style="border-radius:10px; margin:auto; height:200px; width:325px; margin-bottom:10px;  background-size: cover;background-image: url({{b64encoded}});  background-repeat:no-repeat; box-shadow: 5px 7px 7px 0 #333, 0px 0px 0 0px #333;">
+
+                    <div class="row" style="padding:5px 15px; margin-bottom:-20px;">
+                        <div class="small-3 columns" style="float:right; margin-right:-15px;">
+                            <a href="/Consumer/MyProfile" ng-hide="b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img ng-src="{{b64conlogoencoded}}" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            <a href="/Consumer/MyProfile" ng-show="consumergender == 'Female' && b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img src="~/Images/female_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            <a href="/Consumer/MyProfile" ng-show="consumergender == 'Male' && b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img src="~/Images/male_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            &nbsp;
+                            &nbsp;
+                        </div>
+
+                        <div class="small-7 columns" style="float:left; margin-left:-5px;"><a href="#" ng-hide="b64banklogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px"><img ng-src="{{b64banklogoencoded}}" style="width:100%; height:100%;" /></a>&nbsp;</div>
+                        @*<p style="margin-left:10px; margin-bottom:0px;"><b>@Session["UserName"]</b></p>
+                            <p style="margin-left:10px;margin-bottom:5px; font-size:14px; font-weight:normal;"><b>&nbsp;</b></p>*@
+                    </div>
+                    <div class="small-12 columns" style="float:left; margin-left:-5px;">
+                        <p style="margin-left:5px;margin-top:15px;color:{{DECColor}}"><b>@Session["UserName"]</b></p>
+                    </div>
+                    <div class="columns" style="float:left; margin-left:-5px;margin-top:-10px;color:{{DECColor}}">
+                        &nbsp;
+                    </div>
+                    <hr style="margin:15px 0px 5px 0px;" />
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="showCoupons(bankid)" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button1_text}}
+                        </a>
+
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="redirect()" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button2_text}}
+                        </a>
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="redirect1(bankid)" class="decbutton" style="font-size:12px; width:80px;border:black 1px solid;font-weight:bold">
+                            {{button3_text}}
+                        </a>
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">&nbsp;</div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row rowb" ng-show="divMerchantDEC">
+            <input type="hidden" ng-model="MerchantId" />
+            <div class="h-heading text-center">
+                Welcome to {{decname}}
+            </div>
+
+            <div class="row">
+                <div style="border-radius:10px; margin:auto; height:200px; width:325px; margin-bottom:10px; background-size: cover;background-image: url({{b64merdecencoded}});  background-repeat:no-repeat; box-shadow: 5px 7px 7px 0 #333, 0px 0px 0 0px #333;">
+                    <div class="row" style="padding:5px 15px; margin-bottom:-20px;">
+                        <div class="small-3 columns" style="float:right; margin-right:-15px;">
+                            <a href="/Consumer/MyProfile" ng-hide="b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img ng-src="{{b64conlogoencoded}}" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            <a href="/Consumer/MyProfile" ng-show="consumergender == 'Female' && b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img src="~/Images/female_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            <a href="/Consumer/MyProfile" ng-show="consumergender == 'Male' && b64conlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img src="~/Images/male_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                            </a>
+                            &nbsp;
+                            &nbsp;
+                        </div>
+                        <div class="small-7 columns" style="float:left; margin-left:-5px;">
+                            <a href="#" ng-hide="b64merlogoencoded == 'none'" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                                <img ng-src="{{b64merlogoencoded}}" style="width:100%; height:100%;" />
+                            </a>
+                        </div>
+
+                        @*<p style="margin-left:10px; margin-bottom:0px;"><b>@Session["UserName"]</b></p>
+                            <p style="margin-left:10px;margin-bottom:5px; font-size:14px; font-weight:normal;"><b>{{RewardName}} {{Points}}</b></p>*@
+                    </div>
+
+                    <div class="small-12 columns" style="float:left; margin-left:-5px;">
+                        <p style="margin-left:5px;margin-top:15px;color:{{DECColor}}"><b>@Session["UserName"]</b></p>
+                    </div>
+
+                    
+                    <div class="columns" style="float:left; margin-left:-5px;margin-top:-10px;color:{{DECColor}}" ng-show="ShowCurrency == true && currency != 'Rs'">
+                        {{RewardName}} {{currency}} {{Points}}
+                    </div>
+
+                    <div class="columns" style="float:left; margin-left:-5px;margin-top:-10px;color:{{DECColor}}" ng-show="ShowCurrency == true && currency == 'Rs'">
+                        {{RewardName}} <i class="fa fa-inr"></i> {{Points}}
+                    </div>
+
+                    <div class="columns" style="float:left; margin-left:-5px;margin-top:-10px;color:{{DECColor}}" ng-show="ShowCurrency == false">
+                        {{RewardName}} {{Points}}
+                    </div>
+
+                    <hr style="margin:15px 0px 5px 0px;" />
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="showMerchantCoupons(MerchantId)" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button1_text}}
+                        </a>
+
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="redirect()" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button2_text}}
+                        </a>
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="redirect1(MerchantId)" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button3_text}}
+                        </a>
+                    </div>
+                    <div class="small-3 columns" style="opacity:0.9;">
+                        <a ng-click="showMerchantGiftCard(MerchantId)" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            {{button4_text}}
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="row rowb" ng-show="divCoupons">
+            <div class="h-heading text-center" ng-show="divCoupons">
+                @Global.Consumer.MyCoupons
+            </div>
+
+            <div class="row">
+                <label ng-show="divBankCoupons">
+                    @Global.Consumer.SelectCity
+                    <select style="border-radius:4px;" ng-show="divBankCoupons" ng-model="city.City" id="ddlCity" name="ddlCity" ng-change="GetCouponsFromCity(city.City)" ng-options="city.City for city in CityList">
+                        <option value="" label=@Global.Consumer.SelectCity></option>
+                    </select>
+                </label>
+
+                <label ng-show="divBankCoupons">
+                    @Global.Consumer.SelectBusinessCategory
+                    <select style="border-radius:4px;" ng-show="divBankCoupons" ng-model="busi.categoryid" id="ddlBussCat" name="ddlBussCat" ng-change="UpdateCouponsDataForBusiness(busi.categoryid)" ng-options="busi.CategoryName for busi in CategoryList track by busi.categoryid">
+                        <option value="" label=@Global.Consumer.SelectBusinessCategory></option>
+                    </select>
+                </label>
+                <button class="button" style="width:100%; border-radius:5px;" ng-show="divBankCoupons" ng-click="GetCouponsFromCityCategory()">@Global.Consumer.Search</button>
+
+                <div class="row" ng-show="divCoupons">
+                    <div ui-grid="gridOptions" class="myGrid" ng-style="{visibility: gridOptions.data && gridOptions.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+                </div>
+
+             
+            </div>
+        </div>
+
+
+        <div class="row rowb" ng-show="divCouponDetails">
+            <div class="row grey text-center">
+                {{coupontitle}}
+            </div>
+            <label>
+                Code: <b> {{couponcode}}</b>
+            </label>
+
+            <label>
+                @Global.Consumer.ValidTill: {{validtill}}
+            </label>
+            <label>
+                {{coupondetails}}
+            </label>
+            <div class="small-12 columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="cond in EventConditions">
+                <label>
+                    {{cond.EventCondition}}
+                </label>
+            </div>
+            <label>&nbsp;</label>
+            
+            <label ng-show="CouponConditions.length > 0">
+                @Global.Consumer.TermsAndConditions
+            </label>
+            <div class="small-12 columns" style="border-radius:5px; margin-bottom:10px;" ng-repeat="cond in CouponConditions">
+                <label>
+                    {{cond.Condition}}
+                </label>
+            </div>
+            <label>&nbsp;</label>
+            <div class="row grey text-center">@Global.Consumer.ApplicableIn </div>
+            <label>
+                <b> {{merchant.MerchantName}}</b>
+            </label>
+            <label>{{merchant.Address1}}</label>
+            <label>{{merchant.Address2}}</label>
+            <label ng-hide="merchant.LocationName == null">{{merchant.LocationName}}, {{merchant.CityName}}</label>
+
+            @*<label>&nbsp;</label>
+            <div class="row grey text-center">  @Global.Consumer.RedeemCouponPrompt:</div>
+            <label class="text-center">
+                <img class="img-responsive" ng-src="data:image/jpeg;base64,{{b64encodedqr}}" width="200" height="200" style="width:200px;height:200px">
+            </label>*@
+
+
+            <div ng-switch on="coupondecdata">
+                <div ng-switch-when=null class="small-12 htab columns">
+                    <span ng-switch on="categoryid">
+                        <img ng-switch-when="3" src='~/Images/Coupons/Restaurant.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-when="4" src='~/Images/Coupons/Hotel.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-when="5" src='~/Images/Coupons/Spa.png' width="325" height="200" style="width:325px;height:200px">
+                        <img ng-switch-default src='~/Images/Coupons/Hotel.png' width="325" height="200" style="width:325px;height:200px">
+                    </span>
+                </div>
+                <div ng-switch-default class="small-12 htab columns">
+                    <img ng-src="{{b64decencoded}}" width="325" height="200" style="width:325px;height:200px" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+}
+

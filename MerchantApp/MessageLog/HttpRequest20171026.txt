@@ -1,0 +1,24 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 208668 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 190944 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 190944 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 190944 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 518917 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear consumer,  if you wish to redeem your Gift Card, then please share the OTP 208668 with the Business staff now. Please do not share this OTP if you do not wish to redeem. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your Men's Avenue Digital Card is updated. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456 unless you have reset it.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3435012631539529094-92731337848819556
+
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=8334513363&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Goodluck and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 8334513363. Status: success | 918334513363 | 3435095983248586118-555480508651792416
+

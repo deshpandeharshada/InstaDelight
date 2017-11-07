@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <h1>@ViewBag.Result</h1>
+        <div class="small-12 text-center">
+            <div class="small-12 htab columns" style="border-radius:5px 5px 0px 0px;height:100px;font-size:15px">
+                <i class="fa fa-bar-chart fa-2x red-icon" aria-hidden="true"></i><br>
+                <a href=@Url.Action("ReviewReport", "Merchant")>@Global.Merchant.ReviewReport</a>
+            </div>
+
+            <div class="small-12 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px">
+                <i class="fa fa-key fa-2x red-icon" aria-hidden="true"></i><br>
+                <a href=@Url.Action("KeyMetricsReport", "Merchant")>@Global.Merchant.KeyBusinessMetrics</a>
+            </div>
+
+            <div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;height:100px;font-size:15px">
+                <i class="fa fa-table fa-2x red-icon" aria-hidden="true"></i><br>
+                <a href=@Url.Action("CustomerList", "Merchant")>@Global.Merchant.CustomerSummary</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/js/vendor/jquery.js"></script>
+<script src="~/Content/js/vendor/what-input.js"></script>
+<script src="~/Content/js/vendor/foundation.js"></script>
+<script src="~/Content/js/app.js"></script>

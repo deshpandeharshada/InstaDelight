@@ -1,0 +1,16 @@
+07-10-2017 10:36:35 AM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 10:36:37 AM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 3:53:31 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 3:53:33 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 4:00:59 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 4:01:00 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 4:02:00 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.
+07-10-2017 4:02:01 PM
+Error occurred Consumer/getConsumerPoints.Object reference not set to an instance of an object.

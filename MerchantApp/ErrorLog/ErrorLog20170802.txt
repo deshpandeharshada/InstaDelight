@@ -1,0 +1,2 @@
+02-08-2017 3:54:11 PM
+Error occured Consumer/GetMerchantCoupons.PROCEDURE instadelight_consumer.GetCouponListForMerchant does not exist

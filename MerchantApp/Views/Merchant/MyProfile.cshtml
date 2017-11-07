@@ -1,0 +1,386 @@
+﻿@{
+    ViewBag.Title = "MyProfile";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenProfileForm()" class="row rowb">
+    <input type="hidden" disabled="disabled" name="hdnMechantId" ng-model="MerchantId" ng-required="true" value="@ViewBag.MerchantId" />
+    <input type="hidden" disabled="disabled" ng-model="MerchantName" ng-required="true" />
+    <input type="hidden" disabled="disabled" ng-model="UserId" ng-required="true" />
+    <input type="hidden" disabled="disabled" name="hdnFlag" value="@ViewBag.flag" ng-model="flag" ng-required="true" />
+
+    @if (ViewBag.flag == "showDEC")
+    {
+        <div ng-show="divDEC">
+            @*<form name="myForm">*@
+
+            <h3>@Global.Merchant.MyProfile</h3>
+            <label>
+                @Global.Merchant.Message <font style="color:red">*</font>
+                <input name="name" type="text" class="textbox" ng-model="DECName" maxlength="50" ng-required="true"
+                       placeholder="@Global.Merchant.Message" required>
+            </label>
+
+            <label>
+                @Global.Merchant.BusinessCategory <font style="color:red">*</font>
+                <select style="border-radius:4px;" id="gender" name="gender" ng-model="selectedcatobject" ng-required="true" ng-change="CategoryChanged(selectedcatobject)"
+                        ng-options="busi.CategoryName for busi in CategoryList track by busi.categoryid">
+                    <option value="" label="@Global.Merchant.BusinessCategory"></option>
+                </select>
+            </label>
+            <div class="row" style="padding:0px;">
+                <div class="medium-6 columns">
+                    <b> @Global.Merchant.Logo</b>
+                    <input type="file" name="mechantlogofile" style="margin-top:10px;" value="Upload File" id="mechantlogofile" ng-required="false" accept="image/*" required
+                           onchange="angular.element(this).scope().merchantlogofile_changed(this)" />
+                </div>
+            </div>
+            <label>
+                <img class="img-responsive" ng-src="{{b64encoded}}" ng-show="b64encoded" width="75" height="75">
+            </label>
+            <label><a class="btn-link" ng-show="b64encoded" style="cursor:pointer;color:blue" ng-click="ClearLogo()">@Global.Merchant.ClearLogo</a></label>
+            <hr />
+            <div class="row" style="padding:0px;">
+                <div class="medium-6 columns">
+                    <b>@Global.Merchant.DECBackground:</b> <br />
+                    size (325 x 200) px
+                    <input type="file" name="mechantdecfile" style="margin-top:10px;" value="Upload File" id="mechantdecfile" ng-required="false" accept="image/*" required
+                           onchange="angular.element(this).scope().merchantdecfile_changed(this)" ng-model="SelectedImageSrc" />
+                    <button class="button" ng-click="ShowImageGallery()">@Global.Merchant.SelectFromLibrary</button>
+                </div>
+            </div>
+
+            <label>
+                <img class="img-responsive" ng-src="{{b64decencoded}}" width="75" height="75">
+            </label>
+            <label>&nbsp;</label>
+            <label>
+                @Global.Merchant.TextColorPrompt
+            </label>
+            <label>
+                <input type="radio" name="type" value="Black" ng-model="DECColor" /><label for="Black">@Global.Merchant.Black</label>
+                <input type="radio" name="type" value="White" ng-model="DECColor" ng-init="DECColor = 'White'" /><label for="White"> @Global.Merchant.White </label>
+            </label>
+            <div class="row grey text-center">@Global.Merchant.SetButtonURL</div>
+            <label>
+                @Global.Merchant.Button 1 @Global.Merchant.Text <font style="color:red">*</font>
+                <input type="text" class="text" ng-model="button1_text" maxlength="20" ng-required="true" placeholder="@Global.Merchant.Button 1 @Global.Merchant.Text " />
+            </label>
+
+            <label>
+                @Global.Merchant.Button 2 @Global.Merchant.Text <font style="color:red">*</font>
+                <input type="text" class="text" ng-model="button2_text" maxlength="20" ng-required="true" placeholder="@Global.Merchant.Button 2 @Global.Merchant.Text " />
+            </label>
+            <label>
+                @Global.Merchant.Button 2 @Global.Merchant.URL 
+                <input type="text" class="text" ng-model="button2_url" maxlength="255" placeholder="@Global.Merchant.Button 2 @Global.Merchant.URL " />
+            </label>
+
+            <label>
+                @Global.Merchant.Button 3 @Global.Merchant.Text <font style="color:red">*</font>
+                <input type="text" class="text" ng-model="button3_text" maxlength="20" ng-required="true" placeholder="@Global.Merchant.Button 3 @Global.Merchant.Text " />
+            </label>
+            <label>
+                @Global.Merchant.Button 3 @Global.Merchant.URL 
+                <input type="text" class="text" ng-model="button3_url" maxlength="255" placeholder="@Global.Merchant.Button 3 @Global.Merchant.URL " />
+            </label>
+
+            <label>
+                @Global.Merchant.Button 4 @Global.Merchant.Text <font style="color:red">*</font>
+                <input type="text" class="text" ng-model="button4_text" maxlength="20" ng-required="true" placeholder="@Global.Merchant.Button 4 @Global.Merchant.Text " />
+            </label>
+
+            <label>&nbsp;</label>
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateMerchant()">@Global.Merchant.Update</button>
+        </div>
+    }
+    else if (ViewBag.flag == "showProfile")
+    {
+        <div ng-show="divProfile">
+            <div class="row grey text-center">@Global.Merchant.Address</div>
+            <label>
+                @Global.Merchant.Country <font style="color:red">*</font>
+                @*<input name="Country" type="text" class="textbox" placeholder="@Global.Merchant.Country" ng-model="Country"
+                    maxlength="500" ng-required="true">*@
+                <select style="border-radius:4px;" ng-model="selectedcountryobject" id="ddlCountry" name="ddlCountry" ng-required="true"
+                        ng-selected="country.countryid == countryid"
+                        ng-change="getStates(selectedcountryobject)"
+                        ng-options="country.countryname for country in CountryList track by country.countryid">
+                    <option value="" label="Select Country"></option>
+                </select>
+            </label>
+            <label>
+                @Global.Merchant.State <font style="color:red">*</font>
+                @*<input name="State" type="text" class="textbox" placeholder="State" ng-model="State"
+                    maxlength="500" ng-required="true">*@
+                <select style="border-radius:4px;" ng-model="selectedstateobject" id="ddlstate" name="ddlstate" ng-required="true"
+                        ng-change="getCities(selectedstateobject)" ng-options=" st.state for st in StateList track by st.stateid">
+                    <option value="" label="Select State"></option>
+                </select>
+            </label>
+            <label>
+                @Global.Merchant.City <font style="color:red">*</font>
+                <input name="City" type="text" class="textbox" placeholder="@Global.Merchant.City" ng-model="City"
+                       maxlength="500" ng-required="true">
+                @*<select style="border-radius:4px;" ng-model="selectedcityobject" id="ddlCity" name="ddlCity" ng-required="true"
+                            ng-change="getLocations(selectedcityobject)" ng-options="city.City for city in CityList track by city.cityid">
+                        <option value="" label="Select City"></option>
+                    </select>*@
+
+            </label>
+            <label>
+                @Global.Merchant.Location <font style="color:red">*</font>
+                <input name="Location" type="text" class="textbox" placeholder="@Global.Merchant.Location" ng-model="Location"
+                       maxlength="500" ng-required="true">
+                @*<select style="border-radius:4px;" ng-model="selectedlocobject" id="ddlLoc" name="ddlLoc" ng-required="true"
+                            ng-change="LocationChanged(selectedlocobject)" ng-options=" loc.Location for loc in LocationList track by loc.LocationId">
+                        <option value="" label="Select Location"></option>
+                    </select>*@
+
+            </label>
+            <label>
+                @Global.Merchant.Street <font style="color:red">*</font>
+                <input name="street" type="text" class="textbox" placeholder="@Global.Merchant.Street" ng-model="Street"
+                       maxlength="50" ng-required="true">
+            </label>
+
+            <label>
+                @Global.Merchant.SocietyName <font style="color:red">*</font>
+                <input name="society" type="text" class="textbox" placeholder="@Global.Merchant.SocietyName" ng-model="SocietyName" maxlength="50">
+            </label>
+
+            <label>
+                @Global.Merchant.BuildingName <font style="color:red">*</font>
+                <input name="building" type="text" class="textbox" placeholder="@Global.Merchant.BuildingName" required ng-model="BuildingName" maxlength="50" ng-required="true">
+            </label>
+            <label>
+                @Global.Merchant.PinCode <font style="color:red">*</font>
+                <input id="inputPinCode" type="text" name="PinCode" ng-model="PinCode"
+                       class="textbox" ng-required="true" ng-pattern="/^[0-9]{6,6}$/" maxlength="6" placeholder="@Global.Merchant.PinCode" />
+            </label>
+            <div class="alert-warning" ng-show="myForm.PinCode.$error.pattern" style="width:70%">
+                <p> @Global.Merchant.PinCodeValidationMessage</p>
+            </div>
+            <label>
+                @Global.Merchant.OwnerEmail <font style="color:red">*</font>
+                <input type="email" class="textbox" ng-model="Email" id="inputEmail" name="Email"
+                       ng-disabled="usernameSelection == 'email'"
+                       maxlength="256" ng-required="true" placeholder="@Global.Merchant.OwnerEmail" />
+            </label>
+            <div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+                <p> @Global.Merchant.EmailValidationMessage</p>
+            </div>
+
+            @Global.Merchant.RegisteredMobileNumber
+            <input id="inputPhone" type="text" name="PhoneNumber" ng-model="PhoneNumber" style="width:70%"
+                   class="textbox" ng-required="true" ng-pattern="/^[0-9]{10,10}$/" maxlength="10"
+                   ng-disabled="usernameSelection == 'phone'"
+                   placeholder="@Global.Merchant.RegisteredMobileNumber" />
+
+            <label>&nbsp;</label>
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateMerchant()">@Global.Merchant.Update</button>
+        </div>
+    }
+    else if (ViewBag.flag == "showRewardProgram")
+    {
+        <div ng-show="divRewardProgram">
+            <div class="row grey text-center">@Global.Merchant.RewardProgramPrompt</div>
+            @*<input type="checkbox" name="rewardselection" ng-model="rewardSelection" ng-change="ShowHide()" />*@
+
+            <div class="small-12 columns row">
+                <input type="radio" name="reward" value="yes" ng-checked="true" ng-model="rewardSelection" ng-init="rewardSelection = 'yes'" /><label>@Global.Merchant.Yes</label>
+                &nbsp;
+                <input type="radio" name="reward" value="no" ng-model="rewardSelection" /><label>@Global.Merchant.No</label>
+            </div>
+
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes'">@Global.Merchant.RewardFormula</div>
+
+            <div class="row" style="padding:0px;" ng-show="rewardSelection == 'yes'">
+                <div class="small-3 columns">
+                    <input name="RewardRs" id="txtRewardRs" type="text" class="textbox" placeholder="@Global.Merchant.Amount"
+                           ng-model="RewardRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+                <div class="small-3 columns" style="padding-top:10px;">{{currency}} =</div>
+                <div class="small-3 columns">
+                    <input name="RewardPts" id="txtRewardPts" type="text" class="textbox small-4 columns" placeholder="@Global.Merchant.Points" ng-model="RewardPts"
+                           ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+
+                <div class="small-3 columns" style="padding-top:10px;">@Global.Merchant.Points</div>
+            </div>
+            <hr />
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes'">@Global.Merchant.RedeemOptions1</div>
+
+            <div class="small-12 columns row" ng-show="rewardSelection == 'yes'">
+                <input type="radio" name="type" value="Points" ng-checked="true" ng-model="RedeemSelection" ng-click="RewardName = ''" ng-init="RedeemSelection = 'Points'" /><label>@Global.Merchant.RedeemFormula</label>
+                <br />
+                <input type="radio" name="type" value="Options" ng-model="RedeemSelection" ng-click="RewardName = ''" /><label>@Global.Merchant.RedeemOptions</label>
+                <br />
+                <input type="radio" name="type" value="Cashback" ng-model="RedeemSelection" ng-click="RewardName = 'Cashback'" /><label>@Global.Merchant.Cashback</label>
+            </div>
+
+            <div class="small-12 columns row" ng-show="rewardSelection == 'yes' && RedeemSelection == 'Options'">
+                <input type="text" class="textbox" ng-disabled="RedeemSelection != 'Options'" placeholder="Redeem Condition" ng-model="condition1" id="inputCondition1" name="Condition1">
+                <input type="text" class="textbox" ng-disabled="RedeemSelection != 'Options'" placeholder="Redeem Condition" ng-model="condition2" id="inputCondition2" name="Condition2">
+                <input type="text" class="textbox" ng-disabled="RedeemSelection != 'Options'" placeholder="Redeem Condition" ng-model="condition3" id="inputCondition3" name="Condition3">
+                <input type="text" class="textbox" ng-disabled="RedeemSelection != 'Options'" placeholder="Redeem Condition" ng-model="condition4" id="inputCondition4" name="Condition4">
+                <input type="text" class="textbox" ng-disabled="RedeemSelection != 'Options'" placeholder="Redeem Condition" ng-model="condition5" id="inputCondition5" name="Condition5">
+            </div>
+
+
+            <label ng-show="RedeemSelection == 'Cashback'">
+                @Global.Merchant.JoiningBonus1
+                <input id="inputJoiningBonus" type="text" name="JoiningBonus" ng-model="JoiningBonus" style="width:70%"
+                       class="tableinputcell" maxlength="5" />
+            </label>
+
+            <label ng-show="RedeemSelection != 'Cashback'">
+                @Global.Merchant.JoiningBonus
+                <input id="inputJoiningBonus" type="text" name="JoiningBonus" ng-model="JoiningBonus" style="width:70%"
+                       class="tableinputcell" maxlength="5" />
+            </label>
+
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes' && RedeemSelection == 'Points'">@Global.Merchant.RedeemFormula</div>
+            <div class="row" style="padding:0px;" ng-show="rewardSelection == 'yes' && RedeemSelection == 'Points'">
+                <div class="small-3 columns">
+                    <input name="RedeemPt" id="txtRedeemPt" type="text" class="textbox" placeholder="@Global.Merchant.Points"
+                           ng-model="RedeemPt" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+                <div class="small-3 columns" style="padding-top:10px;">@Global.Merchant.Points =</div>
+                <div class="small-3 columns">
+                    <input name="RedeemRs" id="txtRedeemRs" type="text" class="textbox small-4 columns" placeholder="@Global.Merchant.Amount"
+                           ng-model="RedeemRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+
+                <div class="small-3 columns" style="padding-top:10px;">{{currency}}</div>
+            </div>
+
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes' && RedeemSelection == 'Cashback'">@Global.Merchant.Cashback</div>
+            <div class="row" style="padding:0px;" ng-show="rewardSelection == 'yes' && RedeemSelection == 'Cashback'">
+                <div class="small-12 columns row" ng-show="rewardSelection == 'yes'">
+                    <input type="radio" name="cashbackselect" value="cashbackpoints" ng-checked="true"
+                           ng-model="cashbackSelection" ng-init="cashbackSelection = 'cashbackpoints'" />
+                    <label>@Global.Merchant.CashbackPoints</label>
+                    <br />
+                    <input type="radio" name="cashbackselect" value="cashbacktransaction" ng-model="cashbackSelection" />
+                    <label>@Global.Merchant.FixedCashback</label>
+                </div>
+
+                <div class="small-3 columns" ng-show="cashbackSelection == 'cashbackpoints'">
+                    <input name="CashbackRedeemPt" id="txtCashbackRedeemPt" type="text" class="textbox" placeholder="@Global.Merchant.Points"
+                           ng-model="CashbackRedeemPt" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+                <div class="small-3 columns" style="padding-top:10px;" ng-show="cashbackSelection == 'cashbackpoints'">@Global.Merchant.Points =</div>
+                <div class="small-3 columns" ng-show="cashbackSelection == 'cashbackpoints'">
+                    <input name="CashbackRedeemRs" id="txtCashbackRedeemRs" type="text" class="textbox small-4 columns" placeholder="@Global.Merchant.Amount"
+                           ng-model="CashbackRedeemRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+                <div ng-show="cashbackSelection == 'cashbackpoints'" class="small-3 columns" style="padding-top:10px;">{{currency}}</div>
+
+                <div class="small-12 columns" ng-show="cashbackSelection == 'cashbacktransaction'">
+                    {{currency}}
+                    <input name="CashbackRs" id="txtCashbackRs" type="text" class="textbox small-4 columns" placeholder="@Global.Merchant.Amount"
+                           ng-model="CashbackRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                </div>
+            </div>
+
+            <label ng-show="rewardSelection == 'yes'">
+                @Global.Merchant.RewardName
+                <input type="text" class="text" ng-model="RewardName" ng-disabled="RedeemSelection == 'Cashback'" maxlength="45" placeholder="@Global.Merchant.RewardName" />
+            </label>
+
+            <hr />
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes'">@Global.Merchant.Benefits</div>
+            <label ng-show="rewardSelection == 'yes'">
+                @Global.Merchant.BenefitsPrompt
+            </label>
+            <div class="small-12 columns row" ng-show="rewardSelection == 'yes'">
+                <input type="text" class="textbox" placeholder="@Global.Merchant.Benefits" ng-model="Benefits1" id="inputBenefits1" name="Benefits1">
+                <input type="text" class="textbox" placeholder="@Global.Merchant.Benefits" ng-model="Benefits2" id="inputBenefits2" name="Benefits2">
+                <input type="text" class="textbox" placeholder="@Global.Merchant.Benefits" ng-model="Benefits3" id="inputBenefits3" name="Benefits3">
+                <input type="text" class="textbox" placeholder="@Global.Merchant.Benefits" ng-model="Benefits4" id="inputBenefits4" name="Benefits4">
+                <input type="text" class="textbox" placeholder="@Global.Merchant.Benefits" ng-model="Benefits5" id="inputBenefits5" name="Benefits5">
+            </div>
+            <label>&nbsp;</label>
+
+            <hr />
+            <div class="row grey text-center" ng-show="rewardSelection == 'yes'">@Global.Merchant.PointsCashbackExpiry</div>
+            <label ng-show="rewardSelection == 'yes'">
+                @Global.Merchant.PointsExpiryPrompt 
+            </label>
+            <div class="small-12 columns row" ng-show="rewardSelection == 'yes'">
+                <select style="border-radius:4px;" ng-model="selectedexpiryobject" id="ddlExpiry" name="ddlExpiry" ng-required="true"
+                        ng-selected="expiry.Id == expid"
+                        ng-change="setPeriod(selectedexpiryobject)"
+                        ng-options="expiry.DisplayText for expiry in ExpiryList track by expiry.Id">
+                    <option value="" label="Select Period"></option>
+                </select>
+            </div>
+            <label>&nbsp;</label>
+
+
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateMerchant()">@Global.Merchant.Update</button>
+
+            @*</form>*@
+        </div>
+    }
+    <div class="row" ng-show="divImageGallery" id="divImages">
+        <label>@Global.Merchant.ImageGalleryHeading</label>
+        @if (((IEnumerable<string>)ViewBag.Images).Count() > 0)
+        {
+            <div>
+                @{
+            int imgcnt = 0;
+
+            string htmltable = "<table>";
+            foreach (var image in (IEnumerable<string>)ViewBag.Images)
+            {
+                if (imgcnt == 0)
+                {
+                    htmltable += "<tr>";
+                }
+                else if (imgcnt % 3 == 0)
+                {
+                    htmltable += "</tr><tr>";
+                }
+
+                htmltable += "<td> <img ng-src='" + Url.Content(image) + "' alt='" + Url.Content(image) + "' ng-click=EnlargeImage('" + Url.Content(image) + "') style='width:75px;height:75px' /></td>";
+                imgcnt++;
+            }
+            if (imgcnt == ((IEnumerable<string>)ViewBag.Images).Count())
+            {
+                htmltable += "</tr></table>";
+            }
+
+            @Html.Raw(htmltable); //This works and display as expected
+                }
+            </div>
+        }
+        <button class="button" style="width:100%; border-radius:5px;" ng-click="CloseImageGallery()">@Global.Merchant.Cancel</button>
+    </div>
+
+    <div class="row rowb text-center" ng-show="divEnlargeImage">
+        <label>@Global.Merchant.SetImageHeading</label>
+
+        <img ng-src="{{SelectedImageSrc}}" alt='{{SelectedImageSrc}}' style='width:325px;height:200px' />
+        <label>&nbsp;</label>
+
+        <div class="small-6 columns">
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="SetImage(SelectedImageSrc)">@Global.Merchant.SetImage</button>
+        </div>
+        <div class="small-6 columns">
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="CloseEnlargedImage()">@Global.Merchant.Cancel</button>
+        </div>
+
+
+
+    </div>
+
+
+
+</div>
+

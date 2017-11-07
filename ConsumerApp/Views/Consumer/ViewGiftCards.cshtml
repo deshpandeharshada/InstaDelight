@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "ViewGiftCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@*<div class="row rowb">
+        <h3>@Global.Consumer.NoGiftCardsPrompt</h3>
+    </div>*@
+
+<div ng-controller="myCntrl" data-ng-init="GetConsumerGiftCards()" ng-show="divPurchasedCards == true">
+    <input type="hidden" ng-model="MerchantId" id="hdnMerchantId" name="hdnMerchantId" value="@ViewBag.MerchantId" />
+    <div class="row rowb">
+        <div class="large-12" style="border-radius:5px; margin-bottom:10px;" ng-repeat="card in cards">
+            <input type="hidden" value="{{card.Id}}" />
+            <div class="h-heading text-center">
+                {{card.MerchantName}}
+            </div>
+            @*<div class="h-heading text-center">
+                    Card Value:  {{card.Denomination}}
+                </div>*@
+
+            <div style="border-radius:10px; margin:auto; height:200px; width:325px; margin-bottom:10px; background-image:url({{card.MerchantDEC}}); background-repeat:no-repeat;background-size: cover; box-shadow: 5px 7px 7px 0 #333, 0px 0px 0 0px #333;">
+                <div class="row" style="padding:5px 15px; margin-bottom:-20px;">
+                    <div class="small-3 columns" style="float:right; margin-right:-15px;">
+                        <a href="/Consumer/MyProfile" ng-hide="{{card.ConsumerLogo == null}}" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                            <img ng-src="{{card.ConsumerLogo}}" style="width:100%; height:100%; border-radius:5px;" />
+                        </a>
+                        <a href="/Consumer/MyProfile" ng-show="card.consumergender == 'Female' && card.ConsumerLogo == null" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                            <img src="~/Images/female_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                        </a>
+                        <a href="/Consumer/MyProfile" ng-show="card.consumergender == 'Male' && card.ConsumerLogo == null" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                            <img src="~/Images/male_user_icon.png" style="width:100%; height:100%; border-radius:5px;" />
+                        </a>
+                        &nbsp;
+                        &nbsp;
+                    </div>
+                    <div class="small-7 columns" style="float:left; margin-left:-5px;">
+                        <a href="#" ng-hide="{{card.MerchantLogo == null}}" class="decbutton" style="font-size:12px; width:50px; height:50px; padding:0px">
+                            <img ng-src="{{card.MerchantLogo}}" style="width:100%; height:100%;" />
+                        </a>
+                    </div>
+                </div>
+
+                <div class="small-12 columns" style="float:left; margin-left:-5px;">
+                    <p style="margin-left:5px;margin-top:15px;color:{{card.DECColor}}">Valid Till: {{card.ValidTill}}</p>
+                </div>
+
+                <hr style="margin:15px 0px 5px 0px;" />
+                <div class="row" style="padding:5px 15px; margin-bottom:-20px;">
+                    <div class="small-7 columns" style="float:left; margin-left:-5px;color:{{card.DECColor}}" ng-show="card.currency == 'Rs'">
+                        <i class="fa fa-inr"></i><b> {{card.Denomination}}</b>
+                    </div>
+                    <div class="small-7 columns" style="float:left; margin-left:-5px;color:{{card.DECColor}}" ng-show="card.currency != 'Rs'">
+                        <b> {{card.currency}} {{card.Denomination}}</b>
+                    </div>
+
+                    <div class="small-3 columns" style="float:right; margin-right:-5px;">
+                        <a ng-click="sendGC(card.Id)" class="decbutton" style="font-size:12px; width:65px;border:black 1px solid;font-weight:bold">
+                            @Global.Consumer.Send
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row rowb" ng-show="divPurchasedCards == false">
+    <h3>@Global.Consumer.NoGiftCardsPurchasedPrompt</h3>
+</div>

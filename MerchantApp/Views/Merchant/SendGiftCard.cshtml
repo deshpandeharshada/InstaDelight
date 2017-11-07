@@ -1,0 +1,111 @@
+﻿@{
+    ViewBag.Title = "SendGiftCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenGiftsForm()">
+    <div class="row rowb">
+        <h1>@Global.Merchant.SetGiftCards</h1>
+        <label>&nbsp;</label>
+        <p>@Global.Merchant.Denomination</p>
+        <p style="font-size:16px;">@Global.Merchant.GiftCardPrompt1 @Global.Merchant.GiftCardPrompt2:</p>
+        <form name="myForm">
+            <label>
+                @Global.Merchant.Denomination 1 ({{currency}})
+                <input name="denomation" type="text" class="textbox" placeholder="@Global.Merchant.Denomination 1 ({{currency}})" ng-model="Denomination1" maxlength="20">
+            </label>
+            <label>
+                @Global.Merchant.GiftcardBackground: @Global.Merchant.Denomination 1
+                <input type='file' name="file" style="margin-top:10px;" value="Upload File" title="Upload File" id="file" accept="image/*"
+                       onchange="angular.element(this).scope().denom1_file_changed(this)">
+            </label>
+            <label>
+                <img class="img-responsive" ng-src="{{denom1encoded}}" width="75" height="75">
+            </label>
+            <hr />
+            <label>
+                @Global.Merchant.Denomination 2 ({{currency}})
+                <input name="denomation" type="text" class="textbox" placeholder="@Global.Merchant.Denomination 2 ({{currency}})" ng-model="Denomination2" maxlength="20">
+            </label>
+            <label>
+                @Global.Merchant.GiftcardBackground: @Global.Merchant.Denomination 2
+                <input type='file' name="file" style="margin-top:10px;" value="Upload File" title="Upload File" id="file" accept="image/*"
+                       onchange="angular.element(this).scope().denom2_file_changed(this)">
+            </label>
+            <label>
+                <img class="img-responsive" ng-src="{{denom2encoded}}" width="75" height="75">
+            </label>
+            <hr />
+
+            <label>
+                @Global.Merchant.Denomination 3 ({{currency}})
+                <input name="denomation" type="text" class="textbox" placeholder="@Global.Merchant.Denomination 3 ({{currency}})" ng-model="Denomination3" maxlength="20">
+            </label>
+            <label>
+                @Global.Merchant.GiftcardBackground: @Global.Merchant.Denomination 3
+                <input type='file' name="file" style="margin-top:10px;" value="Upload File" title="Upload File" id="file" accept="image/*"
+                       onchange="angular.element(this).scope().denom3_file_changed(this)">
+            </label>
+            <label>
+                <img class="img-responsive" ng-src="{{denom3encoded}}" width="75" height="75">
+            </label>
+            <hr />
+            <label>
+                @Global.Merchant.Denomination 4 ({{currency}})
+                <input name="denomation" type="text" class="textbox" placeholder="@Global.Merchant.Denomination 4 ({{currency}})" ng-model="Denomination4" maxlength="20">
+            </label>
+            <label>
+                @Global.Merchant.GiftcardBackground: @Global.Merchant.Denomination 4
+                <input type='file' name="file" style="margin-top:10px;" value="Upload File" title="Upload File" id="file" accept="image/*"
+                       onchange="angular.element(this).scope().denom4_file_changed(this)">
+            </label>
+            <label>
+                <img class="img-responsive" ng-src="{{denom4encoded}}" width="75" height="75">
+            </label>
+            <hr />
+
+            <p style="font-weight:bold;">@Global.Merchant.Email</p>
+            <p style="font-size:16px;">@Global.Merchant.GiftCardEmailPrompt</p>
+            <label>
+                <p style="font-size:16px;">
+                    <b>
+                        giftcard@offertraker.com
+                    </b>
+                </p>
+                @*<input name="email" type="text" class="textbox" placeholder="Enter Email" ng-model="Email" id="inputEmail" maxlength="256" ng-required="true">*@
+            </label>
+            @*<div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+                    <p> Write a Email Id</p>
+                </div>*@
+            <label>&nbsp;</label>
+            <p style="font-weight:bold;">@Global.Merchant.TermsAndConditions</p>
+
+            <ul>
+                <li ng-repeat="elemnt in conditionelemnt" style="margin-top:10px;">
+                    {{elemnt.condition}}
+                </li>
+            </ul>
+            <div class="large-4">
+                <input name="Condition" type="text" class="textbox" placeholder="Condition" required ng-model="TermsCondition">
+            </div>
+            <div class="large-12">
+                <div class="small-4 column" style="padding-top:10px;"><input type="button" name="submit" value="Remove" ng-click="conditionelemnt.splice($index, 1)" class="button" style="width:100%; border-radius:5px;"></div>
+                <div class="small-4 column"> <a ng-click="newItem($event)" class="button">@Global.Merchant.AddCondition</a></div>
+            </div>
+
+            <label>&nbsp;</label>
+            <label><hr /></label>
+            <input type="submit" name="submit" value="@Global.Merchant.Update" class="button" style="width:100%; border-radius:5px;" ng-click="SetGiftCard('myForm',conditionelemnt)">
+
+
+        </form>
+    </div>
+
+
+</div>
+
+

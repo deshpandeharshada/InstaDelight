@@ -1,0 +1,83 @@
+﻿@{
+    ViewBag.Title = "AddBank";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" data-ng-init="EnableHomeBackButton()">
+    <script src="~/Scripts/1.11.3/jquery.min.js"></script>
+    <script src="~/Scripts/1.11.3/bootstrap.min.js"></script>
+    
+    <div class="row rowb">
+        <div class="h-heading text-center">
+            @Global.InstaDelight.BankDetails
+        </div>
+        <div class="row">
+            <form name="myForm">
+                <input type="hidden" disabled="disabled" ng-model="bankid" value="@ViewBag.bankid" />
+                <label>
+                    @Global.InstaDelight.Name <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="bankname" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Name" />
+                </label>
+                <label>
+                    @Global.InstaDelight.DECName <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="bank_dec_details.decname" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.DECName" />
+                </label>
+                <div class="row" style="padding:0px;">
+                    <div class="medium-6 columns">
+                        @Global.InstaDelight.DECBackground
+                        <input type="file" name="file" style="margin-top:10px;" value="Upload File" id="file" ng-required="false" accept="image/*" required
+                               onchange="angular.element(this).scope().file_changed(this)" />
+                    </div>
+                </div>
+                <div class="row" style="padding:0px;">
+                    <div class="medium-6 columns">
+                        @Global.InstaDelight.Bank @Global.InstaDelight.Logo
+                        <input type="file" name="logofile" style="margin-top:10px;" value="Upload File" id="logofile" ng-required="false" accept="image/*" required
+                               onchange="angular.element(this).scope().logofile_changed(this)" />
+                    </div>
+                </div>
+                <label>
+                    @Global.InstaDelight.Button 1 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button1_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 1 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 1 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button1_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 1 @Global.InstaDelight.URL " />
+                </label>
+
+                <label>
+                    @Global.InstaDelight.Button 2 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button2_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 2 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 2 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button2_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 2 @Global.InstaDelight.URL " />
+                </label>
+
+                <label>
+                    @Global.InstaDelight.Button 3 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button3_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 3 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 3 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button3_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 3 @Global.InstaDelight.URL " />
+                </label>
+
+                <label>
+                    @Global.InstaDelight.Button 4 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button4_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 4 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 4 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button4_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 4 @Global.InstaDelight.URL " />
+                </label>
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateBank('myForm')">@Global.InstaDelight.Save</button>
+            </form>
+        </div>
+    </div>
+</div>
+

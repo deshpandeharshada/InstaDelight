@@ -1,0 +1,77 @@
+﻿@using Microsoft.AspNet.Identity
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css" />
+<link rel="stylesheet" href="~/Content/css/foundation.css" />
+
+<link rel="stylesheet" href="~/Content/css/simple-sidebar.css" />
+
+
+
+@if (Request.IsAuthenticated)
+{
+    if (Session["UserId"] != null)
+    {
+        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+        {
+
+            @Html.AntiForgeryToken()
+            <div class="header red text-center">
+                <nav class="small-2 columns">
+                    <section class="left-small">
+                        <a id="menu-toggle"><i class="fa fa-bars fa-lg" style="color:#fff;" aria-hidden="true"></i></a>
+                    </section>
+                </nav>
+                <div class="small-8 columns headerFont" style="float:left;">
+                    Hello @Session["UserName"]
+                </div>
+            </div>
+
+    <!-- Sidebar -->
+
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+
+                    <li>
+                        <img src="~/Images/photo.jpg" style="width:50px;height:50px;margin-top:10px" />
+                    </li>
+                    <li>
+                        <a href=@Url.Action("ChangeCountry", "Merchant")>@Global.Merchant.RegionalSetting</a>
+                    </li>
+                    <li>
+                        <a href=@Url.Action("Support", "Home")>@Global.Merchant.Support</a>
+                    </li>
+                    <li>
+                        <a href="javascript:document.getElementById('logoutForm').submit()">@Global.Merchant.Logoff</a>
+                    </li>
+
+                </ul>
+            </div>
+                <!-- /#sidebar-wrapper -->
+            <div class="footer red text-center" style="color:white;" ng-controller="myCntrl" ng-app="myApp">
+                <div class="small-12 columns" ng-show="showFooter">
+                    <div class="small-6 columns">
+                        <a href=@Url.Action("Index", "Home") style="color:white">
+                            <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+                        </a>
+                    </div>
+
+                    <div class="small-6 columns">
+                        <a ng-click="NavigateBack()" style="color:white"><i class="fa fa-caret-left fa-2x" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <script src="~/Content/js/vendor/jquery.js"></script>
+            <script src="~/Content/js/vendor/what-input.js"></script>
+            <script src="~/Content/js/vendor/foundation.js"></script>
+            <script src="~/Content/js/app.js"></script>
+            <script src="~/Content/js/toggle-class.js"></script>
+            <script>
+                $(document).foundation();
+            </script>
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+
+        }
+    }
+}
+

@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "CreateVAR";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" data-ng-init="openCreateVAR()" class="row rowb">
+    <div ng-show="divCreateVAR">
+        <h3>@Global.InstaDelight.CreateVAR</h3>
+
+        <input type="hidden" disabled="disabled" ng-model="Id" value="@ViewBag.Id" />
+        <input type="hidden" disabled="disabled" name="hdnCountry" ng-model="country" value="@ViewBag.countryid" />
+
+        <label>
+            @Global.InstaDelight.VARName
+            <input name="VARName" type="text" class="textbox" placeholder="@Global.InstaDelight.VARName" ng-model="VARName"
+                   maxlength="256">
+        </label>
+        <label>
+            @Global.InstaDelight.VAROwner
+            <input name="OwnerName" type="text" class="textbox" placeholder="@Global.InstaDelight.VAROwner" ng-model="OwnerName"
+                   maxlength="256">
+        </label>
+
+        <label>
+            @Global.InstaDelight.MobileNo:
+        </label>
+        <div class="small-4 column">
+            <select style="border-radius:4px;" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                    ng-selected="country.countryid == countryid"
+                    ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                <option value="" label="@Global.InstaDelight.CountryCode"></option>
+            </select>
+        </div>
+        <div class="small-8 column">
+            <input id="inputPhone" type="text" name="PhoneNumber" ng-model="PhoneNumber" style="width:70%"
+                   class="textbox" ng-required="true" ng-pattern="/^[0-9]{10,10}$/" maxlength="10"
+                   placeholder="@Global.InstaDelight.MobileNo" />
+        </div>
+        <div class="alert-warning" ng-show="myForm.PhoneNumber.$error.PhoneNumber" style="width:70%">
+            <p> @Global.InstaDelight.PhoneValidationMessage</p>
+        </div>
+
+        <label>
+            @Global.InstaDelight.Email:
+            <input type="email" class="textbox" ng-model="Email" id="inputEmail" name="Email" style="width:70%"
+                   maxlength="256" ng-required="true" placeholder="@Global.InstaDelight.Email" />
+        </label>
+        <div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+            <p> @Global.InstaDelight.EmailValidationMessage</p>
+        </div>
+
+        <label>
+            @Global.InstaDelight.PrimeryIDLogin  <br />
+            <input type="radio" name="VAR" value="cell" ng-checked="true" ng-model="PrimaryVARIDSelection" ng-init="PrimaryVARIDSelection = 'cell'" /><label>@Global.InstaDelight.MobileNo</label>
+
+            <input type="radio" name="VAR" value="email" ng-model="PrimaryVARIDSelection" /><label>@Global.InstaDelight.Email</label>
+        </label>
+
+        <label>
+            @Global.InstaDelight.VARCode
+            <input name="VARCode" type="text" class="textbox" placeholder="@Global.InstaDelight.VARCode" ng-model="VARCode"
+                   maxlength="45">
+        </label>
+
+        <div class="text-center">
+            <a class="button" ng-click="AddNewVAR()">@Global.InstaDelight.Save</a>
+        </div>
+
+    </div>
+</div>

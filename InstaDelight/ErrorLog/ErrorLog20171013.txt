@@ -1,0 +1,8 @@
+13-10-2017 11:07:18 AM
+VARCode IND-SARVATRA already exist.
+13-10-2017 11:07:33 AM
+Error occurred while creating new VAR.User name +91 0582923785 is invalid, can only contain letters or digits.
+13-10-2017 11:09:47 AM
+VARCode IND-VASP already exist.
+13-10-2017 2:45:17 PM
+Error occured Merchant/GetCountrycode.Input string was not in a correct format.

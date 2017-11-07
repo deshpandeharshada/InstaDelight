@@ -1,0 +1,5 @@
+Email sent successfully to harshada@vaspsolutions.com
+SMS sent successfully to 7083191351. Status: error | 253 | Message specified does not match with any template.
+
+SMS sent successfully to 7083191351. Status: error | 253 | Message specified does not match with any template.
+

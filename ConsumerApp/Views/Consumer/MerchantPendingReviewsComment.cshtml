@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "MerchantPendingReviewsComment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" ng-app="app" data-ng-init="setLanguageCode()">
+        <div class="row rowb">
+            <div class="h-heading text-center">
+                @* @Global.Consumer.ReviewComment*@
+                Review Comment
+            </div>
+            <div class="row">
+                <form name="sendCommentForm">
+                    <input type="hidden" ng-model="MerchantId" id="hdnMerchantId" name="hdnMerchantId" value="@ViewBag.merchantid" />
+                    <input type="hidden" ng-model="ReviewId" id="hdnreviewId" name="hdnreviewId" value="@ViewBag.reviewId" />
+                    <label>
+                        Please Enter Your Comment
+                    </label>
+                    <textarea rows="4" cols="50" name="comment" type="text" class="textbox" placeholder="Enter Comment" ng-model="Comment"></textarea>
+
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="SendReviewComment('sendCommentForm')">@Global.Consumer.SubmitComment</button>
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="CloseReviewComment('sendCommentForm')">Close</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
+

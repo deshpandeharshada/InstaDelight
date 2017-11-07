@@ -1,0 +1,219 @@
+﻿@{
+    ViewBag.Title = "AddMerchant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+<div ng-controller="myCntrl" data-ng-init="OpenMerchantForm()">
+    <script src="~/Scripts/1.11.3/jquery.min.js"></script>
+    <script src="~/Scripts/1.11.3/bootstrap.min.js"></script>
+    <div class="row rowb">
+        <div class="h-heading text-center">
+            @Global.InstaDelight.MerchantDetails
+        </div>
+        <div class="row">
+            <form name="myForm">
+                <input type="hidden" disabled="disabled" ng-model="merchantid" ng-required="false" value="@ViewBag.Merchantid" />
+                <input type="hidden" disabled="disabled" ng-model="Action" ng-required="false" value="Add" data-ng-inti="Action = 'Add'" />
+
+                <label>
+                    @Global.InstaDelight.Name (@Global.InstaDelight.AsOnDEC) <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="MerchantName" maxlength="50" ng-required="true" placeholder="@Global.InstaDelight.Name (@Global.InstaDelight.AsOnDEC)" />
+                </label>
+                <label>
+                    @Global.InstaDelight.Category
+                    <select style="width:70%" ng-model="busi.categoryid" id="ddlBussCat" ng-required="true" name="ddlBussCat"
+                            ng-options="busi.CategoryName for busi in CategoryList track by busi.categoryid" ng-change="CategoryChanged(busi.categoryid)">
+                        <option value="" label="@Global.InstaDelight.Category"></option>
+                    </select>
+                </label>
+                <div class="row" style="padding:0px;">
+                    <div class="medium-6 columns">
+                        <b> @Global.InstaDelight.Logo</b>
+                        <input type="file" name="mechantlogofile" style="margin-top:10px;" value="Upload File" id="mechantlogofile" ng-required="false" accept="image/*" required
+                               onchange="angular.element(this).scope().merchantlogofile_changed(this)" />
+                    </div>
+                </div>
+                <div class="row" style="padding:0px;">
+                    <div class="medium-6 columns">
+                        <b>@Global.InstaDelight.DECBackground:</b> <br />
+                        size (325 x 200) px
+                        <input type="file" name="mechantdecfile" style="margin-top:10px;" value="Upload File" id="mechantdecfile" ng-required="false" accept="image/*" required
+                               onchange="angular.element(this).scope().merchantdecfile_changed(this)" />
+
+                    </div>
+                </div>
+
+                <div class="row grey text-center">@Global.InstaDelight.SetButtonURL</div>
+                <label>
+                    @Global.InstaDelight.Button 1 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button1_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 1 @Global.InstaDelight.Text " />
+                </label>
+
+
+                <label>
+                    @Global.InstaDelight.Button 2 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button2_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 2 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 2 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button2_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 2 @Global.InstaDelight.URL " />
+                </label>
+
+                <label>
+                    @Global.InstaDelight.Button 3 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button3_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 3 @Global.InstaDelight.Text " />
+                </label>
+                <label>
+                    @Global.InstaDelight.Button 3 @Global.InstaDelight.URL <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button3_url" maxlength="255" ng-required="true" placeholder="@Global.InstaDelight.Button 3 @Global.InstaDelight.URL " />
+                </label>
+
+                <label>
+                    @Global.InstaDelight.Button 4 @Global.InstaDelight.Text <font style="color:red">*</font>
+                    <input type="text" class="text" ng-model="button4_text" maxlength="20" ng-required="true" placeholder="@Global.InstaDelight.Button 4 @Global.InstaDelight.Text " />
+                </label>
+
+                <div class="row grey text-center">@Global.InstaDelight.Address</div>
+                <label>
+                    @Global.InstaDelight.Country <font style="color:red">*</font>
+
+                    <select style="border-radius:4px;" ng-model="selectedcountryobject" id="ddlCountry" name="ddlCountry" ng-required="true"
+                            ng-selected="country.countryid == countryid"
+                            ng-change="getStates(selectedcountryobject)"
+                            ng-options="country.countryname for country in CountryList track by country.countryid">
+                        <option value="" label="Select Country"></option>
+                    </select>
+
+                </label>
+                <label>
+                    @Global.InstaDelight.State <font style="color:red">*</font>
+
+                    <select style="border-radius:4px;" ng-model="selectedstateobject" id="ddlstate" name="ddlstate" ng-required="true"
+                            ng-change="getCities(selectedstateobject)" ng-options=" st.state for st in StateList track by st.stateid">
+                        <option value="" label="Select State"></option>
+                    </select>
+                </label>
+                <label>
+                    @Global.InstaDelight.City <font style="color:red">*</font>
+                    <input name="City" type="text" class="textbox" placeholder="@Global.InstaDelight.City" ng-model="City"
+                           maxlength="500" ng-required="true">
+                    @*<select style="width:70%" ng-model="city.cityid" id="ddlCity" name="ddlCity" ng-required="true" ng-change="getLocations(city.cityid)" ng-options="city.City for city in CityList track by city.cityid">
+                            <option value="" label="Select City"></option>
+                        </select>*@
+
+                </label>
+                <label>
+                    @Global.InstaDelight.Location <font style="color:red">*</font>
+                    <input name="Location" type="text" class="textbox" placeholder="@Global.InstaDelight.Location" ng-model="Location"
+                           maxlength="500" ng-required="true">
+                    @*<select style="width:70%" ng-model="loc.LocationId" id="ddlLoc" name="ddlLoc" ng-required="true" ng-change="LocationChanged(loc.LocationId)" ng-options=" loc.Location for loc in LocationList track by loc.LocationId">
+                            <option value="" label="Select Location"></option>
+                        </select>*@
+
+
+                </label>
+                <label>
+                    @Global.InstaDelight.Street <font style="color:red">*</font>
+                    <input name="street" type="text" class="textbox" placeholder="@Global.InstaDelight.Street" ng-model="Street"
+                           maxlength="50" ng-required="true">
+                </label>
+
+                <label>
+                    @Global.InstaDelight.SocietyName <font style="color:red">*</font>
+                    <input name="society" type="text" class="textbox" placeholder="@Global.InstaDelight.SocietyName" ng-model="SocietyName" maxlength="50">
+                </label>
+
+                <label>
+                    @Global.InstaDelight.BuildingName <font style="color:red">*</font>
+                    <input name="building" type="text" class="textbox" placeholder="@Global.InstaDelight.BuildingName" required ng-model="BuildingName" maxlength="50" ng-required="true">
+                </label>
+                <label>
+                    @Global.InstaDelight.PinCode <font style="color:red">*</font>
+                    <input id="inputPinCode" type="text" name="PinCode" ng-model="PinCode"
+                           class="textbox" ng-required="true" ng-pattern="/^[0-9]{6,6}$/" maxlength="6" placeholder="@Global.InstaDelight.PinCode" />                   
+                </label>
+                <div class="alert-warning" ng-show="myForm.PinCode.$error.pattern" style="width:70%">
+                    <p> @Global.InstaDelight.PinCodeValidationMessage</p>
+                </div>
+
+                <div class="row grey text-center">@Global.InstaDelight.PrimaryLoginPrompt</div>
+                
+                <label>
+                    <input type="radio" name="username" value="email" ng-model="usernameSelection" />
+                    @Global.InstaDelight.OwnerEmail <font style="color:red">*</font>
+                    <input type="email" class="textbox" ng-model="Email" id="inputEmail" name="Email" maxlength="256" ng-required="true" placeholder="@Global.InstaDelight.OwnerEmail" />
+                </label>
+                <div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+                    <p> @Global.InstaDelight.EmailValidationMessage</p>
+                </div>
+                <label>
+                    <input type="radio" name="username" value="phone" ng-model="usernameSelection" ng-init="usernameSelection = 'phone'" />
+                    @Global.InstaDelight.RegisteredMobileNumber <font style="color:red">*</font>
+                    <label class="tablecell">  +91 </label>
+                    <input id="inputPhone" type="text" name="PhoneNumber" ng-model="PhoneNumber" style="width:70%"
+                           class="tableinputcell" ng-required="true" ng-pattern="/^[0-9]{10,10}$/" maxlength="10" />
+                </label>
+                <div class="alert-warning" ng-show="myForm.PhoneNumber.$error.pattern" style="width:70%">
+                    <p> @Global.InstaDelight.PhoneValidationMessage</p>
+                </div>
+
+                <div class="row grey text-center">@Global.InstaDelight.RewardProgramPrompt</div>
+
+                <div class="small-12 columns row">
+                    <input type="radio" name="type" value="yes" ng-model="checkboxSelection" ng-init="checkboxSelection = 'yes'" /><label>@Global.InstaDelight.RewardRedeemFormula</label>
+                    <br />
+                    <input type="radio" name="type" value="no" ng-model="checkboxSelection" /><label>@Global.InstaDelight.RedeemOptions</label>
+                </div>
+
+                <div class="small-12 columns row">
+                    <input type="text" class="textbox" ng-disabled="isCheckboxSelected('yes')" placeholder="Redeem Condition" ng-model="condition1" id="inputCondition1" name="Condition1">
+                    <input type="text" class="textbox" ng-disabled="isCheckboxSelected('yes')" placeholder="Redeem Condition" ng-model="condition2" id="inputCondition2" name="Condition2">
+                    <input type="text" class="textbox" ng-disabled="isCheckboxSelected('yes')" placeholder="Redeem Condition" ng-model="condition3" id="inputCondition3" name="Condition3">
+                    <input type="text" class="textbox" ng-disabled="isCheckboxSelected('yes')" placeholder="Redeem Condition" ng-model="condition4" id="inputCondition4" name="Condition4">
+                    <input type="text" class="textbox" ng-disabled="isCheckboxSelected('yes')" placeholder="Redeem Condition" ng-model="condition5" id="inputCondition5" name="Condition5">
+                </div>
+                <label>
+                    @Global.InstaDelight.JoiningBonus
+                    <input id="inputJoiningBonus" type="text" name="JoiningBonus" ng-model="JoiningBonus" style="width:70%"
+                           class="tableinputcell" maxlength="5" />
+                </label>
+
+                <div class="row grey text-center">@Global.InstaDelight.RewardFormula</div>
+                <div class="row" style="padding:0px;">
+                    <div class="small-3 columns">
+                        <input name="RewardRs" id="txtRewardRs" type="text" class="textbox" placeholder="@Global.InstaDelight.Amount"
+                               ng-model="RewardRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                    </div>
+                    <div class="small-3 columns" style="padding-top:10px;">@Global.InstaDelight.Rupees =</div>
+                    <div class="small-3 columns">
+                        <input name="RewardPts" id="txtRewardPts" type="text" class="textbox small-4 columns" placeholder="@Global.InstaDelight.Points" ng-model="RewardPts"
+                               ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                    </div>
+
+                    <div class="small-3 columns" style="padding-top:10px;">Points</div>
+                </div>
+                <div class="row grey text-center">@Global.InstaDelight.RedeemFormula</div>
+                <div class="row" style="padding:0px;">
+                    <div class="small-3 columns">
+                        <input name="RedeemPt" id="txtRedeemPt" type="text" class="textbox" placeholder="@Global.InstaDelight.Points"
+                               ng-model="RedeemPt" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                    </div>
+                    <div class="small-3 columns" style="padding-top:10px;">Points =</div>
+                    <div class="small-3 columns">
+                        <input name="RedeemRs" id="txtRedeemRs" type="text" class="textbox small-4 columns" placeholder="@Global.InstaDelight.Amount"
+                               ng-model="RedeemRs" ng-pattern="/^[0-9]{0,10}$/" maxlength="10">
+                    </div>
+
+                    <div class="small-3 columns" style="padding-top:10px;">@Global.InstaDelight.Rupees</div>
+                </div>
+                <label>&nbsp;</label>
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateMerchant('myForm')">@Global.InstaDelight.AddMerchant</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker Business App is 919595&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3419761116584064332-459297661025546633
+
+New password 919595
+SMSText=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=6102116296&userid=2000170305&password=O1czbaj9f&msg=Congrats!! Welcome to Vaishnavi and thanks for registering with us. Download the app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 6102116296. Status: success | 916102116296 | 3419937206874359116-430165933524774500
+
+Email sent successfully to harshada@vaspsolutions.com

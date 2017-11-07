@@ -1,0 +1,16 @@
+04-10-2017 10:46:22 AM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 10:46:57 AM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 11:12:58 AM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 12:06:36 PM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 12:48:32 PM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 12:50:41 PM
+Error occurred Merchant/GetMerchantById.Object reference not set to an instance of an object.
+04-10-2017 1:16:01 PM
+Error occurred Merchant/UpdateMerchant.Object reference not set to an instance of an object.
+04-10-2017 3:12:41 PM
+Error occurred Merchant/getMerchantLanguage.An error occurred while executing the command definition. See the inner exception for details.

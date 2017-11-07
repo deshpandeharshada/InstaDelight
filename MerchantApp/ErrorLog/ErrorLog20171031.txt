@@ -1,0 +1,10 @@
+31-10-2017 2:55:54 PM
+Error occurred in Merchant/DownloadConsumerSample: Thread was being aborted.
+31-10-2017 4:28:40 PM
+Error occurred Merchant/AddNewDECConsumer.UserId not found.
+31-10-2017 4:28:40 PM
+Error occurred Merchant/AddNewDECConsumer.UserId not found.
+31-10-2017 4:36:47 PM
+Error occurred Merchant/AddNewDECConsumer.Input string was not in a correct format.
+31-10-2017 4:37:42 PM
+Error occurred Merchant/AddNewDECConsumer.Input string was not in a correct format.

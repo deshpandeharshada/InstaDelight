@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "VerifyAndRedeemGiftCard";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="DisplayGiftCard()">
+    <form name="myForm">
+        <div class="row rowb">
+            <input type="hidden" ng-model="Id" id="hdnId" name="hdnId" value="@ViewBag.Id" />
+            <input type="hidden" ng-model="OtpSent" id="hdnOTP" name="hdnOTP" value="@ViewBag.Result" />
+            <div class="row grey text-center" ng-show="divShowOTP">Enter OTP</div>
+            <div class="row text-center table-bordered" ng-show="divShowOTP">
+                <label>
+                    @Global.Merchant.VerifyGC
+                    <input type="text" class="textbox" ng-model="otp" placeholder="Enter OTP" id="inputOTP" name="inputOTP" />
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="VerifyOTP()">Verify</button>
+                </label>
+            </div>
+            <div class="row text-center table-bordered" ng-show="OTPError">
+                <label>
+                   @ViewBag.Result
+                </label>
+            </div>
+            <label>&nbsp;</label>
+
+            <div class="small-6 columns" ng-show="divOTPSent == false">
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="RedeemGiftcardNow()">@Global.Merchant.Redeem</button>
+            </div>
+            <div class="small-6 columns">
+                <button class="button small-6 columns" style="width:100%; border-radius:5px;" ng-click="NavigateBack()">
+                    @Global.Merchant.Cancel
+                </button>
+            </div>
+
+        </div>
+    </form>
+</div>
+

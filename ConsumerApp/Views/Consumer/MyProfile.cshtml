@@ -1,0 +1,228 @@
+﻿@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+@if (User.IsInRole("Consumer"))
+{
+
+    <div ng-controller="myCntrl" data-ng-init="OpenProfileForm()">
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <div class="row rowb">
+            <div class="h-heading text-center">
+                @Global.Consumer.MyProfile
+            </div>
+
+            <div class="row">
+                <form name="myForm">
+                    <input type="hidden" disabled="disabled" name="hdnConsumerId" ng-model="id" ng-required="true" value="@ViewBag.id" />
+                    <label>
+                        @Global.Consumer.Name <font style="color:red">*</font>
+                        <input type="text" class="text" ng-model="Name" maxlength="20" ng-required="true" placeholder="@Global.Consumer.Name" />
+                    </label>
+
+                    <label>
+                        @Global.Consumer.Gender <font style="color:red">*</font>
+                        <select ng-model="gender" ng-options="gender for gender in genders" style="border-radius:4px;" ng-change="setImage(gender)"></select>
+                    </label>
+
+                    <div class="row" style="padding:0px;">
+                        <div class="medium-6 columns">
+                            @Global.Consumer.Picture
+                            <input type="file" name="Consumerlogofile" style="margin-top:10px;" value="Upload File" id="Consumerlogofile" ng-required="false" accept="image/*" required
+                                   onchange="angular.element(this).scope().Consumerlogofile_changed(this)" />
+                        </div>
+                    </div>
+                    <label>
+                        <img class="img-responsive" ng-src="{{b64encoded}}" width="75" height="75">
+                    </label>
+                    <label><hr /></label>
+
+                    <div class="row grey text-center">@Global.Consumer.Address</div>
+
+                    <label>
+                        <select style="border-radius:4px;" ng-model="selectedcountryobject" id="ddlCountry" name="ddlCountry" ng-required="true"
+                                ng-selected="country.countryid == countryid"
+                                ng-change="getStates(selectedcountryobject)" ng-options="country.countryname for country in CountryList track by country.countryid">
+                            <option value="" label=@Global.Consumer.SelectCountry></option>
+                        </select>
+                    </label>
+                    <label>
+                        <select style="border-radius:4px;" ng-model="selectedstateobject" id="ddlstate" name="ddlstate" ng-required="true"
+                                ng-change="getCities(selectedstateobject)" ng-options=" st.state for st in StateList track by st.stateid">
+                            <option value="" label=@Global.Consumer.SelectState></option>
+                        </select>
+                    </label>
+                    @*<label>
+                            <select style="border-radius:4px;" ng-model="selectedcityobject" id="ddlCity" name="ddlCity" ng-required="true"
+                                    ng-change="getLocations(selectedcityobject)" ng-options="city.City for city in CityList track by city.cityid">
+                                <option value="" label= @Global.Consumer.SelectCity ></option>
+                            </select>
+                        </label>
+                        <label>
+                            <select style="border-radius:4px;" ng-model="selectedlocobject" id="ddlLoc" name="ddlLoc" ng-required="true"
+                                    ng-change="LocationChanged(selectedlocobject)" ng-options=" loc.Location for loc in LocationList track by loc.LocationId">
+                                <option value="" label= @Global.Consumer.SelectLocation ></option>
+                            </select>
+                        </label>*@
+                    <label>
+                        @Global.Consumer.City <font style="color:red">*</font>
+                        <input name="City" type="text" class="textbox" placeholder="@Global.Consumer.City" ng-model="City"
+                               maxlength="500" ng-required="true">
+
+                    </label>
+                    <label>
+                        @Global.Consumer.Location <font style="color:red">*</font>
+                        <input name="Location" type="text" class="textbox" placeholder="@Global.Consumer.Location" ng-model="Location"
+                               maxlength="500" ng-required="true">
+                    </label>
+
+                    <label>
+                        @Global.Consumer.Street
+                        <input type="text" class="textbox" ng-model="Street" maxlength="50" placeholder="Street" />
+                    </label>
+                    <label>
+                        @Global.Consumer.SocietyName
+                        <input type="text" class="textbox" ng-model="SocietyName" maxlength="50" placeholder="Society Name" />
+                    </label>
+
+                    <label>
+                        @Global.Consumer.BuildingName
+                        <input type="text" class="textbox" ng-model="BuildingName" maxlength="50" ng-required="true" placeholder="Building Name" />
+                    </label>
+
+                    <label>
+                        @Global.Consumer.PinCode <font style="color:red">*</font>
+                        <input id="inputPinCode" type="text" name="PinCode" ng-model="PinCode"
+                               class="textbox" ng-required="true" ng-pattern="/^[0-9]{6,6}$/" maxlength="6" placeholder="Pincode" />
+                    </label>
+                    <div class="alert-warning" ng-show="myForm.PinCode.$error.pattern" style="width:70%">
+                        <p> @Global.Consumer.PinCodeValidationMessage</p>
+                    </div>
+                    <div class="row grey text-center">@Global.Consumer.SetDatePrompt </div>
+                    <label>
+                        @Global.Consumer.DateOfBirth
+                        <input type="date" ng-model="DOB" id="DOB" class="textbox" placeholder="Date of Birth" />
+                    </label>
+
+                    <label>
+                        @Global.Consumer.DateOfAnniversary
+                        <input type="date" ng-model="DOA" id="DOA" class="textbox" placeholder="Date of Anniversary" />
+                    </label>
+
+
+                    <div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+                        <p> @Global.Consumer.EmailValidationMessage</p>
+                    </div>
+                    <label ng-hide="Phone1=='' || Phone1 == null">
+                        @Global.Consumer.RegisteredMobileNumber
+                        <input id="inputPhone" type="text" name="Phone1" ng-model="Phone1"
+                               class="textbox" readonly="readonly" />
+                    </label>
+                    <label ng-show="Phone1=='' || Phone1 == null">
+                        @Global.Consumer.RegisteredEmailId
+                        <input id="inputEmail" type="text" name="Email" ng-model="Email"
+                               class="textbox" placeholder="@Global.Consumer.RegisteredEmailId " maxlength="256" readonly="readonly" />
+                    </label>
+
+                    <div class="row grey text-center">@Global.Consumer.AdditionalNosPrompt</div>
+                    <label>
+                        @Global.Consumer.Email <font style="color:red">*</font>
+                        <input type="email" class="textbox" ng-model="Email" placeholder="Email" id="inputEmail" name="Email" maxlength="256" ng-required="true" />
+                        <a ng-click="verifyEmailId()" style="font-size:12px; font-weight:bold;color:red" ng-show="EmailVerified == false">
+                            @Global.Consumer.VerifyEmail
+                        </a>
+                        <a href="#" style="font-size:12px; font-weight:bold;color:green" ng-show="EmailVerified == true">
+                            @Global.Consumer.Verified
+                        </a>
+                    </label>
+                    <div class="row text-center table-bordered" ng-show="divShowEmailOTP">
+                        <label>
+                            @Global.Consumer.OTPEmailMessage
+                            <input type="text" class="textbox" ng-model="emailotp" placeholder="Enter OTP" id="inputEmailOTP" name="inputEmailOTP" />
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="VerifyEmailOTP()">Verify</button>
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="divShowEmailOTP = false">@Global.Consumer.Cancel</button>
+                        </label>
+                    </div>
+                    <label>&nbsp;</label>
+
+                    <label>
+                        @Global.Consumer.OptionalMobileNumber 1
+
+                    </label>
+                    <div class="small-4 column">
+                        <select style="border-radius:4px;" ng-model="selectedcountrycode2object" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                                ng-selected="country.countryid == countryid"
+                                ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                            <option value="" label="@Global.Consumer.CountryCode"></option>
+                        </select>
+                    </div>
+                    <div class="small-8 column">
+                        <input id="inputPhone2" type="text" name="Phone2" ng-model="Phone2" style="width:70%"
+                               class="textbox" placeholder="Mobile" ng-pattern="/^[0-9]{10,10}$/" maxlength="10" />
+                        <a ng-click="verifyPhone2()" style="font-size:12px; font-weight:bold;color:red" ng-show="Phone2 != '' && Phone2 != null && Phone2Verified == false">
+                            @Global.Consumer.VerifyPhoneNumber
+                        </a>
+                        <a href="#" style="font-size:12px; font-weight:bold;color:green" ng-show="Phone2Verified == true">
+                            @Global.Consumer.Verified
+                        </a>
+                    </div>
+
+                    <div class="row text-center table-bordered" ng-show="divShowPhone2OTP">
+                        <label>
+                            @Global.Consumer.OTPPhoneMessage
+                            <input type="text" class="textbox" ng-model="phone2otp" placeholder="Enter OTP" id="inputphone2otp" name="inputphone2otp" />
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="Verifyphone2otp()">Verify</button>
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="divShowPhone2OTP = false">@Global.Consumer.Cancel</button>
+                        </label>
+                    </div>
+                    <label>&nbsp;</label>
+
+                    <label>
+                        @Global.Consumer.OptionalMobileNumber 2
+                        
+                    </label>
+
+                    <div class="small-4 column">
+                        <select style="border-radius:4px;" ng-model="selectedcountrycode3object" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                                ng-selected="country.countryid == countryid"
+                                ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                            <option value="" label="@Global.Consumer.CountryCode"></option>
+                        </select>
+                    </div>
+                    <div class="small-8 column">
+                        <input id="inputPhone3" type="text" name="Phone3" ng-model="Phone3" style="width:70%"
+                               class="textbox" placeholder="Mobile" ng-pattern="/^[0-9]{10,10}$/" maxlength="10" />
+                        <a ng-click="verifyPhone3()" style="font-size:12px; font-weight:bold;color:red" ng-show="Phone3 != '' && Phone3 != null && Phone3Verified == false">
+                            @Global.Consumer.VerifyPhoneNumber
+                        </a>
+                        <a href="#" style="font-size:12px; font-weight:bold;color:green" ng-show="Phone3Verified == true">
+                            @Global.Consumer.Verified
+                        </a>
+                    </div>
+
+                    <div class="row text-center table-bordered" ng-show="divShowPhone3OTP">
+                        <label>
+                            @Global.Consumer.OTPPhoneMessage
+                            <input type="text" class="textbox" ng-model="phone3otp" placeholder="Enter OTP" id="inputphone3otp" name="inputphone3otp" />
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="Verifyphone3otp()">Verify</button>
+                            <button class="button" style="width:100%; border-radius:5px;" ng-click="divShowPhone3OTP = false">@Global.Consumer.Cancel</button>
+                        </label>
+                    </div>
+                    <label>&nbsp;</label>
+
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="AddUpdateConsumer('myForm')">@Global.Consumer.Update</button>
+                </form>
+            </div>
+        </div>
+
+
+
+
+    </div>
+}
+

@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "SplashScreen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<script language="javascript">
+    window.setTimeout(function () {
+        window.location.href = '/Home/Index';
+    }, 3000);
+
+</script>
+<body style="background-color: #cc3333">
+    <div class="spacer" style="height: 100px;background-color:#cc3333"></div>
+    <div>
+        <img src="~/Images/EbQuMUfpTwqCzoUzbS9R_logo_Offertraker_transparent.png" style="display: block; width: 80%; height: auto; margin-left: auto; margin-right: auto;background-color:#cc3333">
+    </div>
+    <h4 id="splashscreen-heading1" style="color:#FFFFFf;text-align:center;background-color:#cc3333;font-weight:bold">@Global.Consumer.SplashScreenHeading</h4>
+    <div class="spacer" style="height: 100px;background-color:#cc3333"></div>
+
+    <div id="splashscreen-markdown3" style="text-align:center;background-color:#cc3333;margin-left:20px;margin-right:20px" class="show-list-numbers-and-dots">
+        <p style="color:#FFFFFF;">@Global.Consumer.SplashScreenText </p>
+</div>
+</body>

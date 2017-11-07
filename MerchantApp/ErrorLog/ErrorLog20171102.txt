@@ -1,0 +1,16 @@
+02-11-2017 10:00:55 AM
+Error occured in sendMessage:One or more errors occurred.
+02-11-2017 11:02:41 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 5555555555 is invalid, can only contain letters or digits.
+02-11-2017 11:02:42 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 2222222222 is invalid, can only contain letters or digits.
+02-11-2017 11:02:43 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 3333333333 is invalid, can only contain letters or digits.
+02-11-2017 11:02:44 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 4444444444 is invalid, can only contain letters or digits.
+02-11-2017 11:10:35 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 6898490541 is invalid, can only contain letters or digits.
+02-11-2017 11:15:50 AM
+Unauthorized access.
+02-11-2017 11:17:17 AM
+Error occurred MerchantCommonFunctions/AddNewCouponConsumer. User name +91 6898490541 is invalid, can only contain letters or digits.

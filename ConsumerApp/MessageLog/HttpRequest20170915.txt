@@ -1,0 +1,20 @@
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker App is 324661&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3405324914574415180-370897662385909029
+
+New password 324661
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 801850 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3405449288541984050-61682903054349103
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 801850 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3405449297140823346-170037822724934100
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 979714 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3405449315437585714-54450065412820215
+
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, you have added a new cell number in your Offertraker profile. Please enter the OTP 979714 in the app to confirm addition of this number in your profile.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3405449322232644914-440721624603797949
+

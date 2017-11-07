@@ -1,0 +1,6 @@
+01-11-2017 11:15:06 AM
+Error occurred in MerchantWebService/sendCouponToGroups: StartIndex cannot be less than zero.
+Parameter name: startIndex
+01-11-2017 11:17:06 AM
+Error occurred in MerchantWebService/sendCouponToGroups: StartIndex cannot be less than zero.
+Parameter name: startIndex

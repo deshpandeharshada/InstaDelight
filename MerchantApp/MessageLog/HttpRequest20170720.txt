@@ -1,0 +1,11 @@
+SMS sent successfully to 9011085421. Status: Request sheduled
+SMS sent successfully to 9011085421. Status: Request sheduled
+SMS sent successfully.
+New password 564510
+SMS sent successfully to 9011085421. Status: Request sheduled
+SMS sent successfully.
+New password 315166
+SMS sent successfully to 9011085421. Status: Request sheduled
+SMS sent successfully.
+New password 240755
+SMS sent successfully to 9011085421. Status: 400 : Invalid Host

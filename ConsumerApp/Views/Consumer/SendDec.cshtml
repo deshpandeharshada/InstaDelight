@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "SendDec";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+@if (User.IsInRole("Consumer"))
+{
+    <div ng-controller="myCntrl" ng-app="app" data-ng-init="openSendCoupon()">
+        <div class="row rowb">
+            <div class="h-heading text-center">
+                @Global.Consumer.ShareWithFriends
+            </div>
+
+            <div class="row">
+                <form name="sendDecForm">
+                    <input type="hidden" ng-model="MerchantId" id="hdnMerchantId" name="hdnMerchantId" value="@ViewBag.MerchantId" />
+                    <input type="hidden" disabled="disabled" name="hdnCountry" ng-model="country" value="@ViewBag.countryid" />
+
+                    <label>
+                        @Global.Consumer.MobileNo:
+                    </label>
+                    <div class="small-4 column">
+                        <select style="border-radius:4px;" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                                ng-selected="country.countryid == countryid"
+                                ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                            <option value="" label="@Global.Consumer.CountryCode"></option>
+                        </select>
+                    </div>
+                    <div class="small-8 column">
+                        <input name="mobile" type="text" class="textbox" placeholder="@Global.Consumer.MobileNo" ng-model="MobileNo">
+                    </div>
+                    <label ><b>@Global.Consumer.Or</b></label>
+                    <label>
+                        @Global.Consumer.Email:
+                    </label>
+                    <label>
+                        <input type="email" class="textbox" ng-model="Email" placeholder="Email" id="inputEmail" name="Email" maxlength="256" />
+                    </label>
+
+                    <button class="button" style="width:100%; border-radius:5px;" ng-click="SendDECtoConsumer('sendDecForm')">@Global.Consumer.Send</button>
+                </form>
+                <hr />
+                <div class="small-12 text-center">
+                    <div class="small-12 htab columns" style="border-radius:5px;">
+                        <a href='Navigation://ShareDECWithFriends&MechantId=@ViewBag.MerchantId'>
+                            <i class="fa fa-share-alt fa-2x red-icon" aria-hidden="true"></i>
+                            <br>
+                            @Global.Consumer.ShareWithFriends
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+

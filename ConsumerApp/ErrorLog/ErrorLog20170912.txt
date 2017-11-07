@@ -1,0 +1,13 @@
+12-09-2017 12:20:07 PM
+Error occurred ConsumerWebService/GetConsumerLogo.Thread was being aborted.
+12-09-2017 12:20:28 PM
+Error occurred ConsumerWebService/GetConsumerLogo.Thread was being aborted.
+12-09-2017 12:39:16 PM
+Error occurred ConsumerWebService/GetConsumerLogo.The remote host closed the connection. The error code is 0x800703E3.
+12-09-2017 12:46:37 PM
+Error occurred ConsumerWebService/GetConsumerLogo.Specified argument was out of the range of valid values.
+Parameter name: count
+12-09-2017 5:04:49 PM
+Error occurred ConsumerWebService/GetConsumerLogo.An error occurred while communicating with the remote host. The error code is 0x800703E3.
+12-09-2017 5:06:25 PM
+Error occurred ConsumerWebService/GetConsumerLogo.The remote host closed the connection. The error code is 0x800703E3.

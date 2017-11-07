@@ -1,0 +1,36 @@
+﻿
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="row rowb" ng-controller="myCntrl" ng-app="myApp">
+    <div class="row">
+        <div class="small-10 small-offset-1 text-center columns">
+            @if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager"))
+            {
+                if (ViewBag.isCouponCreationAllowed == "true")
+                {
+                    <a href=@Url.Action("AddCoupon", "Merchant", new { Flag = "Add", couponid = 0 })><div class="small-6 htab columns" style="border-radius:5px 0px 0px 0px;height:100px"><i class="fa fa-plus fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.CreateCoupons &nbsp;<br /></div></a>
+                    <a href=@Url.Action("CouponList", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 5px 0px 0px;height:100px"><i class="fa fa-pencil fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.ViewEditCoupons</div></a>
+                }
+                else
+                {
+                    <a href=@Url.Action("CouponList", "Merchant")><div class="small-12 htab columns" style="border-radius:0px 5px 5px 5px;height:100px"><i class="fa fa-pencil fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.ViewEditCoupons</div></a>
+                }
+
+
+                if (ViewBag.isEventCouponAllowed == "true")
+                {
+                    <a href=@Url.Action("EventCoupons", "Merchant")><div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;height:100px"><i class="fa fa-gift fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.SetCouponForEvents</div></a>
+                }
+
+
+            }
+            else if (User.IsInRole("Staff"))
+            {
+                <a href=@Url.Action("CouponList", "Merchant")><div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:100px"><i class="fa fa-pencil fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.ViewSendCoupons</div></a>
+            }
+        </div>
+    </div>
+</div>

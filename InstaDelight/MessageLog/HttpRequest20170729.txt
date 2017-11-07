@@ -1,0 +1,21 @@
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Email sent successfully to harshada@vaspsolutions.com
+SMS sent successfully to 1231231231. Status: success | 911231231231 | 3370583271183115569-291304637736652503
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, we are pleased to launch our Digital Card. You can avail exciting offers from thousands of Businesses and also use the bank's services from the card. Janalaxmi Bank&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3370641078636004657-186397303099962769
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, we are pleased to launch our Digital Card. You can avail exciting offers from thousands of Businesses and also use the bank's services from the card. ICICI Bank&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3370641560049739057-101476394125992946
+
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@transtechprojects.com
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=1234567890&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, we are pleased to launch our Digital Card. You can avail exciting offers from thousands of Businesses and also use the bank's services from the card. ICICI Bank&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 1234567890. Status: success | 911234567890 | 3370641587193730353-45543377076872882
+
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9876543210&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, we are pleased to launch our Digital Card. You can avail exciting offers from thousands of Businesses and also use the bank's services from the card. ICICI Bank&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9876543210. Status: success | 919876543210 | 3370641592345453873-573784071758738110
+
+Email sent successfully to harshada.deshpande@hotmail.com
+Email sent successfully to mutalikharshada@gmail.com

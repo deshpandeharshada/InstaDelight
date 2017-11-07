@@ -1,0 +1,79 @@
+﻿
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+@if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager") || User.IsInRole("Staff"))
+{
+    <div ng-controller="myCntrl" ng-app="myApp" class="row rowb" data-ng-init="OpenHomeScreen()">
+        <div class="row">
+            <ul class="tabbed-search tabs text-center" data-tabs id="tabbed-search">
+                @if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager") || User.IsInRole("Staff"))
+                {
+                    <li class="tabs-title is-active small-6"><a href="#panel1" style="border-radius:5px 0px 0px 5px;font-size:16px"><i class="fa fa-plus-circle" aria-hidden="true"></i> @Global.Merchant.Customer</a></li>
+                    <li class="tabs-title small-6"><a href="#panel2" style="border-radius:0px 5px 5px 0px;font-size:16px"><i class="fa fa-cog" aria-hidden="true"></i> @Global.Merchant.RegionalSetting</a></li>
+                }
+            </ul>
+
+            <div class="tabbed-search-content tabs-content" data-tabs-content="tabbed-search">
+                <div class="tabs-panel is-active" id="panel1">
+                    <div class="small-12 text-center">
+                        <a href=@Url.Action("ScanQRCode", "Merchant")><div class="small-12 htab columns" style="border-radius:5px; margin-bottom:10px;font-size:15px"><i class="fa fa-cart-arrow-down fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Redeem</div></a>
+                        @if (User.IsInRole("BrandManager") || User.IsInRole("LocationManager") || User.IsInRole("Staff"))
+                        {
+                            <a href=@Url.Action("SendDec", "Merchant")><div class="small-12 htab columns" style="border-radius:5px;font-size:15px"><i class="fa fa-share-alt fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.SendDEC</div></a>
+                        }
+                    </div>
+                </div>
+                <div class="tabs-panel" id="panel2">
+                    <div class="small-12 text-center">
+                        @if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager"))
+                        {
+                            <a href=@Url.Action("ManageLicenses", "Merchant")><div class="small-6 htab columns" style="border-radius:5px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-drivers-license fa-2x red-icon"></i><br>@Global.Merchant.ManageLicenses</div></a>
+                            if (User.IsInRole("Merchant") || User.IsInRole("BrandManager"))
+                            {
+                                <a href=@Url.Action("MyProfile", "Merchant", new { Flag = "showDEC" })><div class="small-6 htab columns" style="border-radius:0px 5px 0px 0px;height:100px;font-size:15px"><i class="fa fa-id-card fa-2x red-icon"></i><br>@Global.Merchant.ManageDECs</div></a>
+                            }
+                            <a href=@Url.Action("Index", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-tags fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Coupons</div></a>
+                            if (User.IsInRole("Merchant") || User.IsInRole("BrandManager"))
+                            {
+                                <a href=@Url.Action("SendGiftCard", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-gift fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.SetGiftCards</div></a>
+                            }
+                            if (ViewBag.isMenuCreationAllowed == "true")
+                            {
+                                <a href=@Url.Action("UploadMenu", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-upload fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.UploadMenu</div></a>
+                            }
+                            if (User.IsInRole("Merchant") || User.IsInRole("BrandManager"))
+                            {
+                                <a href=@Url.Action("MyProfile", "Merchant", new { Flag = "showRewardProgram" })><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-star fa-2x red-icon"></i><br>@Global.Merchant.RewardProgram</div></a>
+                                <a href=@Url.Action("CreateReview", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-star fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.SetReviewQuestions</div></a>
+                            }
+                            <a href=@Url.Action("UploadConsumerFile", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-group  fa-2x red-icon"></i><br>@Global.Merchant.ManageGroups</div></a>
+                            <a href=@Url.Action("ViewReport", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 0px 0px 5px;height:100px;font-size:15px"><i class="fa fa-list-alt fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Reports</div></a>
+                            <a href=@Url.Action("MyProfile", "Merchant", new { Flag = "showProfile" })><div class="small-6 htab columns" style="border-radius:0px 0px 5px 0px;height:100px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Profile</div></a>
+                        }
+                        else if (User.IsInRole("Staff"))
+                        {
+                            <a href=@Url.Action("MyProfile", "Merchant", new { Flag = "showProfile" })><div class="small-6 htab columns" style="border-radius:5px 0px 0px 0px;height:100px;font-size:15px"><i class="fa fa-user fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Profile</div></a>
+                            <a href=@Url.Action("Index", "Merchant")><div class="small-6 htab columns" style="border-radius:0px 5px 0px 0px;height:100px;font-size:15px"><i class="fa fa-tags fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Coupons</div></a>
+                            <a href=@Url.Action("ViewReport", "Merchant")><div class="small-12 htab columns" style="border-radius:0px 0px 5px 5px;height:100px;font-size:15px"><i class="fa fa-list-alt fa-2x red-icon" aria-hidden="true"></i><br>@Global.Merchant.Reports</div></a>
+                        }
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Content/js/vendor/jquery.js"></script>
+    <script src="~/Content/js/vendor/what-input.js"></script>
+    <script src="~/Content/js/vendor/foundation.js"></script>
+    <script src="~/Content/js/app.js"></script>
+
+
+}
+

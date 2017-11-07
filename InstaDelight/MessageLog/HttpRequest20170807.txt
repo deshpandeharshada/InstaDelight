@@ -1,0 +1,3 @@
+SMS Text=http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear BBQ, Welcome to Offertraker! Please download the Offertraker Business app for Android at goo.gl/FzvjZi and for Apple at goo.gl/KtkRHd. Your cell number is your login and your password is 123456.&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3377153765141865777-384518139972418914
+

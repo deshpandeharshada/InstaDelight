@@ -1,0 +1,6 @@
+Email sent successfully to harshada@vaspsolutions.com
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, your password to access Offertraker App is 881619&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: success | 919011085421 | 3414889577008428422-52594159494434457
+
+New password 881619

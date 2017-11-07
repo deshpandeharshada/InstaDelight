@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "BankConfiguration";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" data-ng-init="EnableHomeBackButton()">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="row rowb">
+                <h2>@Global.InstaDelight.BankDetails</h2>
+
+                <div class="small-10 small-offset-1 text-center columns">
+                    <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-bank fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("AddBank", "Bank", new { Flag = "Add", bankid = 0 })>@Global.InstaDelight.CreateBank</a></div>
+                    <label>&nbsp;</label>
+                    <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-edit fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("Index", "Bank", new { Flag = "Edit" })>@Global.InstaDelight.EditBank</a></div>
+                    @*<label>&nbsp;</label>
+                    <div class="small-12 htab columns" style="border-radius:5px 5px 5px 5px;height:80px;font-size:15px"><i class="fa fa-mobile fa-2x red-icon" aria-hidden="true"></i><br><a href=@Url.Action("", "")>@Global.InstaDelight.SendSMS</a></div>
+                    <label>&nbsp;</label>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*<p>@Html.ActionLink(@Global.InstaDelight.CreateBank, "AddBank", "Bank", new { Flag = "Add", bankid = 0 }, new { @class = "btn btn-default", @style = "width:150px" })</p>
+<p>@Html.ActionLink(@Global.InstaDelight.EditBank, "", "", new { Flag = "Edit" }, new { @class = "btn btn-default", @style = "width:150px" })</p>
+<p><a class="btn btn-default" style="width:150px">@Global.InstaDelight.SendSMS &raquo;</a></p>*@

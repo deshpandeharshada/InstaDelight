@@ -1,0 +1,9 @@
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear Customer, thank you for buying our Gift card. You can view the gift card in the "purchased" section of Gift cards on our DEC. Best wishes, Men's Avenue&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Email sent successfully to harshada@vaspsolutions.com
+SMS : http://enterprise.smsgupshup.com/GatewayAPI/rest?method=SendMessage&send_to=9011085421&userid=2000170305&password=O1czbaj9f&msg=Dear +91 9011085421, Harshada Deshpande has sent you a Gift Card. To avail the Gift card, please download the Offertraker app for Android at goo.gl/r5rxjj and for Apple at goo.gl/dAq4er. Your cell number is your login and your password is 123456. Offertraker team&v=1.1&msg_type=TEXT&mask=OFRTKR&auth_scheme=PLAIN
+SMS sent successfully to 9011085421. Status: error | 253 | Message specified does not match with any template.
+
+Email sent successfully to harshada.deshpande@hotmail.com

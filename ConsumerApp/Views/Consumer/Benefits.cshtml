@@ -1,0 +1,92 @@
+﻿@model List<ConsumerApp.Models.bank_benefits>
+@{
+    ViewBag.Title = "Redeem";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<div class="row rowb">
+    <h2>@Global.Consumer.Benefitsof @ViewBag.MerchantName's @Global.Consumer.privilegeprogram</h2>
+    <hr />
+    <ul>
+        @if (ViewBag.option1 != null)
+        {
+            if (ViewBag.option1 != "")
+            {
+                <li>@ViewBag.option1</li>
+            }
+        }
+
+        @if (ViewBag.option2 != null)
+        {
+            if (ViewBag.option2 != "")
+            {
+                <li>@ViewBag.option2</li>
+            }
+        }
+
+        @if (ViewBag.option3 != null)
+        {
+            if (ViewBag.option3 != "")
+            {
+                <li>@ViewBag.option3</li>
+            }
+        }
+
+        @if (ViewBag.option4 != null)
+        {
+            if (ViewBag.option4 != "")
+            {
+                <li>@ViewBag.option4</li>
+            }
+        }
+        @if (ViewBag.option5 != null)
+        {
+            if (ViewBag.option5 != "")
+            {
+                <li>@ViewBag.option5</li>
+            }
+        }
+    </ul>
+
+    @if (Model.Count > 0)
+    {
+        <hr />
+        <h2>@Global.Consumer.BankBenefits</h2>
+        <hr />
+        <table class="table-layout" style="width:100%;padding:0px;">
+            <tr>
+
+                <th style="width:25%;text-align:left">
+                    @Global.Consumer.BankName
+                </th>
+                <th style="width:25%;text-align:left">
+                    @Global.Consumer.Benefit
+                </th>
+                <th style="width:50%;text-align:left">
+                    @Global.Consumer.URL
+                </th>
+            </tr>
+
+
+
+            @foreach (var item in @Model)
+            {
+                <tr>
+                    <td style="width:25%;text-align:left">
+                        @item.BankName
+                    </td>
+
+                    <td style="width:25%;text-align:left">
+                        @item.Benefit
+                    </td>
+                    <td style="width:50%;text-align:left">
+                        @item.URL
+                    </td>
+                </tr>
+            }
+        </table>
+    }
+</div>

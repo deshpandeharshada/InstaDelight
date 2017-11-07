@@ -1,0 +1,12 @@
+28-09-2017 3:19:27 PM
+Error occurred Consumer/LoadStaticCache.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.
+28-09-2017 3:28:03 PM
+Error occurred Consumer/LoadStaticCache.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.
+28-09-2017 3:36:48 PM
+Error occurred Consumer/LoadStaticCache.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.
+28-09-2017 3:40:36 PM
+Error occurred Consumer/LoadStaticCache.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.
+28-09-2017 3:43:32 PM
+Error occurred Consumer/LoadStaticCache.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.
+28-09-2017 3:51:59 PM
+Error occurred Consumer/GetPendingReviews.The type 'Edm.Int32' of the member 'CountryCode' in the conceptual side type 'instadelightModel.country_master' does not match with the type 'System.String' of the member 'CountryCode' on the object side type 'ConsumerApp.Models.country_master'.

@@ -1,0 +1,85 @@
+﻿@{
+    ViewBag.Title = "SendCoupon";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+@if (User.IsInRole("Merchant") || User.IsInRole("BrandManager") || User.IsInRole("LocationManager") || User.IsInRole("Staff"))
+{
+    <div ng-controller="myCntrl" ng-app="myApp" class="row rowb" data-ng-init="OpenSendDECForm()">
+        <div class="h-heading text-center">
+            @Global.Merchant.ShareCouponWithFriends
+        </div>
+        <div class="h3">
+            @Global.Merchant.SendCouponTitle
+        </div>
+        <div class="row">
+            <form name="sendCouponForm">
+                <input type="hidden" ng-model="CouponId" id="hdnCouponId" name="hdnCouponId" value="@ViewBag.CouponId" />
+                <input type="hidden" disabled="disabled" name="hdnCountry" ng-model="country" value="@ViewBag.countryid" />
+
+                <div class="row grey text-center">1. @Global.Merchant.SendToAllDECs</div>
+                <div class="small-12 columns">
+                    <label class="left"></label>
+                    <input type="checkbox" name="type" value="shareondec" ng-model="shareondec" ng-init="shareondec = true" /><label>@Global.Merchant.ShareWithAll</label>
+                </div>
+                <label>&nbsp;</label>
+                <div class="row grey text-center">2. @Global.Merchant.SendToAFriend</div>
+
+                <label>
+                    @Global.Merchant.MobileNo:
+                </label>
+
+                <div class="small-4 column">
+                    <select style="border-radius:4px;" ng-model="selectedcountrycodeobject" ng-disabled="shareondec == true" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                            ng-selected="country.countryid == countryid"
+                            ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                        <option value="" label="@Global.Merchant.CountryCode"></option>
+                    </select>
+                </div>
+                <div class="small-8 column">
+                    <input name="mobile" type="text" class="textbox" ng-disabled="shareondec == true" placeholder="@Global.Merchant.MobileNo:" ng-model="MobileNo">
+                </div>
+                <label class="text-center"><b>@Global.Merchant.Or</b></label>
+                <label>
+                    @Global.Merchant.Email:
+                </label>
+                <label>
+                    <input type="email" class="textbox" ng-model="Email" ng-disabled="shareondec == true" placeholder="@Global.Merchant.Email" id="inputEmail" name="Email" maxlength="256" />
+                </label>
+
+                <button class="button" style="width:100%; border-radius:5px;" ng-click="SendCoupontoConsumer('sendCouponForm')">@Global.Merchant.Send</button>
+            </form>
+            <hr />
+            <div class="small-12 text-center">
+                <div class="small-12 htab columns" style="border-radius:5px;">
+
+                    <a href='Navigation://ShareCouponWithFriends&CouponId=@ViewBag.CouponId'>
+                        3.@Global.Merchant.ShareCouponWithFriends
+                    </a>
+                </div>
+            </div>
+            <hr />
+            <div class="small-12 text-center">
+                <div class="small-12 htab columns" style="border-radius:5px;">
+
+                    <a href=@Url.Action("UploadConsumers", "Merchant", new { CouponId = ViewBag.CouponId })>
+                        4. @Global.Merchant.BulkUpload
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+}
+
+
+

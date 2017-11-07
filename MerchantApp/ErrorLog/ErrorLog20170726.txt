@@ -1,0 +1,4 @@
+26-07-2017 9:53:45 AM
+Error occured while sending mail.User not local; please try a different path. The server response was: Sender address is not valid for your login. Check your email program settings.
+26-07-2017 10:00:10 AM
+Error occured while sending mail.User not local; please try a different path. The server response was: Sender address is not valid for your login. Check your email program settings.

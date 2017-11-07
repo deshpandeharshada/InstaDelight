@@ -1,0 +1,76 @@
+﻿@using InstaDelight.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = @Global.InstaDelight.Login;
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+<link rel="stylesheet" href="~/Content/css/app.css">
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div class="header red text-center">
+    @Global.InstaDelight.AdminLogin
+</div>
+<div class="row rowb">
+    <section id="loginForm">
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger", @style = "color:red" })
+            <div class="row text-center">
+                <img src="~/Images/logo.png" />
+            </div>
+            <div class="small-12 columns">
+                <label>
+                    @Global.InstaDelight.MobileNo
+                </label>
+
+
+                <div class="small-4 column">
+                    @Html.DropDownListFor(m => m.CountryCode,
+               new SelectList(ViewBag.CountryList,
+                                    "CountryCode",
+                                    "CountryCode",
+                                     ViewBag.DefaultCountryCode),
+                                  new { @class = "dropdown" })
+                </div>
+                <div class="small-8 column">
+                    @Html.TextBoxFor(m => m.MobileNo, new { @class = "textbox", @PlaceHolder = @Global.InstaDelight.MobileNo })
+                </div>
+
+                <label><b>@Global.InstaDelight.Or</b></label>
+
+                <label>
+                    @Global.InstaDelight.Email
+                </label>
+
+                <label>
+                    @Html.TextBoxFor(m => m.Email, new { @class = "textbox", @PlaceHolder = @Global.InstaDelight.Email })
+                </label>
+                <label>
+                    @Global.InstaDelight.Password
+                    @Html.PasswordFor(m => m.Password, new { @class = "textbox" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </label>
+
+                <label>
+                    @Html.CheckBoxFor(m => m.RememberMe)
+                    @Global.InstaDelight.RememberMe
+                </label>
+
+
+                <input type="submit" name="submit" value="@Global.InstaDelight.Login" class="button" style="width:100%; border-radius:4px;" />
+
+                <label class="text-center">
+                    @Html.ActionLink(@Global.InstaDelight.ForgotPassword, "ForgotPassword", null, null)
+                </label>
+            </div>
+        }
+    </section>
+</div>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

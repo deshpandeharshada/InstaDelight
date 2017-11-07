@@ -1,0 +1,174 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+<style>
+    .htabGrid {
+        border: solid 1px #ccc;
+        padding: 15px 10px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 60% !important;
+    }
+
+    .htabGridshare {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: 0px;
+        border-right: 1px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 40% !important;
+    }
+</style>
+
+<style type="text/css">
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ui-grid, .ui-grid-viewport {
+        height: auto !important;
+        border: none !important;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 100% !important;
+        overflow: hidden !important;
+    }
+
+    .ui-grid-row .ng-scope {
+        /*height: 65px !important;*/
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .ui-grid-pager-panel {
+        position: relative;
+        display: inline-block;
+    }
+
+    .ui-grid-pager-max-pages-number {
+        vertical-align: middle !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+</style>
+
+
+<div ng-controller="myCntrl" data-ng-init="OpenEditVARForm()">
+    <div class="row rowb" ng-show="divVarList">
+        <h3>@Global.InstaDelight.VARList @Global.InstaDelight.Selecttoedit</h3>
+
+        <div class="row">
+            <div ui-grid="gridVAROptions" class="myGrid" ng-style="{visibility: gridVAROptions.data && gridVAROptions.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+            <h3 ng-style="{visibility: gridVAROptions.data && gridVAROptions.data.length > 0 ? 'hidden' : 'visible'}">No VAR present</h3>
+        </div>
+    </div>
+
+    <div class="row rowb" ng-show="divVar">
+        
+        @if (User.IsInRole("InstadelightAdmin"))
+        {
+            <h3>Edit VAR</h3>
+        }
+        else
+        {
+            <h3>Edit User</h3>
+        }
+
+        <input type="hidden" disabled="disabled" ng-model="Id" />
+        @if (User.IsInRole("InstadelightAdmin"))
+        {
+            <label>
+                @Global.InstaDelight.VARName
+                <input name="VARName" type="text" class="textbox" placeholder="@Global.InstaDelight.VARName" ng-model="VARName"
+                       maxlength="256">
+            </label>
+            <label>
+                @Global.InstaDelight.VAROwner
+                <input name="OwnerName" type="text" class="textbox" placeholder="@Global.InstaDelight.VAROwner" ng-model="OwnerName"
+                       maxlength="256">
+            </label>
+        }
+        else if (User.IsInRole("SupportAdmin"))
+        {
+            <label>
+                Support User Name
+                <input name="OwnerName" type="text" class="textbox" placeholder="Support User Name" ng-model="OwnerName"
+                       maxlength="256">
+            </label>
+        }
+
+        <label>
+            @Global.InstaDelight.MobileNo:            
+        </label>
+       
+        <div class="small-4 column">
+            <select style="border-radius:4px;" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                    ng-selected="country.countryid == countryid"
+                    ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                <option value="" label="@Global.InstaDelight.CountryCode"></option>
+            </select>
+        </div>
+        <div class="small-8 column">
+            <input id="inputPhone" type="text" name="PhoneNumber" ng-model="PhoneNumber" style="width:70%"
+                   class="textbox" ng-required="true" ng-pattern="/^[0-9]{10,10}$/" maxlength="10"
+                   placeholder="@Global.InstaDelight.MobileNo" />
+        </div>
+
+        <div class="alert-warning" ng-show="myForm.PhoneNumber.$error.PhoneNumber" style="width:70%">
+            <p> @Global.InstaDelight.PhoneValidationMessage</p>
+        </div>
+
+        <label>
+            @Global.InstaDelight.Email:
+            <input type="email" class="textbox" ng-model="Email" id="inputEmail" name="Email" style="width:70%"
+                   maxlength="256" ng-required="true" placeholder="@Global.InstaDelight.Email" />
+        </label>
+        <div class="alert-warning" ng-show="myForm.Email.$error.email" style="width:70%">
+            <p> @Global.InstaDelight.EmailValidationMessage</p>
+        </div>
+
+
+        <label>
+            @Global.InstaDelight.VARCode
+            <input name="VARCode" type="text" class="textbox" placeholder="@Global.InstaDelight.VARCode" ng-model="VARCode" ng-disabled="true"
+                   style="width:70%">
+        </label>
+
+        <div class="text-center">
+            <button class="button" style="border-radius:5px;" ng-click="AddNewVAR()">@Global.InstaDelight.Save</button>
+            <button class="button" style="border-radius:5px;" ng-click="activateSelectedVAR()">@Global.InstaDelight.ActivateAccount</button>
+            <button class="button" style="border-radius:5px;" ng-click="deactivateSelectedVAR()">@Global.InstaDelight.SuspendAccount</button>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+

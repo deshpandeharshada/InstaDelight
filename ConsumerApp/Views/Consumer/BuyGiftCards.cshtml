@@ -1,0 +1,50 @@
+﻿@model ConsumerApp.Models.Citrus
+@{
+    ViewBag.Title = "Buy Gift Card";
+}
+
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenBuyGiftCardForm()" class="row rowb">
+    <input type="hidden" disabled="disabled" name="hdnFlag" value="@ViewBag.flag" ng-model="flag" ng-required="true" />
+    <label ng-show="divShowPayButton == false">
+        @ViewBag.flag
+    </label>
+   
+    @if (Model != null)
+    {
+        <form align="center" method="post" action=@Model.formPostUrl>
+            <input type="hidden" id="merchantTxnId" name="merchantTxnId" value=@Model.merchantTxnId />
+
+            <input type="hidden" id="currency" name="currency" value=@Model.currency />
+
+            <label>
+                Email: @Model.email
+            </label>
+
+            <label>
+                PhoneNumber: @Model.phoneNumber
+            </label>
+
+            @if (Model.currency == "INR")
+            {
+                <label>
+                    Amount: <i class="fa fa-inr"></i> @Model.orderAmount
+                </label>
+            }
+            else
+            {
+                <label>
+                    Amount: @Model.currency &nbsp; @Model.orderAmount
+                </label>
+            }
+            <input type="hidden" id="email" name="email" value="@Model.email" ng-show="divShowPayButton" />
+            <input type="hidden" id="phoneNumber" name="phoneNumber" value="@Model.phoneNumber" ng-show="divShowPayButton" />
+            <input type="hidden" id="orderAmount" name="orderAmount" value=@Model.orderAmount />
+            <input type="hidden" name="returnUrl" value=@Model.returnUrl />
+            <input type="hidden" id="notifyUrl" name="notifyUrl" value=@Model.notifyUrl />
+            <input type="hidden" id="secSignature" name="secSignature" value=@Model.secSignature />
+            <input type="Submit" value="Pay Now" ng-show="divShowPayButton" />
+
+        </form>
+    }
+</div>

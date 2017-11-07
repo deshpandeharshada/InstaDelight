@@ -1,0 +1,819 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AddMerchant" xml:space="preserve">
+    <value>व्यापारी जोड़ें</value>
+  </data>
+  <data name="AnniversaryCopupon" xml:space="preserve">
+    <value>वर्षगांठ कूपन</value>
+  </data>
+  <data name="AsOnDEC" xml:space="preserve">
+    <value>डीईसी के रूप में</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>वापस</value>
+  </data>
+  <data name="Bank" xml:space="preserve">
+    <value>बैंक </value>
+  </data>
+  <data name="BankDetails" xml:space="preserve">
+    <value>बैंक विवरण</value>
+  </data>
+  <data name="BillValidationMessage" xml:space="preserve">
+    <value>बिल राशि के लिए संख्या दर्ज करें</value>
+  </data>
+  <data name="BirthdayCoupon" xml:space="preserve">
+    <value>जन्मदिन कूपन</value>
+  </data>
+  <data name="BuildingName" xml:space="preserve">
+    <value>इमारत का नाम</value>
+  </data>
+  <data name="Button" xml:space="preserve">
+    <value>बटन</value>
+  </data>
+  <data name="BuyAndShareGiftCards" xml:space="preserve">
+    <value>उपहार कार्ड खरीदें और साझा करें</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>रद्द करना</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>वर्ग</value>
+  </data>
+  <data name="City" xml:space="preserve">
+    <value>शहर</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>शर्तेँ</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>विन्यास</value>
+  </data>
+  <data name="Confirmpassword" xml:space="preserve">
+    <value>पासवर्ड की पुष्टि कीजिये</value>
+  </data>
+  <data name="consumer" xml:space="preserve">
+    <value>उपभोक्ता</value>
+  </data>
+  <data name="ConsumerCell" xml:space="preserve">
+    <value>उपभोक्ता सेल</value>
+  </data>
+  <data name="CopuponBackground" xml:space="preserve">
+    <value>कूपन पृष्ठभूमि</value>
+  </data>
+  <data name="CouponDescription" xml:space="preserve">
+    <value>कूपन विवरण</value>
+  </data>
+  <data name="CouponDetails" xml:space="preserve">
+    <value>कूपन विवरण</value>
+  </data>
+  <data name="CouponList" xml:space="preserve">
+    <value>कूपन सूची</value>
+  </data>
+  <data name="Coupons" xml:space="preserve">
+    <value>कूपन</value>
+  </data>
+  <data name="CouponTitle" xml:space="preserve">
+    <value>कूपन शीर्षक</value>
+  </data>
+  <data name="CreateBank" xml:space="preserve">
+    <value>बैंक बनाएं</value>
+  </data>
+  <data name="CreateCoupons" xml:space="preserve">
+    <value>कूपन बनाएं</value>
+  </data>
+  <data name="CreateReview" xml:space="preserve">
+    <value>समीक्षा बनाएं</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>ग्राहक</value>
+  </data>
+  <data name="DateOfAnniversary" xml:space="preserve">
+    <value>वर्षगांठ की तिथि</value>
+  </data>
+  <data name="DateOfBirth" xml:space="preserve">
+    <value>जन्म की तारीख</value>
+  </data>
+  <data name="DECBackground" xml:space="preserve">
+    <value>DEC पृष्ठभूमि</value>
+  </data>
+  <data name="DECName" xml:space="preserve">
+    <value>DEC नाम</value>
+  </data>
+  <data name="DECShare" xml:space="preserve">
+    <value>डीईसी शेयर</value>
+  </data>
+  <data name="Discount" xml:space="preserve">
+    <value>छूट</value>
+  </data>
+  <data name="DiscountValidationMessage" xml:space="preserve">
+    <value>डिस्काउंट के लिए नंबर दर्ज करें</value>
+  </data>
+  <data name="EditBank" xml:space="preserve">
+    <value>बैंक को संपादित करें</value>
+  </data>
+  <data name="EditMerchant" xml:space="preserve">
+    <value>व्यापारी संपादित करें</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ईमेल</value>
+  </data>
+  <data name="EmailValidationMessage" xml:space="preserve">
+    <value>एक ईमेल आईडी लिखें</value>
+  </data>
+  <data name="EnterBillAmount" xml:space="preserve">
+    <value>बिल राशि दर्ज करें</value>
+  </data>
+  <data name="EnterCode" xml:space="preserve">
+    <value>कोड दर्ज करें</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>पहला नाम</value>
+  </data>
+  <data name="ForgotPassword" xml:space="preserve">
+    <value>पासवर्ड भूल गए?</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>लिंग</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>घर</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>अंतिम नाम</value>
+  </data>
+  <data name="LocalFavourites" xml:space="preserve">
+    <value>स्थानीय पसंदीदा</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>इलाका</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>लॉग इन करें</value>
+  </data>
+  <data name="Logo" xml:space="preserve">
+    <value>प्रतीक चिन्ह</value>
+  </data>
+  <data name="MaxDiscount" xml:space="preserve">
+    <value>अधिकतम डिस्काउंट</value>
+  </data>
+  <data name="Merchant" xml:space="preserve">
+    <value>व्यापारी</value>
+  </data>
+  <data name="MerchantDetails" xml:space="preserve">
+    <value>व्यापारी विवरण</value>
+  </data>
+  <data name="MerchantList" xml:space="preserve">
+    <value>व्यापारी सूची</value>
+  </data>
+  <data name="MobileNo" xml:space="preserve">
+    <value>मोबाइल नंबर</value>
+  </data>
+  <data name="MyCards" xml:space="preserve">
+    <value>मेरे कार्ड</value>
+  </data>
+  <data name="MyDigitalCards" xml:space="preserve">
+    <value>मेरे डिजिटल कार्ड</value>
+  </data>
+  <data name="MyProfile" xml:space="preserve">
+    <value>मेरी प्रोफाइल</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>नाम</value>
+  </data>
+  <data name="OffersNearMe" xml:space="preserve">
+    <value>मेरे पास ऑफर</value>
+  </data>
+  <data name="OptionalMobileNumber" xml:space="preserve">
+    <value>मोबाइल नंबर (वैकल्पिक)</value>
+  </data>
+  <data name="OwnerEmail" xml:space="preserve">
+    <value>मालिक का ईमेल</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>पासवर्ड</value>
+  </data>
+  <data name="PendingReviews" xml:space="preserve">
+    <value>लंबित समीक्षा</value>
+  </data>
+  <data name="PercentageOff" xml:space="preserve">
+    <value>% छूट</value>
+  </data>
+  <data name="PercentOffValidationMessage" xml:space="preserve">
+    <value>% छूट के लिए नंबर दर्ज करें</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>फ़ोन</value>
+  </data>
+  <data name="PhoneValidationMessage" xml:space="preserve">
+    <value>एक फोन नंबर लिखें</value>
+  </data>
+  <data name="Picture" xml:space="preserve">
+    <value>जैसा चित्र डिजिटल कार्ड पर प्रदर्शित करना चाहे</value>
+  </data>
+  <data name="PinCode" xml:space="preserve">
+    <value>पिन कोड</value>
+  </data>
+  <data name="PinCodeValidationMessage" xml:space="preserve">
+    <value>एक पिन कोड लिखें</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>प्रोफाइल</value>
+  </data>
+  <data name="QRCode" xml:space="preserve">
+    <value>क्यूआर कोड</value>
+  </data>
+  <data name="Questions" xml:space="preserve">
+    <value>प्रश्न</value>
+  </data>
+  <data name="Redeem" xml:space="preserve">
+    <value>रीडीम</value>
+  </data>
+  <data name="RedeemCode" xml:space="preserve">
+    <value>रीडीम कोड</value>
+  </data>
+  <data name="RegisteredMobileNumber" xml:space="preserve">
+    <value>पंजीकृत मोबाइल नंबर</value>
+  </data>
+  <data name="Registernewmerchant" xml:space="preserve">
+    <value>एक नया व्यापारी पंजीकृत करें</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>मुझे याद रखें</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>समीक्षा</value>
+  </data>
+  <data name="ReviewSubmission" xml:space="preserve">
+    <value>समीक्षा प्रस्तुत करना</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>सहेजें</value>
+  </data>
+  <data name="ScanCoupon" xml:space="preserve">
+    <value>स्कैन कूपन</value>
+  </data>
+  <data name="Select" xml:space="preserve">
+    <value>चुनते हैं</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>भेजें</value>
+  </data>
+  <data name="SendDEC" xml:space="preserve">
+    <value>DEC भेजें</value>
+  </data>
+  <data name="SendSMS" xml:space="preserve">
+    <value>संदेश भेजो</value>
+  </data>
+  <data name="SetCouponForEvents" xml:space="preserve">
+    <value>घटनाओं के लिए कूपन सेट करें</value>
+  </data>
+  <data name="SetCoupons" xml:space="preserve">
+    <value>कूपन सेट करें</value>
+  </data>
+  <data name="SetGiftCards" xml:space="preserve">
+    <value>गिफ्ट कार्ड सेट करें</value>
+  </data>
+  <data name="SetReviewQuestions" xml:space="preserve">
+    <value>समीक्षा प्रश्न पूछें</value>
+  </data>
+  <data name="ShareWithFriends" xml:space="preserve">
+    <value>दोस्तों के साथ व्यापारी की DEC साझा करें</value>
+  </data>
+  <data name="SocietyName" xml:space="preserve">
+    <value>सोसायटी का नाम</value>
+  </data>
+  <data name="Street" xml:space="preserve">
+    <value>सड़क</value>
+  </data>
+  <data name="SubmitReview" xml:space="preserve">
+    <value>समीक्षा जमा करें</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>उपयोग की शर्तें</value>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>टेक्स्ट</value>
+  </data>
+  <data name="UpcomingEvents" xml:space="preserve">
+    <value>आने वाले कार्यक्रम</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>अद्यतन</value>
+  </data>
+  <data name="URL" xml:space="preserve">
+    <value>यूआरएल</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>उपयोगकर्ता का नाम (मोबाइल नंबर/ईमेल)</value>
+  </data>
+  <data name="ValidAbove" xml:space="preserve">
+    <value>बिल राशि से अधिक मान्य</value>
+  </data>
+  <data name="ValidAt" xml:space="preserve">
+    <value>में मान्य</value>
+  </data>
+  <data name="ValidFrom" xml:space="preserve">
+    <value>से मान्य</value>
+  </data>
+  <data name="ValidTill" xml:space="preserve">
+    <value>तक मान्य है</value>
+  </data>
+  <data name="ViewEditCoupons" xml:space="preserve">
+    <value>कूपन देखें / संपादित करें</value>
+  </data>
+  <data name="ApplicableIn" xml:space="preserve">
+    <value>लागू</value>
+  </data>
+  <data name="ConsumerEmail" xml:space="preserve">
+    <value>उपभोक्ता का ईमेल</value>
+  </data>
+  <data name="LoginLink" xml:space="preserve">
+    <value>लॉग इन करने के लिए यहां क्लिक करें</value>
+  </data>
+  <data name="MyCoupons" xml:space="preserve">
+    <value>मेरे कूपन</value>
+  </data>
+  <data name="NearMe" xml:space="preserve">
+    <value>मेरे पास</value>
+  </data>
+  <data name="Please" xml:space="preserve">
+    <value>कृपया</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>रीसेट</value>
+  </data>
+  <data name="ResetConfirmation" xml:space="preserve">
+    <value>पासवर्ड रीसेट पुष्टिकरण करें</value>
+  </data>
+  <data name="ResetMessage" xml:space="preserve">
+    <value>आपका पासवर्ड रिसेट कर दिया गया है।</value>
+  </data>
+  <data name="Resetpassword" xml:space="preserve">
+    <value>पासवर्ड रीसेट</value>
+  </data>
+  <data name="Resetyourpassword" xml:space="preserve">
+    <value>अपना पासवर्ड रीसेट करें।</value>
+  </data>
+  <data name="TitleName" xml:space="preserve">
+    <value>श्री श्रीमती नाम</value>
+  </data>
+  <data name="ForgotPasswordCaption" xml:space="preserve">
+    <value>अपना पंजीकृत फोन नंबर / ईमेल दर्ज करें</value>
+  </data>
+  <data name="ForgotPasswordConfirmation" xml:space="preserve">
+    <value>पासवर्ड भूल जाने की पुष्टि</value>
+  </data>
+  <data name="ForgotPasswordMessage" xml:space="preserve">
+    <value>कृपया अपना पासवर्ड रीसेट करने के लिए अपना फोन एसएमएस जांचें</value>
+  </data>
+  <data name="ChangeCountry" xml:space="preserve">
+    <value>देश बदलो</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>देश</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>भाषा</value>
+  </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>लॉग ऑफ</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>देश चुनिए</value>
+  </data>
+  <data name="SelectLanguage" xml:space="preserve">
+    <value>भाषा चुनिए</value>
+  </data>
+  <data name="RegionalSetting" xml:space="preserve">
+    <value>सेटिंग्स</value>
+  </data>
+  <data name="State" xml:space="preserve">
+    <value>राज्य</value>
+  </data>
+  <data name="ConsumerLogin" xml:space="preserve">
+    <value>उपभोक्ता लॉगिन</value>
+  </data>
+  <data name="BuyGiftCards" xml:space="preserve">
+    <value>गिफ्ट कार्ड खरीदें</value>
+  </data>
+  <data name="NoGiftCardsPrompt" xml:space="preserve">
+    <value>व्यापारी ने अभी तक कोई गिफ्ट कार्ड सेट नहीं किया है</value>
+  </data>
+  <data name="Off" xml:space="preserve">
+    <value>छूट</value>
+  </data>
+  <data name="PasswordPrompt" xml:space="preserve">
+    <value>पासवर्ड (न्यूनतम 4 अक्षर)</value>
+  </data>
+  <data name="RedeemCouponPrompt" xml:space="preserve">
+    <value>कूपन आहरण करने के लिए यह QR कोड व्यवसाय को दिखाएं</value>
+  </data>
+  <data name="SelectBusinessCategory" xml:space="preserve">
+    <value>व्यापार श्रेणी चुनें</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>शहर चुनें</value>
+  </data>
+  <data name="ShareGiftCards" xml:space="preserve">
+    <value>गिफ्ट कार्ड साझा करें</value>
+  </data>
+  <data name="ViewGiftCards" xml:space="preserve">
+    <value>गिफ्ट कार्ड देखें</value>
+  </data>
+  <data name="AdditionalNosPrompt" xml:space="preserve">
+    <value>कृपया ध्यान दें: अपने अतिरिक्त सेल नंबर, ईमेल आईडी, दर्ज करने से जिन व्यवसायों के पास ये सेल नंबर, ईमेल आईडी है, उनके डिजिटल कार्ड्स ऑफरट्रैकर ऐप में दिखाए जाएंगे| अब एक स्थान पर अपने ग्लोबल डिजिटल कार्ड का आनंद लें!</value>
+  </data>
+  <data name="Address" xml:space="preserve">
+    <value>पता</value>
+  </data>
+  <data name="SelectLocation" xml:space="preserve">
+    <value>इलाका चुनें</value>
+  </data>
+  <data name="SelectState" xml:space="preserve">
+    <value>राज्य चुनें</value>
+  </data>
+  <data name="SetDatePrompt" xml:space="preserve">
+    <value>व्यवसायों को आपको ऑफ़र भेजने की अनुमति देने के लिए निम्नलिखित तिथियां निर्धारित करें</value>
+  </data>
+  <data name="ShareGiftCardwithFriends" xml:space="preserve">
+    <value>मित्रों के साथ गिफ्ट कार्ड साझा करें</value>
+  </data>
+  <data name="SplashScreenHeading" xml:space="preserve">
+    <value>डिजिटल मार्केटिंग प्लेटफार्म</value>
+  </data>
+  <data name="SplashScreenText" xml:space="preserve">
+    <value>आपके सभी डिजिटल कार्ड, कूपन, उपहार कार्ड एक ही स्थान में उपलब्ध है| अपने डिजिटल कार्ड से ऑर्डर करने की सुविधा का आनंद लें|</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>मदद</value>
+  </data>
+  <data name="WelcomePrompt" xml:space="preserve">
+    <value>OfferTraker!</value>
+  </data>
+  <data name="CustomerSupport" xml:space="preserve">
+    <value>ग्राहक सहायता क्रमांक:</value>
+  </data>
+  <data name="India" xml:space="preserve">
+    <value>भारत</value>
+  </data>
+  <data name="RewardPoints" xml:space="preserve">
+    <value>Reward Points:</value>
+  </data>
+  <data name="ShareCouponWithFriends" xml:space="preserve">
+    <value>दोस्तों के साथ कूपन साझा करें</value>
+  </data>
+  <data name="NoCouponsPrompt" xml:space="preserve">
+    <value>इस व्यापारी द्वारा आपके साथ कोई कूपन साझा नहीं किया गया है</value>
+  </data>
+  <data name="RegisteredEmailId" xml:space="preserve">
+    <value>पंजीकृत ईमेल आईडी</value>
+  </data>
+  <data name="OTPEmailMessage" xml:space="preserve">
+    <value>हमने आपके द्वारा दर्ज किए गए नए ईमेल आईडी पर आपको एक ओटीपी भेजा है। कृपया इसे बदलने के लिए यहां दर्ज करें:</value>
+  </data>
+  <data name="OTPPhoneMessage" xml:space="preserve">
+    <value>हमने आपके द्वारा दर्ज किए गए नए फ़ोन नंबर पर आपको एक ओटीपी भेजा है। कृपया इसे बदलने के लिए यहां दर्ज करें:</value>
+  </data>
+  <data name="Verified" xml:space="preserve">
+    <value>सत्यापित</value>
+  </data>
+  <data name="VerifyEmail" xml:space="preserve">
+    <value>ईमेल सत्यापित करें</value>
+  </data>
+  <data name="VerifyPhoneNumber" xml:space="preserve">
+    <value>फ़ोन नंबर सत्यापित करें</value>
+  </data>
+  <data name="SubmitReviewPrompt" xml:space="preserve">
+    <value>कृपया अगले 24 घंटों के भीतर हमें अपनी बहुमूल्य प्रतिक्रिया दें और एक कूपन जीतें</value>
+  </data>
+  <data name="CommentSaved" xml:space="preserve">
+    <value>टिप्पणी सहेजी गई</value>
+  </data>
+  <data name="ConsumerUpdated" xml:space="preserve">
+    <value>उपभोक्ता अपडेट किया गया है</value>
+  </data>
+  <data name="CountryUpdated" xml:space="preserve">
+    <value>भाषा प्राथमिकताएं अपडेट की गईं</value>
+  </data>
+  <data name="GetAllException" xml:space="preserve">
+    <value>बैंक सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetAllReviewsException" xml:space="preserve">
+    <value>समीक्षा पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetBankDECException" xml:space="preserve">
+    <value>बैंक DEC विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCategoriesException" xml:space="preserve">
+    <value>व्यवसाय श्रेणी सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCityListException" xml:space="preserve">
+    <value>राज्य से शहर सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetConsumerByIdException" xml:space="preserve">
+    <value>उपभोक्ता विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetConsumerLogoException" xml:space="preserve">
+    <value>उपभोक्ता लोगो पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetConsumerPointsException" xml:space="preserve">
+    <value>उपभोक्ता के अंक की गणना करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCountryCodeException" xml:space="preserve">
+    <value>देश कोड पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCountryListException" xml:space="preserve">
+    <value>देश की सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCouponDetails" xml:space="preserve">
+    <value>कूपन विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetCouponsException" xml:space="preserve">
+    <value>कूपन सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetEventCondtiongsException" xml:space="preserve">
+    <value>ईवेंट नियम को पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetGiftCardDenominationException" xml:space="preserve">
+    <value>उपहार कार्ड पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetLanguageException" xml:space="preserve">
+    <value>भाषा विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetLocationsException" xml:space="preserve">
+    <value>शहर से स्थान सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetMerchantDECException" xml:space="preserve">
+    <value>व्यापारी DEC विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetMerchantDetails" xml:space="preserve">
+    <value>व्यापारी विवरण पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetMerchantsException" xml:space="preserve">
+    <value>व्यापारी सूची पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetPendingReviewsException" xml:space="preserve">
+    <value>लंबित समीक्षा पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="GetStatesException" xml:space="preserve">
+    <value>देश की राज्य सूची को पुनः प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="InvalidConsumer" xml:space="preserve">
+    <value>अमान्य उपभोक्ता</value>
+  </data>
+  <data name="InvalidConsumerreview" xml:space="preserve">
+    <value>अमान्य उपभोक्ता समीक्षा</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>अवैध ईमेल</value>
+  </data>
+  <data name="InvalidOTP" xml:space="preserve">
+    <value>OTP अमान्य है</value>
+  </data>
+  <data name="InvalidPhoneNumber" xml:space="preserve">
+    <value>यह फ़ोन नंबर मान्य नहीं है</value>
+  </data>
+  <data name="MobileNumberPrompt" xml:space="preserve">
+    <value>मोबाइल नंबर दर्ज करें</value>
+  </data>
+  <data name="OTPErrorMessage1" xml:space="preserve">
+    <value>ईमेल आईडी xxx को OTP भेजने में सक्षम नहीं है I कृपया फिर से प्रयास करें।</value>
+  </data>
+  <data name="OTPErrorMessage2" xml:space="preserve">
+    <value>ओटीपी बनाने में सक्षम नहीं बाद में पुन: प्रयास करें।</value>
+  </data>
+  <data name="OTPErrorMessage3" xml:space="preserve">
+    <value>सेल नंबर XXX पर ओटीपी भेजने में सक्षम नहीं है। बाद में पुन: प्रयास करें।</value>
+  </data>
+  <data name="OTPVerified" xml:space="preserve">
+    <value>OTP सत्यापित है</value>
+  </data>
+  <data name="RegisterConsumerError" xml:space="preserve">
+    <value>उपभोक्ता को पंजीकृत करने में सक्षम नहीं है</value>
+  </data>
+  <data name="SaveCommentException" xml:space="preserve">
+    <value>उपभोक्ता समीक्षा टिप्पणी को सहेजते समय त्रुटि हुई</value>
+  </data>
+  <data name="SaveGiftCard" xml:space="preserve">
+    <value>उपहार कार्ड भुगतान सफलतापूर्वक किया गया है</value>
+  </data>
+  <data name="SaveGiftCardException" xml:space="preserve">
+    <value>उपहार कार्ड को सहेजते समय त्रुटि हुई</value>
+  </data>
+  <data name="SaveReviewException" xml:space="preserve">
+    <value>उपभोक्ता द्वारा समीक्षा सबमिट करते समय त्रुटि हुई</value>
+  </data>
+  <data name="SendCouponToFriends" xml:space="preserve">
+    <value>कूपन चयनित संपर्कों के लिए सफलतापूर्वक भेजा गया</value>
+  </data>
+  <data name="SendDECToFriends" xml:space="preserve">
+    <value>DEC चयनित संपर्कों के लिए सफलतापूर्वक भेजा गया</value>
+  </data>
+  <data name="SendOTPException" xml:space="preserve">
+    <value>ईमेल पर OTP भेजने में त्रुटि हुई</value>
+  </data>
+  <data name="SendOTPException1" xml:space="preserve">
+    <value>फ़ोन पर OTP भेजने में त्रुटि हुई</value>
+  </data>
+  <data name="SendOTPException2" xml:space="preserve">
+    <value>फ़ोन 3 पर OTP भेजने के दौरान त्रुटि हुई</value>
+  </data>
+  <data name="SendOTPMessage" xml:space="preserve">
+    <value>OTP सफलतापूर्वक भेजा गया</value>
+  </data>
+  <data name="ShareCouponException" xml:space="preserve">
+    <value>उपभोक्ता के साथ शेयर कूपन के दौरान त्रुटि हुई</value>
+  </data>
+  <data name="ShareCouponMessage" xml:space="preserve">
+    <value>कूपन उपभोक्ता के साथ सफलतापूर्वक साझा किया गया</value>
+  </data>
+  <data name="ShareDECException" xml:space="preserve">
+    <value>उपभोक्ता के साथ डीईसी साझा करते समय त्रुटि हुई</value>
+  </data>
+  <data name="ShareDECMessage" xml:space="preserve">
+    <value>DEC को सफलतापूर्वक साझा किया गया</value>
+  </data>
+  <data name="UpdateConsumerException" xml:space="preserve">
+    <value>ग्राहक अपडेट करते समय त्रुटि हुई</value>
+  </data>
+  <data name="UpdateCountryException" xml:space="preserve">
+    <value>देश के विवरण अपडेट करते समय त्रुटि हुई</value>
+  </data>
+  <data name="VerifyOTPException" xml:space="preserve">
+    <value>ईमेल OTP की पुष्टि करते समय त्रुटि हुई</value>
+  </data>
+  <data name="VerifyOTPException1" xml:space="preserve">
+    <value>फ़ोन 2 OTP की पुष्टि करते समय त्रुटि हुई</value>
+  </data>
+  <data name="VerifyOTPException2" xml:space="preserve">
+    <value>Phone3 otp सत्यापित करते समय त्रुटि हुई</value>
+  </data>
+  <data name="TermsAndConditions" xml:space="preserve">
+    <value>नियम और शर्तें</value>
+  </data>
+  <data name="GetCouponCondtiongsException" xml:space="preserve">
+    <value>कूपन की शर्तों को पुनर्प्राप्त करते समय त्रुटि हुई</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>खोज करें</value>
+  </data>
+  <data name="ForgotPasswordMessage1" xml:space="preserve">
+    <value>कृपया अपना पासवर्ड रीसेट करने के लिए अपना मेल बॉक्स जांचें</value>
+  </data>
+  <data name="SendSMSEmail" xml:space="preserve">
+    <value>एसएमएस / ईमेल भेजें</value>
+  </data>
+  <data name="BusinessMobileNo" xml:space="preserve">
+    <value>व्यवसाय का मोबाइल नंबर</value>
+  </data>
+  <data name="GetNewDEC" xml:space="preserve">
+    <value>नई डीईसी प्राप्त करें</value>
+  </data>
+  <data name="YourMobileNo" xml:space="preserve">
+    <value>आपका मोबाइल नंबर</value>
+  </data>
+  <data name="InvalidMerchantErrorMessage" xml:space="preserve">
+    <value>व्यापारी मोबाइल नंबर xxx मौजूद नहीं है</value>
+  </data>
+  <data name="CountryCode" xml:space="preserve">
+    <value>देश का कोड</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>या</value>
+  </data>
+  <data name="NoGiftCardsPurchasedPrompt" xml:space="preserve">
+    <value>आपके द्वारा कोई गिफ्ट कार्ड नहीं खरीदे गए हैं</value>
+  </data>
+  <data name="BankBenefits" xml:space="preserve">
+    <value>बैंक लाभ</value>
+  </data>
+  <data name="BankName" xml:space="preserve">
+    <value>बैंक का नाम</value>
+  </data>
+  <data name="Benefit" xml:space="preserve">
+    <value>लाभ</value>
+  </data>
+  <data name="Benefitsof" xml:space="preserve">
+    <value>लाभ</value>
+  </data>
+  <data name="privilegeprogram" xml:space="preserve">
+    <value>विशेषाधिकार कार्यक्रम</value>
+  </data>
+</root>

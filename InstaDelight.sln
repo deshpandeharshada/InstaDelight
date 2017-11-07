@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InstaDelight", "InstaDelight\InstaDelight.csproj", "{BC0A0A6E-AE00-4F5A-BECB-14117F695A5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsumerApp", "ConsumerApp\ConsumerApp.csproj", "{AB156843-889E-4AA6-A927-354C1C18B0B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MerchantApp", "MerchantApp\MerchantApp.csproj", "{BFA52EAA-CE21-4D15-A15E-F8CF3B9BA1CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalesReportUtility", "SalesReportUtility\SalesReportUtility.csproj", "{AC058356-0130-40DD-B080-6F18A3700E37}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC0A0A6E-AE00-4F5A-BECB-14117F695A5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC0A0A6E-AE00-4F5A-BECB-14117F695A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC0A0A6E-AE00-4F5A-BECB-14117F695A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC0A0A6E-AE00-4F5A-BECB-14117F695A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB156843-889E-4AA6-A927-354C1C18B0B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB156843-889E-4AA6-A927-354C1C18B0B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB156843-889E-4AA6-A927-354C1C18B0B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB156843-889E-4AA6-A927-354C1C18B0B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFA52EAA-CE21-4D15-A15E-F8CF3B9BA1CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFA52EAA-CE21-4D15-A15E-F8CF3B9BA1CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFA52EAA-CE21-4D15-A15E-F8CF3B9BA1CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFA52EAA-CE21-4D15-A15E-F8CF3B9BA1CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC058356-0130-40DD-B080-6F18A3700E37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC058356-0130-40DD-B080-6F18A3700E37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC058356-0130-40DD-B080-6F18A3700E37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC058356-0130-40DD-B080-6F18A3700E37}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

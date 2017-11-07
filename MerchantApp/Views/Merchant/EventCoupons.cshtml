@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "EventCoupons";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="openseteventsform()" style="margin:0">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/underscore.js"></script>
+
+
+    <div class="row rowb">
+        <form name="myForm">
+            <h4 class="Heading">@Global.Merchant.SetCouponForEvents</h4>
+            <input type="hidden" disabled="disabled" ng-model="id" />
+            <label>
+                @Global.Merchant.BirthdayCoupon
+                <select style="border-radius:4px;" ng-model="selectedbcouponobject" id="ddlBCoupon" name="ddlBCoupon"
+                        ng-selected="coupon.couponid == bcouponid"
+                        ng-change="BCouponChanged(selectedbcouponobject)" ng-options="coupon.CouponTitle for coupon in CouponList track by coupon.couponid"></select>
+            </label>
+            <label>
+                @Global.Merchant.AnniversaryCopupon
+                <select style="border-radius:4px;" ng-model="selectedAcouponobject" id="ddlACoupon" name="ddlACoupon"
+                        ng-selected="coupon.couponid == acouponid"
+                        ng-change="ACouponChanged(selectedAcouponobject)" ng-options="coupon.CouponTitle for coupon in CouponList track by coupon.couponid"></select>
+            </label>
+            <label>
+                @Global.Merchant.ReviewSubmission
+                <select style="border-radius:4px;" ng-model="selectedRcouponobject" id="ddlRCoupon" name="ddlRCoupon"
+                        ng-selected="coupon.couponid == rcouponid"
+                        ng-change="RCouponChanged(selectedRcouponobject)" ng-options="coupon.CouponTitle for coupon in CouponList track by coupon.couponid"></select>
+            </label>
+            <label>
+                @Global.Merchant.DECShare
+                <select style="border-radius:4px;" ng-model="selectedScouponobject" id="ddlSCoupon" name="ddlSCoupon"
+                        ng-selected="coupon.couponid == scouponid"
+                        ng-change="SCouponChanged(selectedScouponobject)" ng-options="coupon.CouponTitle for coupon in CouponList track by coupon.couponid"></select>
+            </label>
+
+            <button class="button" ng-click="SetEventCoupons('myForm')" style="width:100%; border-radius:5px;">@Global.Merchant.SetCoupons</button>
+        </form>
+    </div>
+
+
+
+
+
+</div>

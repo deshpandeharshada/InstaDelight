@@ -1,0 +1,228 @@
+﻿@{
+    ViewBag.Title = "ScanQRCode";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/Content/fonts/opensans/css/fonts.css">
+<link rel="stylesheet" href="~/Content/css/foundation.css">
+
+<link rel="stylesheet" href="~/Content/css/font-awesome.min.css">
+
+
+
+
+<style>
+    .mydiv {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        background-color: grey;
+        opacity: .8;
+    }
+
+    .ajax-loader {
+        background-image: url('../../Images/loading.gif');
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        background-color: #666;
+        opacity: 0.4;
+        background-repeat: no-repeat;
+        background-position: center;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+    }
+
+    .htabGrid {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-right: 0px;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 80% !important;
+    }
+
+    .htabGridshare {
+        border: solid 1px #ccc;
+        padding: 15px 0px;
+        border-top-left-radius: 0px !important;
+        border-bottom-left-radius: 0px !important;
+        border-left: 0px;
+        font-size: 1em;
+        background: #ffffff;
+        background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+        background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+        background: linear-gradient(to bottom, #ffffff 0%,#e5e5e5 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 );
+        width: 20% !important;
+    }
+</style>
+
+<style type="text/css">
+    .myGrid {
+        width: 100% !important;
+    }
+
+    .ui-grid, .ui-grid-viewport {
+        height: auto !important;
+        border: none !important;
+        margin-left: 2px;
+        margin-right: 2px;
+        /*width: 100%!important;*/
+    }
+
+    .ui-grid-row .ng-scope {
+        /*height: 65px !important;*/
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    .ui-grid-pager-panel {
+        position: relative;
+        display: inline-block;
+    }
+
+    .ui-grid-pager-max-pages-number {
+        vertical-align: middle !important;
+    }
+
+    abbr[title] {
+        border-bottom: none !important;
+        cursor: inherit !important;
+        text-decoration: none !important;
+    }
+</style>
+
+<div ng-controller="myCntrl" ng-app="myApp" data-ng-init="OpenRedeemForm()">
+
+    @*<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script type="text/javascript" src="~/Scripts/underscore.js"></script>*@
+    <div class="mydiv" ng-show="searchButtonText">
+        <label class="ajax-loader"></label>
+    </div>
+
+    <div ng-show="divRedeemCoupon" class="row rowb">
+        <input type="hidden" disabled="disabled" name="hdnCountry" ng-model="country" value="@ViewBag.countryid" />
+
+        <h3> @Global.Merchant.CheckCustomerCoupons</h3>
+        <label>&nbsp;</label>
+
+        <div class="small-12 columns">
+            <label>
+                @Global.Merchant.MobileNo:
+            </label>
+
+            <div class="small-4 column">
+                <select style="border-radius:4px;" ng-model="selectedcountrycodeobject" id="ddlCountryCode" name="ddlCountryCode" ng-required="true"
+                        ng-selected="country.countryid == countryid"
+                        ng-options="country.CountryCode for country in CountryList track by country.countryid">
+                    <option value="" label="@Global.Merchant.CountryCode"></option>
+                </select>
+            </div>
+            <div class="small-8 column">
+                <input name="CustPhoneNumber" id="inputCustPhone" type="text" class="textbox" placeholder="@Global.Merchant.MobileNo: "
+                       ng-required="true" ng-model="CustPhoneNumber" maxlength="128">
+            </div>
+            <label class="text-center"><b>@Global.Merchant.Or</b></label>
+            <label>
+                @Global.Merchant.Email:
+            </label>
+
+            <label>
+                <input type="email" class="textbox" ng-model="Email" placeholder="@Global.Merchant.Email" id="inputEmail" name="Email" maxlength="256" />
+            </label>
+        </div>
+
+        <div class="small-12 columns">
+            <button ng-click="GetConsumerCouponPoints()" class="button text-center">@Global.Merchant.CheckPointsCoupons</button>
+        </div>
+
+        @*<div class="small-12 columns">
+                <input type="submit" name="submit" value="@Global.Merchant.ScanCoupon" onclick="window.location = 'Navigation://OpenQRCodeScanner'" class="button" style="width:100%; border-radius:4px;">
+            </div>*@
+    </div>
+
+    <div class="row rowb" ng-show="divConsumerProfile">
+        <h3>@Global.Merchant.Redeem</h3>
+        <label>&nbsp;</label>
+
+        <label ng-show="ConsumerName != ''"><b>@Global.Merchant.ConsumerName:</b> {{ConsumerName}}</label>
+        <label ng-show="DOB != null"><b>@Global.Merchant.DateOfBirth: </b>{{DOB}}</label>
+        <label ng-show="DOA != null"><b>@Global.Merchant.DateOfAnniversary:</b> {{DOA}}</label>
+
+        <label>&nbsp;</label>
+
+        <label>
+            @Global.Merchant.NumberOfVisits:
+            {{NoOfVisits}}
+        </label>
+
+        <div class="row grey text-center" ng-show="IsCashback==false">Points </div>
+        <label ng-show="IsCashback==false">
+            @Global.Merchant.AvailablePoints:
+            {{NoOfPoints}}
+        </label>
+        <div class="row grey text-center" ng-show="IsCashback==true">Cashback </div>
+        <label ng-show="IsCashback==true && currency == 'Rs'">
+            Available Cashback:
+            <span class="fa fa-inr"></span> {{NoOfPoints}}
+        </label>
+        <label ng-show="IsCashback==true && currency!='Rs'">
+            Available Cashback:
+            {{currency}} {{NoOfPoints}}
+        </label>
+
+        <label>
+            @Global.Merchant.PointsRedeem
+            <input type="text" class="textbox" placeholder="@Global.Merchant.PointsRedeem" ng-model="RedeemPoints"
+                   ng-pattern="/^[0-9]{1,6}$/" id="inputRedeemPoints" name="RedeemPoints">
+        </label>
+
+        <button class="button" style="width:100%; border-radius:5px;" ng-click="VerifyPoints()" ng-show="divRedeemPoints">@Global.Merchant.Redeem</button>
+
+        <div class="row grey text-center h-heading" ng-show="divGiftCards">
+            @Global.Merchant.GiftCards
+        </div>
+
+        <div class="row" ng-show="divGiftCards">
+            <div ui-grid="gridGiftOptions" class="myGrid" ng-style="{visibility: gridGiftOptions.data && gridGiftOptions.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+        </div>
+
+        <div class="row grey text-center h-heading">
+            @Global.Merchant.Coupons
+        </div>
+
+        <div class="row" ng-show="divCoupons">
+            <div ui-grid="gridCustOptions" class="myGrid" ng-style="{visibility: gridCustOptions.data && gridCustOptions.data.length > 0 ? 'visible' : 'hidden'}" ui-grid-resize-columns ui-grid-auto-resize ui-grid-pagination></div>
+        </div>
+    </div>
+
+
+    <div class="row rowb text-center" ng-show="divShowMessage">
+        {{validitymsg}}
+        <br />
+
+        <div class="small-6 columns">
+            <button class="button" style="width:100%; border-radius:5px;" ng-click="RedeemPointsNow()">@Global.Merchant.Redeem</button>
+        </div>
+        <div class="small-6 columns">
+            <button class="button small-6 columns" style="width:100%; border-radius:5px;" ng-click="NavigateBack()">
+                @Global.Merchant.Cancel
+            </button>
+        </div>
+    </div>
+
+</div>
+
+

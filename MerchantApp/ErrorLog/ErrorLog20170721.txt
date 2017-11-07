@@ -1,0 +1,12 @@
+21-07-2017 12:31:00 PM
+Error occured Merchant/UpdateMerchant.Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+21-07-2017 12:49:04 PM
+Error occured while sending mail.Failure sending mail.
+21-07-2017 2:58:38 PM
+Error occured Merchant/AddNewDECConsumer.The entity type user is not part of the model for the current context.
+21-07-2017 3:00:07 PM
+Error occured Merchant/AddNewDECConsumer.The entity type user is not part of the model for the current context.
+21-07-2017 3:10:19 PM
+Error occured Merchant/AddNewDECConsumer.The entity type user is not part of the model for the current context.
+21-07-2017 3:11:06 PM
+Error occured Merchant/AddNewDECConsumer.Input string was not in a correct format.

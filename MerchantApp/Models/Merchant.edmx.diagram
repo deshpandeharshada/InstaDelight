@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="678bf0264d4845328b3bbe765dd2bcb0" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="instadelightModel.admin" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.bank_dec_details" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.bank_master" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.bankconsumerdetail" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.branch" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.branch_master" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.brand_master" Width="1.5" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="instadelightModel.business_category_master" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.cheque" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="instadelightModel.city_master" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.comment" Width="1.5" PointX="8.75" PointY="6.75" />
+        <EntityTypeShape EntityType="instadelightModel.consumergroup" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelightModel.corder" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelightModel.country_master" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.coupon_redeem_details" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.couponcondition" Width="1.5" PointX="10.75" PointY="7.75" />
+        <EntityTypeShape EntityType="instadelightModel.coupons_master" Width="1.5" PointX="10.75" PointY="10.75" />
+        <EntityTypeShape EntityType="instadelightModel.coupontemplate" Width="1.5" PointX="2.75" PointY="11.75" />
+        <EntityTypeShape EntityType="instadelightModel.currency" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.customer" Width="1.5" PointX="12.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.employee" Width="1.5" PointX="4.75" PointY="12.75" />
+        <EntityTypeShape EntityType="instadelightModel.enquiry" Width="1.5" PointX="12.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelightModel.eventcouponcondition" Width="1.5" PointX="12.75" PointY="13.75" />
+        <EntityTypeShape EntityType="instadelightModel.eventcoupondetail" Width="1.5" PointX="14.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.eventcoupontemplate" Width="1.5" PointX="14.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.eventmaster" Width="1.5" PointX="14.75" PointY="7.75" />
+        <EntityTypeShape EntityType="instadelightModel.giftcardconditionsmapping" Width="1.5" PointX="14.75" PointY="10.75" />
+        <EntityTypeShape EntityType="instadelightModel.giftcardmaster" Width="1.5" PointX="14.75" PointY="13.75" />
+        <EntityTypeShape EntityType="instadelightModel.help" Width="1.5" PointX="0.75" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.language_master" Width="1.5" PointX="2.75" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.location_master" Width="1.5" PointX="4.75" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.menu" Width="1.5" PointX="16.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.menu_csv_template" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantconsumercoupondetail" Width="1.5" PointX="16.75" PointY="8.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantconsumerdetail" Width="1.5" PointX="8.75" PointY="16.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantconsumerreviewdetail" Width="1.5" PointX="10.75" PointY="16.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantjoiningbonu" Width="1.5" PointX="16.75" PointY="12.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantreviewcomment" Width="1.5" PointX="16.75" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantsalesreportlog" Width="1.5" PointX="12.75" PointY="17.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantsalesutilitymaster" Width="1.5" PointX="18.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchantsmsdetail" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="instadelightModel.package" Width="1.5" PointX="2.75" PointY="18.75" />
+        <EntityTypeShape EntityType="instadelightModel.proposal" Width="1.5" PointX="18.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.redeemmaster" Width="1.5" PointX="18.75" PointY="14.75" />
+        <EntityTypeShape EntityType="instadelightModel.redeemoption" Width="1.5" PointX="14.75" PointY="18.75" />
+        <EntityTypeShape EntityType="instadelightModel.report" Width="1.5" PointX="16.75" PointY="18.75" />
+        <EntityTypeShape EntityType="instadelightModel.rest_registration" Width="1.5" PointX="18.75" PointY="17.75" />
+        <EntityTypeShape EntityType="instadelightModel.review_rating_star" Width="1.5" PointX="20.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.review_submit_details" Width="1.5" PointX="20.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.reviewmaster" Width="1.5" PointX="20.75" PointY="7.75" />
+        <EntityTypeShape EntityType="instadelightModel.reviewtemplate" Width="1.5" PointX="8.75" PointY="20.75" />
+        <EntityTypeShape EntityType="instadelightModel.rewardmaster" Width="1.5" PointX="10.75" PointY="20.75" />
+        <EntityTypeShape EntityType="instadelightModel.role" Width="1.5" PointX="20.75" PointY="12.75" />
+        <EntityTypeShape EntityType="instadelightModel.sale" Width="1.5" PointX="20.75" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.staff_master" Width="1.5" PointX="20.75" PointY="19.75" />
+        <EntityTypeShape EntityType="instadelightModel.state_master" Width="1.5" PointX="22.75" PointY="0.75" />
+        <EntityTypeShape EntityType="instadelightModel.ucomment" Width="1.5" PointX="0.75" PointY="22.75" />
+        <EntityTypeShape EntityType="instadelightModel.userclaim" Width="1.5" PointX="2.75" PointY="22.75" />
+        <EntityTypeShape EntityType="instadelightModel.userlogin" Width="1.5" PointX="22.75" PointY="3.75" />
+        <EntityTypeShape EntityType="instadelightModel.userrole" Width="1.5" PointX="22.75" PointY="6.75" />
+        <EntityTypeShape EntityType="instadelightModel.user" Width="1.5" PointX="22.75" PointY="9.75" />
+        <EntityTypeShape EntityType="instadelightModel.varcode" Width="1.5" PointX="12.75" PointY="22.75" />
+        <EntityTypeShape EntityType="instadelightModel.cashbackdetail" Width="1.5" PointX="5.375" PointY="18.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchant_master" Width="1.5" PointX="5.375" PointY="22.75" />
+        <EntityTypeShape EntityType="instadelightModel.merchant_benefits" Width="1.5" PointX="23.375" PointY="15.75" />
+        <EntityTypeShape EntityType="instadelightModel.bank_benefits" Width="1.5" PointX="23.375" PointY="19.75" />
+        <EntityTypeShape EntityType="instadelightModel.expiryperiodmaster" Width="1.5" PointX="23.375" PointY="22.75" />
+        <EntityTypeShape EntityType="instadelightModel.pointscashbackexpiry" Width="1.5" PointX="7.375" PointY="24.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

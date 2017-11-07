@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <title>MerchantApp</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Content/Angular/Module.js"></script>
+    <script src="~/Content/Angular/Service.js"></script>
+    <script src="~/Content/Angular/Controller.js"></script>
+
+
+    <script src="~/Scripts/1.5.0/angular-touch.js"></script>
+    <script src="~/Scripts/1.5.0/angular-animate.js"></script>
+
+
+    <script src="~/Scripts/csv.js"></script>
+
+    <script src="~/Scripts/vfs_fonts.js"></script>
+
+    <script src="~/Scripts/ui-grid.min.js"></script>
+
+    <link href="~/Content/ui-grid.css" rel="stylesheet" />
+   
+    
+    <style>
+        .header {
+            z-index: 1;
+        }
+
+        .footer {
+            z-index: 1;
+        }
+    </style>
+
+</head>
+<body ng-controller="myCntrl" ng-app="myApp">
+
+    @Html.Partial("_LoginPartial")
+    @RenderBody()
+    @RenderSection("SPAViews", required: false)
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+
+</html>
